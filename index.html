@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THUY VU // SENIOR MULTIMEDIA DESIGNER & CREATIVE AUTOMATION ENGINEER</title>
+  <meta name="description" content="Senior Multimedia Designer with 9+ years of hands-on production in Brand Identity, Publishing & Packaging, Motion Ads, WebGL 3D, and AI Automation pipelines." />
+  <meta name="theme-color" content="#09090b" />
+
+  <!-- Google Fonts: Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- WebGL / Canvas Background (Client-side GPU 60 FPS) -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Swiss Aesthetic Background Grid Lines -->
+  <div class="swiss-grid-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- STICKY TELEMETRY NAVIGATION -->
+  <header class="top-nav">
+    <div class="app-container nav-inner">
+      <a href="#" class="nav-brand">
+        <span>THUY VU</span>
+        <div class="brand-badge">
+          <span class="status-dot"></span>
+          <span class="dynamic-fps" data-key="nav.status">60 FPS</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#metrics" data-key="nav.metrics">01 // METRICS</a></li>
+          <li><a href="#experience" data-key="nav.experience">02 // EXPERIENCE</a></li>
+          <li><a href="#stack" data-key="nav.stack">03 // TECH STACK</a></li>
+          <li><a href="#education" data-key="nav.education">04 // CREDENTIALS</a></li>
+          <li><a href="#contact" data-key="nav.contact">05 // TRANSMIT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dual-Language Toggle -->
+        <div class="lang-switcher">
+          <span class="lang-prefix">$ lang:</span>
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <span style="color: var(--border-strong);">|</span>
+          <button type="button" class="lang-btn" data-lang="vi">VI</button>
+        </div>
+
+        <!-- Download CV PDF -->
+        <button type="button" class="btn-pdf" onclick="window.downloadPdf()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-key="nav.download_cv">DOWNLOAD CV.PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP CONTAINER -->
+  <main class="app-container">
+
+    <!-- 00 // HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-telemetry-strip">
+        <span><span class="highlight">NODE:</span> MIZUBLUE2711 // PRODUCTION ARCHITECTURE</span>
+        <span class="highlight">[ DETERMINISTIC 99.99% SLA ]</span>
+        <span>LATENCY: &lt;50ms // GPU CLIENT OFFLOAD</span>
+      </div>
+
+      <div class="hero-main-frame chamfer-tr">
+        <div class="hero-corner-bracket bracket-tl"></div>
+        <div class="hero-corner-bracket bracket-tr"></div>
+        <div class="hero-corner-bracket bracket-bl"></div>
+        <div class="hero-corner-bracket bracket-br"></div>
+
+        <div class="hero-badge-row">
+          <span class="badge-tag" data-key="hero.telemetry">SYSTEM // IDENTIFIER // 2026.V3</span>
+          <span class="badge-experience" data-key="hero.experience_badge">9+ YEARS EXP // SINCE 2016</span>
+          <span class="badge-tag">HO CHI MINH CITY &bull; GLOBAL REMOTE</span>
+        </div>
+
+        <h1 class="hero-name" data-key="hero.name">THUY VU</h1>
+        <div class="hero-role" data-key="hero.role">SENIOR MULTIMEDIA DESIGNER &amp; CREATIVE AUTOMATION ENGINEER</div>
+        
+        <div class="hero-specializations" data-key="hero.specializations">
+          Brand Identity &bull; Editorial Publishing &amp; Packaging &bull; Motion Ads &bull; Design Automation
+        </div>
+
+        <p class="hero-summary" data-key="hero.summary">
+          Senior Multimedia Designer with 9+ years of hands-on execution across 500+ financial publications, 100+ e-commerce landing pages, and 200+ short-form video ads. Combines graphic design precision with Python, n8n, Dify, Remotion, and WebGL to automate creative pipelines, slashing processing latency by 98% and eliminating cloud rendering fees.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://thuy-vu-designer.framer.website/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 3h14v7h-7v7H5z"/><path d="M12 10h7v7h-7z"/></svg>
+            <span data-key="hero.cta_portfolio">FRAMER PORTFOLIO</span>
+            <span>↗</span>
+          </a>
+
+          <a href="https://artificialcraft.space/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span data-key="hero.cta_platform">ARTIFICIAL CRAFT</span>
+            <span>↗</span>
+          </a>
+
+          <a href="#contact" class="btn-indigo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span data-key="hero.cta_contact">TRANSMIT MESSAGE</span>
+            <span>↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 // METRICS GRID -->
+    <section class="section-wrapper" id="metrics">
+      <div class="section-prefix" data-key="metrics.prefix">01 // QUANTIFIABLE PERFORMANCE METRICS</div>
+      <h2 class="section-title" data-key="metrics.heading">SYSTEM OUTPUT &amp; TELEMETRY</h2>
+      <p class="section-subtitle" data-key="metrics.subheading">
+        Deterministic benchmarks measured across enterprise production environments
+      </p>
+
+      <div class="metrics-grid" id="metrics-container">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- 02 // EXPERIENCE SECTION -->
+    <section class="section-wrapper" id="experience">
+      <div class="section-prefix" data-key="experience.prefix">02 // CHRONOLOGICAL PRODUCTION LOGS</div>
+      <h2 class="section-title" data-key="experience.heading">HANDS-ON WORK EXPERIENCE</h2>
+      <p class="section-subtitle" data-key="experience.subheading">
+        Nine-year timeline spanning agency creative leadership to deterministic code automation
+      </p>
+
+      <div class="experience-list" id="experience-container">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- 03 // TECH STACK MATRIX -->
+    <section class="section-wrapper" id="stack">
+      <div class="section-prefix" data-key="tech_stack.prefix">03 // CAPABILITY MATRIX &amp; TOOLKIT</div>
+      <h2 class="section-title" data-key="tech_stack.heading">TECHNICAL STACK &amp; ECOSYSTEM</h2>
+      <p class="section-subtitle" data-key="tech_stack.subheading">
+        Four pillars bridging meticulous graphic design precision with automated engineering
+      </p>
+
+      <div class="stack-matrix-grid" id="stack-container">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- 04 // EDUCATION & CREDENTIALS -->
+    <section class="section-wrapper" id="education">
+      <div class="section-prefix" data-key="education.prefix">04 // ACCREDITATIONS &amp; CERTIFICATIONS</div>
+      <h2 class="section-title" data-key="education.heading">CONTINUOUS SKILL UPGRADES</h2>
+      <p class="section-subtitle" data-key="education.subheading">
+        Rigorous academic and technical credentialing in systems, AI, and languages
+      </p>
+
+      <div class="education-grid" id="education-container">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- 05 // TRANSMIT & CONTACT -->
+    <section class="section-wrapper" id="contact">
+      <div class="section-prefix" data-key="contact.prefix">05 // TELEMETRY TRANSMISSION</div>
+      <h2 class="section-title" data-key="contact.heading">CONNECT &amp; COLLABORATE</h2>
+      <p class="section-subtitle" data-key="contact.subheading">
+        Direct communication line for enterprise consulting, spatial engineering, and automation
+      </p>
+
+      <div class="contact-container">
+        <!-- Terminal Box -->
+        <div class="contact-terminal-box chamfer-tr">
+          <div class="contact-meta-row">
+            <div class="contact-meta-label" data-key="contact.email_label">PRIMARY EMAIL</div>
+            <div class="contact-meta-val">mizu2711@gmail.com</div>
+            <button type="button" class="copy-btn-action" onclick="window.copyEmail()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span data-key="contact.copy_button">COPY EMAIL</span>
+            </button>
+          </div>
+
+          <div class="contact-meta-row">
+            <div class="contact-meta-label" data-key="contact.phone_label">SECURE TELEPHONE</div>
+            <div class="contact-meta-val">+84 979 203 507</div>
+          </div>
+
+          <div class="contact-meta-row" style="margin-bottom: 0;">
+            <div class="contact-meta-label" data-key="contact.location_label">BASE OF OPERATIONS</div>
+            <div class="contact-meta-val" style="font-size: 15px;" data-key="contact.location">
+              Ho Chi Minh City, Vietnam (Global Remote)
+            </div>
+          </div>
+        </div>
+
+        <!-- External Channels List -->
+        <div class="channels-list" id="channels-container">
+          <!-- Injected dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-rights" data-key="footer.rights">
+        &copy; 2026 THUY VU // MIZUBLUE2711. ALL RIGHTS RESERVED.
+      </div>
+      <div class="footer-spec" data-key="footer.spec">
+        ENGINEERED UNDER CYBERNETIC SWISS BRUTALISM &bull; ZERO SOFT RADIUS &bull; 60 FPS DETERMINISTIC CANVAS
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="canvas-bg.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
