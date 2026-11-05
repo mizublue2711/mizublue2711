@@ -1,0 +1,17 @@
+project_id,title,slug,category,status,updated_at
+proj-ac-01,E2E AI-Image PIM Automation Pipeline,e2e-ai-image-pim-automation,Autonomous AI Infrastructure,Production Live,2025-10-15
+proj-ac-02,Video-as-Code Automated Production Pipeline,video-as-code-remotion-pipeline,Programmatic Media Infrastructure,Production Live,2025-11-20
+proj-ac-03,FFmpeg Cloud Media Engine & Scene QA,ffmpeg-cloud-media-engine,Cloud Media Infrastructure,Production Live,2025-12-10
+proj-ac-04,Studio Configurator Node (B2B Web3D),studio-configurator-node,Interactive Web3D Systems,Production Live,2026-01-18
+proj-ac-05,3D Data Metropolis & Profit Visualization,3d-data-metropolis-voxel-city,FinTech & Spatial Data,Production Live,2026-02-05
+proj-ac-06,3D Robotics Factory & Physical AI Cloud,3d-robotics-factory-spatial-ai,Physical AI & Robotics,Production Live,2026-03-12
+proj-ac-07,Multi-Zone Spatial 3D Compound Engine,multi-zone-spatial-3d-compound,Spatial Brand Architecture,Production Live,2026-04-02
+proj-ac-08,VibePath GPS Telemetry to 3D Map Video,vibepath-gps-3d-map-pipeline,Geospatial & Video Automation,Production Live,2026-05-14
+proj-ac-09,0-Code Digital Flipbook Engine,0-code-digital-flipbook-engine,0-Code Document Systems,Production Live,2026-06-01
+proj-ac-10,3D Spatial WebApp Presentation Engine,webapp-presentation-engine,Interactive Web3D Systems,Production Live,2026-11-01
+proj-legacy-01,Hubbis,hubbis,Editorial & Data Visualization,Archived / Production,2025-07-01
+proj-legacy-02,Australia Experiences,australia-experiences,Brand Identity & Motion Graphics,Archived / Production,2025-08-01
+proj-legacy-03,Project 98,project-98,Product Redirection & Packaging,Archived / Production,2026-09-01
+proj-legacy-04,The Deer Project,the-deer-project,Industrial & Form Design,Archived / Production,2020-10-01
+proj-legacy-05,The Growth Agency,the-growth-agency,Creative Direction & UI/UX,Archived / Production,2018-10-01
+proj-legacy-06,VGS Shop,vgs-shop,E-Commerce & Digital Media,Archived / Production,2016-10-01
