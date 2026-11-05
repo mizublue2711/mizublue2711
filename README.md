@@ -52,8 +52,8 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
 
 - ⚙️ **Dual-Engine Architecture:** Vận hành mô hình tách biệt trách nhiệm *"Brain on Dify, Muscle on n8n"* — Tận dụng Dify.ai cho cognitive reasoning & schema validation, kết hợp n8n cho luồng dữ liệu event-driven, webhook routing và streaming.
 - ☁️ **Infrastructure & Production Hosting:** Triển khai và quản trị hạ tầng trên **Ubuntu Linux VPS**, **Google Cloud Platform (GCP)**, **Cloudflare Workers/Pages** và **R2 Object Storage**.
-- 📐 **Zero-Code JSON-Driven Substrate:** Kiến trúc hóa giao diện dựa trên cấu trúc JSON thuần, bảo vệ AI agent khỏi context bloat và đảm bảo SLA vận hành ổn định 99.99%.
-- 🎨 **Visual Engineering Heritage:** Hơn 5 năm kinh nghiệm trong lĩnh vực **Brand Identity, Editorial Design & Financial Infographics** trước khi chuyển hóa hoàn toàn sang Creative Coding, WebGL/Three.js và AI Automation.
+- 📐 **Zero-Code JSON-Driven Substrate:** Kiến trúc hóa giao diện dựa trên cấu trúc JSON thuần, bảo vệ AI agent khỏi context bloat và đảm bảo SLA vận hành ổn định.
+- 🎨 **Visual Engineering Heritage:** Hơn 9 năm kinh nghiệm trong lĩnh vực **Brand Identity, Editorial Design & Financial Infographics** trước khi chuyển hóa hoàn toàn sang Creative Coding, WebGL/Three.js và AI Automation.
 
 ---
 
