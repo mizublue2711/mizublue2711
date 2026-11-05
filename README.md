@@ -152,7 +152,7 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
 
 [![Framer Live Portfolio](https://img.shields.io/badge/⚡_TRẢI_NGHIỆM_PORTFOLIO_CHÍNH_THỨC_TRÊN_FRAMER-CLICK_HERE_TO_LAUNCH-00E5FF?style=for-the-badge&labelColor=09090B&color=00E5FF)](https://thuy-vu-designer.framer.website/)
 
-👉 **Trang chủ chính thức:** [thuy-vu-designer.framer.website](https://thuy-vu-designer.framer.website/)  
+👉 **Portfolio đồ hoạ:** [thuy-vu-designer.framer.website](https://thuy-vu-designer.framer.website/)  
 🌐 **Nền tảng kiến trúc kỹ thuật:** [artificialcraft.space](https://artificialcraft.space/)
 
 </div>
