@@ -1,17 +1,25 @@
 <div align="center">
 
-<!-- HEADER BANNER & SYSTEM TELEMETRY -->
-```ansi
-[1;36m┌────────────────────────────────────────────────────────────────────────────────────────┐[0m
-[1;36m│[0m  [1;37mMIZU // SYSTEM ARCHITECTURE[0m                  [1;32m[ STATUS: ONLINE // 60 FPS ][0m          [1;36m│[0m
-[1;36m│[0m  [1;36m► CREATIVE TECHNOLOGIST & AUTOMATION DESIGNER[0m                                         [1;36m│[0m
-[1;36m│[0m  [0;90m"Merging 3D Spatial Engines with Deterministic AI Pipelines"[0m                          [1;36m│[0m
-[1;36m└────────────────────────────────────────────────────────────────────────────────────────┘[0m
+<!-- CYBER-OCCULT SIGIL BANNER & TELEMETRY -->
+```text
+                     ◯ ☽ ◑ ● ◐ ❨ ◯
+            ৣৢ ꐑஇꐑ ৣৢ     ஐ  𓆦  ஐ     ৣৢ ꐑஇꐑ ৣৢ
+           ༎ຶ  𓂀  ༎ຶ       ༽  𓆣  ༼       ༎ຶ  𓂀  ༎ຶ
+      ༭ຶཬ ༽ ৣྀ ৣྀ ༼༭ຶཬ  ─── 𓆨𓆑𓆤𓆧𓆬 ───  ༭ຶཬ ༽ ৣྀ ৣྀ ༼༭ຶཬ
+        ʅ͡͡͡͡͡͡͡͡͡͡͡()ʃ͡͡͡͡͡͡͡͡͡͡                         ʅ͡͡͡͡͡͡͡͡͡͡͡()ʃ͡͡͡͡͡͡͡͡͡͡
+┌──────────────────────────────────────────────────────────────┐
+│  M̵̡͉̪̓̈́͑̎î̵̲̘̫̗́̓̾z̸̢̛̟̉̌̍͜u̴͔̯̠̿́͗͠ B̵͖̟͉͗̒̓́l̸̝͕̔̿̈́͝u̷̙̠͋͛͘͝e̴̺͇̗̓̀̎͘ // 0xCYBER_SIGIL // [ STATUS: TRANSCENDING ] │
+│  ► CREATIVE TECHNOLOGIST & AUTOMATION DESIGNER               │
+│  "Merging 3D Spatial Engines with Deterministic AI Pipelines"│
+└──────────────────────────────────────────────────────────────┘
+          ༽ ლ༎ຶஉ⊍ ࿊ ༂|̲̲̲͡⊍ℰ ྀ༼ ཬ༭ຶ   ლ •̛༽இ ༼•̛ლ
 ```
 
-# ⚡ CREATIVE TECHNOLOGIST & AUTOMATION DESIGNER
+# ৣৢ ꐑஇꐑ ৣৢ &nbsp; M̵̡͉̪̓̈́͑̎î̵̲̘̫̗́̓̾z̸̢̛̟̉̌̍͜u̴͔̯̠̿́͗͠ B̵͖̟͉͗̒̓́l̸̝͕̔̿̈́͝u̷̙̠͋͛͘͝e̴̺͇̗̓̀̎͘ &nbsp; ৣৢ ꐑஇꐑ ৣৢ
+### ⚡ CREATIVE TECHNOLOGIST & AUTOMATION DESIGNER
 
 <p align="center">
+  <code>◯ ☽ ◑ ● ◐ ❨ ◯ &nbsp; ༎ຶ 𓂀 ༎ຶ 𓂀 ༎ຶ &nbsp; ◯ ☽ ◑ ● ◐ ❨ ◯</code><br/>
   <strong>Bridging the gap between 3D Spatial Experiences and Deterministic Process Automation</strong>
 </p>
 
@@ -26,6 +34,10 @@
   <a href="https://github.com/mizublue2711" target="_blank">
     <img src="https://img.shields.io/badge/GH-MIZUBLUE2711-09090B?style=for-the-badge&logo=github&logoColor=00E5FF" alt="GitHub Profile" height="38"/>
   </a>
+</p>
+
+<p align="center">
+  <code>༭ຶཬ ༽ ৣྀ ৣྀ ༼༭ຶཬ &nbsp; • &nbsp; M̶̧͚̪͉̯̜̰͎̘̀͋̇̀͗̍́͆̑̏͂̿̊̚i̶̡̹͈͎̳̞͙͖̾̂̀͑̀͆̑̓̽̉͐͘͘ͅz̷̛̻̤̯̥̝͎̯͚̹͇͗̆̄̈́̅̎̓̿̎͋́̅̈́̚͜u̷̬̩̰̫͕̘͎̔́̃̄̍͋̓ b̸̼̋͛̑͆̈́͗̿̅l̶̬̞͎̖͉̹̝͕̝͖̣̉͆u̷̬̩̰̫͕̘͎̔́̃̄̍͋̓ë̸͓̮͉͈͇͍̖͎̩̞͈́́́̋̇̾͋̈́̾͆͑͘͘͜͠͝ &nbsp; • &nbsp; ༭ຶཬ ༽ ৣྀ ৣྀ ༼༭ຶཬ</code>
 </p>
 
 ---
@@ -148,5 +160,5 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
 ---
 
 <div align="center">
-  <sub>Designed with Cybernetic Swiss Brutalism • Built by <strong><a href="https://github.com/mizublue2711" style="color: #00E5FF;">@mizublue2711</a></strong> • 2026</sub>
+  <sub>༽ ლ༎ຶஉ⊍ ࿊ ༂|̲̲̲͡⊍ℰ ྀ༼ ཬ༭ຶ • Designed with Cybernetic Swiss Occultism • Built by <strong><a href="https://github.com/mizublue2711" style="color: #00E5FF;">@mizublue2711</a></strong> • 2026</sub>
 </div>
