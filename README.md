@@ -46,9 +46,9 @@
 
 ## 🔮 01 // SYSTEM OPERATIONAL MATRIX & ABOUT ME
 
-> **"Loại bỏ sự phân mảnh thủ công bằng kiến trúc tự động hóa tất định và trải nghiệm tương tác không gian."**
+> **"Loại bỏ sự phân mảnh thủ công bằng kiến trúc tự động hóa nghiêm túc và trải nghiệm tương tác không gian."**
 
-Tôi là một **Creative Technologist & Automation Designer** (DesignOps Architect), tập trung xóa nhòa ranh giới giữa **Trải nghiệm thị giác 3D (Spatial Web)** và **Hệ thống tự động hóa vận hành (AI Pipelines)**.
+Tôi là một **Creative Technologist & Automation Designer** (DesignOps Architect), lọ mọ mài mòn ranh giới giữa **Trải nghiệm thị giác 3D (Spatial Web)** và **Hệ thống tự động hóa vận hành (AI Pipelines)**.
 
 - ⚙️ **Dual-Engine Architecture:** Vận hành mô hình tách biệt trách nhiệm *"Brain on Dify, Muscle on n8n"* — Tận dụng Dify.ai cho cognitive reasoning & schema validation, kết hợp n8n cho luồng dữ liệu event-driven, webhook routing và streaming.
 - ☁️ **Infrastructure & Production Hosting:** Triển khai và quản trị hạ tầng trên **Ubuntu Linux VPS**, **Google Cloud Platform (GCP)**, **Cloudflare Workers/Pages** và **R2 Object Storage**.
@@ -152,8 +152,8 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
 
 [![Framer Live Portfolio](https://img.shields.io/badge/⚡_TRẢI_NGHIỆM_PORTFOLIO_CHÍNH_THỨC_TRÊN_FRAMER-CLICK_HERE_TO_LAUNCH-00E5FF?style=for-the-badge&labelColor=09090B&color=00E5FF)](https://thuy-vu-designer.framer.website/)
 
-👉 **Portfolio đồ hoạ:** [thuy-vu-designer.framer.website](https://thuy-vu-designer.framer.website/)  
-🌐 **Nền tảng kiến trúc kỹ thuật:** [artificialcraft.space](https://artificialcraft.space/)
+👉 **Lớp vỏ đồ hoạ:** [thuy-vu-designer.framer.website](https://thuy-vu-designer.framer.website/)  
+🌐 **Lớp lõi kiến trúc kỹ thuật:** [artificialcraft.space](https://artificialcraft.space/)
 
 </div>
 
