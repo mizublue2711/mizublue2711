@@ -81,7 +81,7 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
         <img src="https://img.shields.io/badge/Google_Cloud_GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="GCP"/>
         <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
         <img src="https://img.shields.io/badge/Pinecone_Vector_RAG-000000?style=flat-square&logo=pinecone&logoColor=00E5FF" alt="Pinecone"/>
-        <img src="https://img.shields.io/badge/Gemini_1.5_Flash_QA-8E75B2?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
+        <img src="https://img.shields.io/badge/Google_Vertex_QA-8E75B2?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
       </p>
       <small>Event-driven workflows, multi-stage LLM evaluation & zero-hallucination pipelines.</small>
     </td>
