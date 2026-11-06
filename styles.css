@@ -1192,28 +1192,32 @@ body {
 }
 
 /* ==========================================================================
-   A4 PORTRAIT MULTI-PAGE PRINT & PDF ENGINE (LEGO BLOCK ARCHITECTURE)
+   A4 PORTRAIT SEAMLESS BLEED MULTI-PAGE PRINT & PDF ENGINE
    ========================================================================== */
-@page {
-  size: A4 portrait;
-  margin: 10mm 12mm;
-}
-
 @media print {
-  /* Enforce exact dark colors and obsidian layering */
+  /* 1. Xóa lề mặc định của máy in để màu nền tràn viền 100% */
+  @page {
+    size: A4 portrait;
+    margin: 0; /* Xóa khung viền trắng bao ngoài */
+  }
+
+  /* 2. Thiết lập Body tràn viền nhưng bắt buộc ép màu nền */
   html, body {
-    width: 100% !important;
-    background-color: #09090b !important;
-    color: #f4f4f5 !important;
-    print-color-adjust: exact !important;
+    background-color: #09090B !important;
+    color: #F4F8FF !important;
     -webkit-print-color-adjust: exact !important;
-    font-size: 10.5pt !important;
-    line-height: 1.5 !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    min-height: 100% !important;
+    font-size: 10pt !important;
+    line-height: 1.45 !important;
   }
 
   *, *::before, *::after {
-    print-color-adjust: exact !important;
     -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1227,41 +1231,56 @@ body {
     display: none !important;
   }
 
-  /* Container width reset for A4 print area */
-  .app-container {
-    max-width: 100% !important;
+  /* 3. VÙNG ĐỆM AN TOÀN (SAFE ZONE): Giữ chữ cách mép giấy 15mm-18mm */
+  .cv-container, main, .page-wrapper, .app-container {
+    box-sizing: border-box !important;
+    padding: 15mm 18mm !important; /* Lề an toàn cho A4 */
     width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    max-width: 210mm !important;
+    margin: 0 auto !important;
   }
 
   /* Section Spacing on A4 */
   .hero-section {
-    padding: 0 0 16pt 0 !important;
-    border-bottom: 1px solid #1f1f2e !important;
+    padding: 0 0 14pt 0 !important;
+    border-bottom: 1px solid #1F1F2E !important;
     break-after: auto !important;
     page-break-after: auto !important;
   }
 
   .section-wrapper {
-    padding: 16pt 0 14pt 0 !important;
-    border-bottom: 1px solid #1f1f2e !important;
+    padding: 14pt 0 12pt 0 !important;
+    border-bottom: 1px solid #1F1F2E !important;
     break-inside: auto !important;
     page-break-inside: auto !important;
   }
 
-  /* Avoid orphan headers across page transitions */
-  h1, h2, h3, h4, .section-prefix, .section-title, .section-subtitle {
+  /* 4. ĐIỀU CHỈNH HEADER LỚN: Tự động co tỷ lệ & rớt dòng mượt mà */
+  h1, h2, h3, .hero-title, .section-title, .hero-name {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important; /* Không cho chữ tràn ngang */
     break-after: avoid !important;
     page-break-after: avoid !important;
   }
 
-  /* -------------------------------------------------------------------------
-     LEGO BLOCK ARCHITECTURE: STRICT PAGE-BREAK AVOIDANCE
-     ------------------------------------------------------------------------- */
+  /* Co nhẹ font Header riêng khi in để không bị đè khối */
+  h1, .hero-title, .hero-name {
+    font-size: 28pt !important; /* Giảm nhẹ từ size màn hình xuống size in */
+    line-height: 1.2 !important;
+  }
+
+  h2, .section-title {
+    font-size: 18pt !important;
+    line-height: 1.25 !important;
+  }
+
+  /* 5. Chống cắt đôi khối nội dung giữa các trang */
   .cv-lego-block,
-  .experience-card,
+  .experience-item,
   .metric-card,
+  .experience-card,
   .stack-pillar-card,
   .edu-card,
   .contact-terminal-box,
@@ -1293,14 +1312,14 @@ body {
   .channel-link-card,
   .qr-mini-card,
   .hero-telemetry-strip {
-    background-color: #0b0b0f !important;
-    border: 1px solid #1f1f2e !important;
-    color: #f4f4f5 !important;
+    background-color: #0B0B0F !important;
+    border: 1px solid #1F1F2E !important;
+    color: #F4F8FF !important;
   }
 
   /* Retain Vibrant Tactical Signal Accents */
   .hero-name, .section-title, h1, h2, h3, h4, .text-white {
-    color: #ffffff !important;
+    color: #FFFFFF !important;
   }
 
   .section-prefix,
@@ -1313,7 +1332,7 @@ body {
   .telemetry-tag,
   .qr-tag,
   .channel-tag {
-    color: #00e5ff !important;
+    color: #00E5FF !important;
   }
 
   .exp-company-sub,
@@ -1330,7 +1349,7 @@ body {
   .hero-summary,
   .edu-institution,
   .text-secondary {
-    color: #a1a1aa !important;
+    color: #A1A1AA !important;
   }
 
   /* Grid Layouts for A4 printing */
@@ -1383,8 +1402,8 @@ body {
   .qr-img-wrapper {
     width: 34pt !important;
     height: 34pt !important;
-    background: #09090b !important;
-    border: 1px solid #1f1f2e !important;
+    background: #09090B !important;
+    border: 1px solid #1F1F2E !important;
   }
 
   .qr-code-img {
