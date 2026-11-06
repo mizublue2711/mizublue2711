@@ -1231,10 +1231,10 @@ body {
     display: none !important;
   }
 
-  /* 3. VÙNG ĐỆM AN TOÀN (SAFE ZONE): Giữ chữ cách mép giấy 15mm-18mm */
+  /* 3. VÙNG ĐỆM AN TOÀN (SAFE ZONE): Giữ chữ cách mép giấy 18mm cân đối sang trọng */
   .cv-container, main, .page-wrapper, .app-container {
     box-sizing: border-box !important;
-    padding: 15mm 18mm !important; /* Lề an toàn cho A4 */
+    padding: 18mm 18mm !important; /* Lề an toàn chuẩn A4 cân xứng 18mm */
     width: 100% !important;
     max-width: 210mm !important;
     margin: 0 auto !important;
@@ -1255,8 +1255,8 @@ body {
     page-break-inside: auto !important;
   }
 
-  /* 4. ĐIỀU CHỈNH HEADER LỚN: Tự động co tỷ lệ & rớt dòng mượt mà */
-  h1, h2, h3, .hero-title, .section-title, .hero-name {
+  /* 4. ĐIỀU CHỈNH TIÊU ĐỀ (H1-H4, SECTION-TITLE): Tự động co tỷ lệ, rớt dòng & luôn dính liền khối nội dung */
+  h1, h2, h3, h4, .hero-title, .section-title, .hero-name, .section-prefix, .pillar-title, .exp-role-title {
     max-width: 100% !important;
     overflow-wrap: break-word !important;
     word-break: break-word !important;
@@ -1269,11 +1269,20 @@ body {
   h1, .hero-title, .hero-name {
     font-size: 28pt !important; /* Giảm nhẹ từ size màn hình xuống size in */
     line-height: 1.2 !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
   }
 
   h2, .section-title {
     font-size: 18pt !important;
     line-height: 1.25 !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  h3, h4 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
   }
 
   /* 5. Chống cắt đôi khối nội dung giữa các trang */
