@@ -72,13 +72,48 @@
 
     <!-- 00 // HERO SECTION -->
     <section class="hero-section" id="hero">
-      <div class="hero-telemetry-strip">
-        <span><span class="highlight">NODE:</span> MIZUBLUE2711 // PRODUCTION ARCHITECTURE</span>
-        <span class="highlight">[ DETERMINISTIC 99.99% SLA ]</span>
-        <span>LATENCY: &lt;50ms // GPU CLIENT OFFLOAD</span>
+      <div class="hero-telemetry-strip cv-lego-block">
+        <div class="telemetry-info-left">
+          <span><span class="highlight">NODE:</span> MIZUBLUE2711 // PRODUCTION ARCHITECTURE</span>
+          <span class="highlight">[ DETERMINISTIC 99.99% SLA ]</span>
+          <span>LATENCY: &lt;50ms // GPU CLIENT OFFLOAD</span>
+        </div>
+
+        <!-- HEADER QR CODE CLUSTER (SCAN & CLICKABLE IN PDF) -->
+        <div class="hero-qr-cluster">
+          <a href="https://thuy-vu-designer.framer.website/" target="_blank" rel="noopener noreferrer" class="qr-mini-card" title="Scan or Click to open Framer Portfolio">
+            <div class="qr-img-wrapper">
+              <img src="assets/qr-framer.svg" alt="QR Framer Portfolio" class="qr-code-img" />
+            </div>
+            <div class="qr-info">
+              <span class="qr-tag">SCAN LIVE</span>
+              <span class="qr-name">PORTFOLIO ↗</span>
+            </div>
+          </a>
+
+          <a href="https://artificialcraft.space/" target="_blank" rel="noopener noreferrer" class="qr-mini-card" title="Scan or Click to open Artificial Craft Platform">
+            <div class="qr-img-wrapper">
+              <img src="assets/qr-platform.svg" alt="QR Artificial Craft" class="qr-code-img" />
+            </div>
+            <div class="qr-info">
+              <span class="qr-tag">SCAN ARCH</span>
+              <span class="qr-name">PLATFORM ↗</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/mizublue2711" target="_blank" rel="noopener noreferrer" class="qr-mini-card" title="Scan or Click to open GitHub Profile">
+            <div class="qr-img-wrapper">
+              <img src="assets/qr-github.svg" alt="QR GitHub Repo" class="qr-code-img" />
+            </div>
+            <div class="qr-info">
+              <span class="qr-tag">SCAN CODE</span>
+              <span class="qr-name">GITHUB ↗</span>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="hero-main-frame chamfer-tr">
+      <div class="hero-main-frame chamfer-tr cv-lego-block">
         <div class="hero-corner-bracket bracket-tl"></div>
         <div class="hero-corner-bracket bracket-tr"></div>
         <div class="hero-corner-bracket bracket-bl"></div>
@@ -206,10 +241,10 @@
 
       <div class="contact-container">
         <!-- Terminal Box -->
-        <div class="contact-terminal-box chamfer-tr">
+        <div class="contact-terminal-box chamfer-tr cv-lego-block">
           <div class="contact-meta-row">
             <div class="contact-meta-label" data-key="contact.email_label">PRIMARY EMAIL</div>
-            <div class="contact-meta-val">mizu2711@gmail.com</div>
+            <a href="mailto:mizu2711@gmail.com" class="contact-meta-val contact-meta-link">mizu2711@gmail.com</a>
             <button type="button" class="copy-btn-action" onclick="window.copyEmail()">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               <span data-key="contact.copy_button">COPY EMAIL</span>
@@ -218,7 +253,7 @@
 
           <div class="contact-meta-row">
             <div class="contact-meta-label" data-key="contact.phone_label">SECURE TELEPHONE</div>
-            <div class="contact-meta-val">+84 979 203 507</div>
+            <a href="tel:+84979203507" class="contact-meta-val contact-meta-link">+84 979 203 507</a>
           </div>
 
           <div class="contact-meta-row" style="margin-bottom: 0;">
