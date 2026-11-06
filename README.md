@@ -46,14 +46,14 @@
 
 ## 🔮 01 // SYSTEM OPERATIONAL MATRIX & ABOUT ME
 
-> **"Loại bỏ sự phân mảnh thủ công bằng kiến trúc tự động hóa tất định và trải nghiệm tương tác không gian."**
+> **"Loại bỏ sự phân mảnh thủ công bằng kiến trúc tự động hóa nghiêm túc và trải nghiệm tương tác không gian."**
 
-Tôi là một **Creative Technologist & Automation Designer** (DesignOps Architect), tập trung xóa nhòa ranh giới giữa **Trải nghiệm thị giác 3D (Spatial Web)** và **Hệ thống tự động hóa vận hành (AI Pipelines)**.
+Tôi là một **Creative Technologist & Automation Designer** (DesignOps Architect), lọ mọ mài mòn ranh giới giữa **Trải nghiệm thị giác 3D (Spatial Web)** và **Hệ thống tự động hóa vận hành (AI Pipelines)**.
 
 - ⚙️ **Dual-Engine Architecture:** Vận hành mô hình tách biệt trách nhiệm *"Brain on Dify, Muscle on n8n"* — Tận dụng Dify.ai cho cognitive reasoning & schema validation, kết hợp n8n cho luồng dữ liệu event-driven, webhook routing và streaming.
 - ☁️ **Infrastructure & Production Hosting:** Triển khai và quản trị hạ tầng trên **Ubuntu Linux VPS**, **Google Cloud Platform (GCP)**, **Cloudflare Workers/Pages** và **R2 Object Storage**.
-- 📐 **Zero-Code JSON-Driven Substrate:** Kiến trúc hóa giao diện dựa trên cấu trúc JSON thuần, bảo vệ AI agent khỏi context bloat và đảm bảo SLA vận hành ổn định 99.99%.
-- 🎨 **Visual Engineering Heritage:** Hơn 5 năm kinh nghiệm trong lĩnh vực **Brand Identity, Editorial Design & Financial Infographics** trước khi chuyển hóa hoàn toàn sang Creative Coding, WebGL/Three.js và AI Automation.
+- 📐 **Zero-Code JSON-Driven Substrate:** Kiến trúc hóa giao diện dựa trên cấu trúc JSON thuần, bảo vệ AI agent khỏi context bloat và đảm bảo SLA vận hành ổn định.
+- 🎨 **Visual Engineering Heritage:** Hơn 9 năm kinh nghiệm trong lĩnh vực **Brand Identity, Editorial Design & Financial Infographics** trước khi chuyển hóa hoàn toàn sang Creative Coding, WebGL/Three.js và AI Automation.
 
 ---
 
@@ -81,7 +81,7 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
         <img src="https://img.shields.io/badge/Google_Cloud_GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="GCP"/>
         <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
         <img src="https://img.shields.io/badge/Pinecone_Vector_RAG-000000?style=flat-square&logo=pinecone&logoColor=00E5FF" alt="Pinecone"/>
-        <img src="https://img.shields.io/badge/Gemini_1.5_Flash_QA-8E75B2?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
+        <img src="https://img.shields.io/badge/Google_Vertex_QA-8E75B2?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
       </p>
       <small>Event-driven workflows, multi-stage LLM evaluation & zero-hallucination pipelines.</small>
     </td>
@@ -152,8 +152,8 @@ Tôi là một **Creative Technologist & Automation Designer** (DesignOps Archit
 
 [![Framer Live Portfolio](https://img.shields.io/badge/⚡_TRẢI_NGHIỆM_PORTFOLIO_CHÍNH_THỨC_TRÊN_FRAMER-CLICK_HERE_TO_LAUNCH-00E5FF?style=for-the-badge&labelColor=09090B&color=00E5FF)](https://thuy-vu-designer.framer.website/)
 
-👉 **Trang chủ chính thức:** [thuy-vu-designer.framer.website](https://thuy-vu-designer.framer.website/)  
-🌐 **Nền tảng kiến trúc kỹ thuật:** [artificialcraft.space](https://artificialcraft.space/)
+👉 **Lớp vỏ đồ hoạ:** [thuy-vu-designer.framer.website](https://thuy-vu-designer.framer.website/)  
+🌐 **Lớp lõi kiến trúc kỹ thuật:** [artificialcraft.space](https://artificialcraft.space/)
 
 </div>
 
