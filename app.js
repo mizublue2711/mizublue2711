@@ -416,7 +416,7 @@
       metricsContainer.innerHTML = d.metrics.items
         .map(
           (m) => `
-        <div class="metric-card chamfer-tr">
+        <div class="metric-card chamfer-tr cv-lego-block">
           <div class="metric-header">
             <span class="metric-val">${m.val}</span>
             <span class="metric-unit">${m.unit}</span>
@@ -439,7 +439,7 @@
       expContainer.innerHTML = d.experience.items
         .map(
           (exp, index) => `
-        <div class="experience-card ${index === 0 ? 'active' : 'collapsed'}" id="${exp.id}">
+        <div class="experience-card cv-lego-block ${index === 0 ? 'active' : 'collapsed'}" id="${exp.id}">
           <div class="exp-header" onclick="window.toggleExperience('${exp.id}')">
             <div class="exp-primary-meta">
               <span class="exp-period-badge">${exp.period}</span>
@@ -470,7 +470,7 @@
       stackContainer.innerHTML = d.tech_stack.pillars
         .map(
           (p) => `
-        <div class="stack-pillar-card chamfer-tr">
+        <div class="stack-pillar-card chamfer-tr cv-lego-block">
           <span class="pillar-subtitle">${p.subtitle}</span>
           <h4 class="pillar-title">${p.title}</h4>
           <ul class="pillar-tools-list">
@@ -492,7 +492,7 @@
       eduContainer.innerHTML = d.education.items
         .map(
           (edu) => `
-        <div class="edu-card chamfer-tr">
+        <div class="edu-card chamfer-tr cv-lego-block">
           <span class="edu-type-tag">${edu.type}</span>
           <span class="edu-year">${edu.year}</span>
           <h4 class="edu-title">${edu.title}</h4>
@@ -518,7 +518,7 @@
       channelsContainer.innerHTML = d.contact.links
         .map(
           (link) => `
-        <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="channel-link-card chamfer-tr">
+        <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="channel-link-card chamfer-tr cv-lego-block">
           <span class="channel-name">${link.name}</span>
           <span class="channel-tag">[ ${link.tag} ] ↗</span>
         </a>

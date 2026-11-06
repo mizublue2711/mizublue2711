@@ -312,21 +312,103 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+/* --------------------------------------------------------------------------
+   LEGO BLOCK MODULAR ARCHITECTURE
+   -------------------------------------------------------------------------- */
+.cv-lego-block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  position: relative;
+}
+
 .hero-telemetry-strip {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   border: 1px solid var(--border-strong);
   background: var(--panel);
   padding: 8px 16px;
   margin-bottom: 24px;
   font-size: 11px;
   color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.telemetry-info-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .hero-telemetry-strip .highlight {
   color: var(--cyan);
   font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   HEADER QR CODE CLUSTER (SCAN & CLICKABLE)
+   -------------------------------------------------------------------------- */
+.hero-qr-cluster {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.qr-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+}
+
+.qr-mini-card:hover {
+  border-color: var(--cyan);
+  background: var(--subpanel);
+  transform: translateY(-1px);
+}
+
+.qr-img-wrapper {
+  width: 36px;
+  height: 36px;
+  padding: 2px;
+  background: #09090b;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.qr-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.qr-tag {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.06em;
+}
+
+.qr-name {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
 }
 
 .hero-main-frame {
@@ -942,6 +1024,17 @@ body {
   font-family: var(--font-display);
 }
 
+.contact-meta-link {
+  color: var(--text-white);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.15s ease;
+}
+
+.contact-meta-link:hover {
+  color: var(--cyan);
+}
+
 .copy-btn-action {
   margin-top: 8px;
   background: var(--panel);
@@ -1098,83 +1191,204 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------------
-   PRINT STYLESHEET (CLEAN 2-PAGE EXECUTIVE CV EXPORT)
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   A4 PORTRAIT MULTI-PAGE PRINT & PDF ENGINE (LEGO BLOCK ARCHITECTURE)
+   ========================================================================== */
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm;
+}
+
 @media print {
-  body, html {
-    background: #ffffff !important;
-    color: #111111 !important;
-    font-size: 11pt !important;
+  /* Enforce exact dark colors and obsidian layering */
+  html, body {
+    width: 100% !important;
+    background-color: #09090b !important;
+    color: #f4f4f5 !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    font-size: 10.5pt !important;
+    line-height: 1.5 !important;
   }
-  
+
+  *, *::before, *::after {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Hide interactive web-only chrome */
   #cyber-canvas,
   .top-nav,
   .swiss-grid-lines,
-  .hero-cta-group,
-  .copy-btn-action,
-  .exp-toggle-btn {
+  .exp-toggle-btn,
+  .copy-btn-action {
     display: none !important;
   }
-  
+
+  /* Container width reset for A4 print area */
   .app-container {
     max-width: 100% !important;
+    width: 100% !important;
     padding: 0 !important;
+    margin: 0 !important;
   }
-  
-  .hero-section,
+
+  /* Section Spacing on A4 */
+  .hero-section {
+    padding: 0 0 16pt 0 !important;
+    border-bottom: 1px solid #1f1f2e !important;
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+
   .section-wrapper {
-    padding: 12pt 0 !important;
-    border-bottom: 1px solid #333333 !important;
+    padding: 16pt 0 14pt 0 !important;
+    border-bottom: 1px solid #1f1f2e !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
-  
+
+  /* Avoid orphan headers across page transitions */
+  h1, h2, h3, h4, .section-prefix, .section-title, .section-subtitle {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     LEGO BLOCK ARCHITECTURE: STRICT PAGE-BREAK AVOIDANCE
+     ------------------------------------------------------------------------- */
+  .cv-lego-block,
+  .experience-card,
+  .metric-card,
+  .stack-pillar-card,
+  .edu-card,
+  .contact-terminal-box,
+  .channel-link-card,
+  .hero-main-frame,
+  .hero-telemetry-strip {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+    margin-bottom: 10pt !important;
+    position: relative !important;
+  }
+
+  /* Always expand all experience accordion cards in PDF */
+  .experience-card .exp-body,
+  .experience-card.collapsed .exp-body {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Ensure backgrounds and borders stay crisp Dark Obsidian (#09090B / #0B0B0F) */
   .hero-main-frame,
   .metric-card,
   .experience-card,
   .stack-pillar-card,
   .edu-card,
   .contact-terminal-box,
-  .channel-link-card {
-    background: #ffffff !important;
-    border: 1px solid #999999 !important;
-    color: #000000 !important;
-    box-shadow: none !important;
+  .channel-link-card,
+  .qr-mini-card,
+  .hero-telemetry-strip {
+    background-color: #0b0b0f !important;
+    border: 1px solid #1f1f2e !important;
+    color: #f4f4f5 !important;
   }
-  
-  .hero-name {
-    color: #000000 !important;
-    font-size: 26pt !important;
+
+  /* Retain Vibrant Tactical Signal Accents */
+  .hero-name, .section-title, h1, h2, h3, h4, .text-white {
+    color: #ffffff !important;
   }
-  
+
+  .section-prefix,
   .hero-role,
   .metric-val,
-  .section-prefix,
+  .exp-period-badge,
   .pillar-subtitle,
-  .edu-year {
-    color: #000000 !important;
+  .edu-year,
+  .highlight,
+  .telemetry-tag,
+  .qr-tag,
+  .channel-tag {
+    color: #00e5ff !important;
   }
-  
-  .text-white, h1, h2, h3, h4 {
-    color: #000000 !important;
+
+  .exp-company-sub,
+  .badge-experience,
+  .edu-type-tag,
+  .btn-indigo {
+    color: #5322FF !important;
   }
-  
-  .text-secondary, p, span, li {
-    color: #222222 !important;
+
+  .metric-desc,
+  .exp-scope-summary,
+  .exp-bullets li,
+  .section-subtitle,
+  .hero-summary,
+  .edu-institution,
+  .text-secondary {
+    color: #a1a1aa !important;
   }
-  
-  .experience-card.collapsed .exp-body {
-    display: block !important;
-  }
-  
+
+  /* Grid Layouts for A4 printing */
   .metrics-grid {
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8pt !important;
   }
-  
+
   .stack-matrix-grid {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8pt !important;
   }
-  
+
   .education-grid {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8pt !important;
+  }
+
+  .contact-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10pt !important;
+  }
+
+  /* Clickable PDF Links */
+  a, a:link, a:visited {
+    color: inherit !important;
+    text-decoration: none !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+
+  .hero-cta-group a,
+  .channel-link-card,
+  .qr-mini-card,
+  .contact-meta-link {
+    pointer-events: auto !important;
+    display: inline-flex !important;
+  }
+
+  /* Ensure QR code cluster displays crisply in PDF */
+  .hero-qr-cluster {
+    display: flex !important;
+    gap: 8pt !important;
+  }
+
+  .qr-img-wrapper {
+    width: 34pt !important;
+    height: 34pt !important;
+    background: #09090b !important;
+    border: 1px solid #1f1f2e !important;
+  }
+
+  .qr-code-img {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
