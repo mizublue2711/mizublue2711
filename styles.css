@@ -1060,6 +1060,71 @@ body {
   transform: rotate(20deg) scale(1.04);
 }
 
+/* Styling cho Biểu đồ Radar Page 5 (System Operations SLA) */
+.cv-radar-container-p5 {
+  background-color: #0D0D11;
+  border: 1px solid #18181E;
+  padding: 24px;
+  margin-top: 28px;
+  box-sizing: border-box;
+  position: relative;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cv-radar-container-p5:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.08);
+}
+
+.radar-header-p5 {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hud-tag-cyan {
+  color: #00E5FF;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.radar-title-p5 {
+  color: var(--text-white, #F4F8FF);
+  font-family: var(--font-display, inherit);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 4px 0 12px 0;
+  text-transform: uppercase;
+}
+
+.radar-legend-p5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: #F4F8FF;
+}
+
+.dot-emerald {
+  background: #10B981;
+  box-shadow: 0 0 6px #10B981;
+}
+
+.radar-svg-full {
+  width: 100%;
+  max-width: 440px;
+  max-height: 380px;
+  margin: 0 auto;
+  display: block;
+}
+
 /* --------------------------------------------------------------------------
    04 // EDUCATION & CREDENTIALS
    -------------------------------------------------------------------------- */
@@ -1470,7 +1535,8 @@ body {
   .channel-link-card,
   .hero-main-frame,
   .hero-telemetry-strip,
-  .cv-radar-container {
+  .cv-radar-container,
+  .cv-radar-container-p5 {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
     break-inside: avoid-page !important;
@@ -1478,14 +1544,21 @@ body {
     position: relative !important;
   }
 
-  /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa ở cuối trang */
+  /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa ở cuối trang 4 & 5 */
   #stack {
     display: flex !important;
     flex-direction: column !important;
     min-height: 240mm !important;
   }
 
-  .cv-radar-container {
+  #contact {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 240mm !important;
+  }
+
+  .cv-radar-container,
+  .cv-radar-container-p5 {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
     margin-top: auto !important; /* Đẩy khối Radar xuống bám đáy trang */
@@ -1494,9 +1567,11 @@ body {
     background-color: #0D0D11 !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    display: block !important;
   }
 
-  .radar-legend {
+  .radar-legend,
+  .radar-legend-p5 {
     display: flex !important;
     justify-content: center !important;
     gap: 16px !important;
@@ -1504,7 +1579,20 @@ body {
     font-size: 8pt !important;
   }
 
-  .radar-svg-3layer {
+  .radar-title-p5 {
+    color: #F4F8FF !important;
+    font-size: 11pt !important;
+    margin: 4px 0 8px 0 !important;
+  }
+
+  .hud-tag-cyan {
+    color: #00E5FF !important;
+    font-family: monospace !important;
+    font-size: 8pt !important;
+  }
+
+  .radar-svg-3layer,
+  .radar-svg-full {
     width: 100% !important;
     max-height: 240px !important;
     height: auto !important;

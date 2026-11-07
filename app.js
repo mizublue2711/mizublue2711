@@ -186,6 +186,13 @@
       footer: {
         rights: "© 2026 THUY VU // MIZUBLUE2711. ALL RIGHTS RESERVED.",
         spec: "ENGINEERED UNDER CYBERNETIC SWISS BRUTALISM • ZERO SOFT RADIUS • 60 FPS DETERMINISTIC CANVAS"
+      },
+      radar_p5: {
+        tag: "// TELEMETRY SYSTEM BENCHMARKS",
+        title: "PRODUCTION ENGINE SLA & LATENCY PROFILES",
+        leg_pim: "AI PIM Pipeline",
+        leg_video: "Video-as-Code Engine",
+        leg_webgl: "3D WebGL Engines"
       }
     },
     vi: {
@@ -365,6 +372,13 @@
       footer: {
         rights: "© 2026 VŨ THU THỦY // MIZUBLUE2711. TOÀN BỘ QUYỀN ĐƯỢC BẢO LƯU.",
         spec: "THIẾT KẾ THEO CYBERNETIC SWISS BRUTALISM • ZERO SOFT RADIUS • CANVAS 60 FPS ĐỒNG BỘ"
+      },
+      radar_p5: {
+        tag: "// TIÊU CHUẨN ĐO LƯỜNG HỆ THỐNG",
+        title: "HỒ SƠ SLA & TỐC ĐỘ VẬN HÀNH THỰC TẾ",
+        leg_pim: "Pipeline AI Xử lý Ảnh PIM",
+        leg_video: "Động cơ Video-as-Code",
+        leg_webgl: "Không gian 3D WebGL Engines"
       }
     }
   };
@@ -565,6 +579,19 @@
     if (legDesign && d.radar_stack) legDesign.textContent = d.radar_stack.legend_design;
     const legDevops = document.querySelector('[data-key="radar.legend_devops"]');
     if (legDevops && d.radar_stack) legDevops.textContent = d.radar_stack.legend_devops;
+
+    // Page 5 Radar Chart (System Operational Benchmarks)
+    const radarP5Tag = document.querySelector('[data-key="radar_p5.tag"]');
+    if (radarP5Tag && d.radar_p5) radarP5Tag.textContent = d.radar_p5.tag;
+    const radarP5Title = document.querySelector('[data-key="radar_p5.title"]');
+    if (radarP5Title && d.radar_p5) radarP5Title.textContent = d.radar_p5.title;
+
+    const legPim = document.querySelector('[data-key="radar_p5.leg_pim"]');
+    if (legPim && d.radar_p5) legPim.textContent = d.radar_p5.leg_pim;
+    const legVideo = document.querySelector('[data-key="radar_p5.leg_video"]');
+    if (legVideo && d.radar_p5) legVideo.textContent = d.radar_p5.leg_video;
+    const legWebgl = document.querySelector('[data-key="radar_p5.leg_webgl"]');
+    if (legWebgl && d.radar_p5) legWebgl.textContent = d.radar_p5.leg_webgl;
   }
 
   // Accordion Toggle
