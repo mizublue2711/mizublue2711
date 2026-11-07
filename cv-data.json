@@ -246,8 +246,8 @@
       "spec": "ENGINEERED UNDER CYBERNETIC SWISS BRUTALISM • ZERO SOFT RADIUS • 60 FPS DETERMINISTIC CANVAS"
     },
     "radar_p5": {
-      "tag": "// TELEMETRY SYSTEM BENCHMARKS",
-      "title": "PRODUCTION ENGINE SLA & LATENCY PROFILES",
+      "tag": "// REAL-WORLD TELEMETRY BENCHMARKS",
+      "title": "ITERATIVE SYSTEM SLA & TEST PASS RATES",
       "leg_pim": "AI PIM Pipeline",
       "leg_video": "Video-as-Code Engine",
       "leg_webgl": "3D WebGL Engines"
@@ -500,8 +500,8 @@
       "spec": "THIẾT KẾ THEO CYBERNETIC SWISS BRUTALISM • ZERO SOFT RADIUS • CANVAS 60 FPS ĐỒNG BỘ"
     },
     "radar_p5": {
-      "tag": "// TIÊU CHUẨN ĐO LƯỜNG HỆ THỐNG",
-      "title": "HỒ SƠ SLA & TỐC ĐỘ VẬN HÀNH THỰC TẾ",
+      "tag": "// ĐO LƯỜNG HỆ THỐNG THỰC TẾ",
+      "title": "SLA VẬN HÀNH THỰC TẾ & TỶ LỆ TEST PASS",
       "leg_pim": "Pipeline AI Xử lý Ảnh PIM",
       "leg_video": "Động cơ Video-as-Code",
       "leg_webgl": "Không gian 3D WebGL Engines"
