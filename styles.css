@@ -538,13 +538,16 @@ body {
   letter-spacing: 0.05em;
 }
 
-.badge-experience {
-  background: var(--indigo);
-  border: 1px solid var(--indigo);
-  color: var(--text-white);
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
+/* SỬA LỖI CHỮ TRÙNG MÀU NỀN TÍM */
+.badge-purple, .tag-purple, .hero-experience-badge, .badge-experience {
+  background-color: #5322FF !important;
+  color: #FFFFFF !important; /* Ép chữ màu trắng tuyệt đối */
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  padding: 4px 10px !important;
+  display: inline-block !important;
 }
 
 .hero-name {
@@ -1690,10 +1693,18 @@ body {
   }
 
   .exp-company-sub,
-  .badge-experience,
   .edu-type-tag,
   .btn-indigo {
     color: #5322FF !important;
+  }
+
+  /* SỬA LỖI CHỮ TRÙNG MÀU NỀN TÍM TRONG BẢN IN PDF */
+  .badge-purple, .tag-purple, .hero-experience-badge, .badge-experience {
+    background-color: #5322FF !important;
+    color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-weight: 700 !important;
   }
 
   .metric-desc,
