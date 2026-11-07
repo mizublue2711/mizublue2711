@@ -42,7 +42,7 @@
           { val: "100+", unit: "PAGES", label: "E-Commerce Landers", desc: "High-converting UI/UX layouts for VGS Shop, driving up to a 30% increase in online sales volume." },
           { val: "200+", unit: "MOTION ADS", label: "Video Production", desc: "Rapid 4-hour editing turnarounds, with 70% featuring custom-composed audio tracks." },
           { val: "-81%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 5–7 min down to 1–3 min per asset." },
-          { val: "$0.00", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
+          { val: "$0.0", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
         ]
       },
       radar_metrics: {
