@@ -27,7 +27,7 @@
         role: "SENIOR MULTIMEDIA DESIGNER & CREATIVE AUTOMATION ENGINEER",
         specializations: "Brand Identity • Editorial Publishing & Packaging • Motion Ads • Design Automation",
         experience_badge: "9+ YEARS EXP // SINCE 2016",
-        summary: "Senior Multimedia Designer with 9+ years of hands-on execution across 500+ financial publications, 100+ e-commerce landing pages, and 200+ short-form video ads. Combines graphic design precision with Python, n8n, Dify, Remotion, and WebGL to automate creative pipelines, slashing processing latency by 98% and eliminating cloud rendering fees.",
+        summary: "Senior Multimedia Designer with 9+ years of hands-on execution across 500+ financial publications, 100+ e-commerce landing pages, and 200+ short-form video ads. Combines graphic design precision with Python, n8n, Dify, Remotion, and WebGL to automate creative pipelines, slashing processing latency by 81% and eliminating cloud rendering fees.",
         cta_portfolio: "FRAMER PORTFOLIO",
         cta_platform: "ARTIFICIAL CRAFT",
         cta_contact: "TRANSMIT MESSAGE"
@@ -41,7 +41,7 @@
           { val: "500+", unit: "REPORTS & CHARTS", label: "Financial Publications", desc: "Complex financial journals and data infographics for Hong Kong / global wealth management markets (Hubbis)." },
           { val: "100+", unit: "PAGES", label: "E-Commerce Landers", desc: "High-converting UI/UX layouts for VGS Shop, driving up to a 30% increase in online sales volume." },
           { val: "200+", unit: "MOTION ADS", label: "Video Production", desc: "Rapid 4-hour editing turnarounds, with 70% featuring custom-composed audio tracks." },
-          { val: "-98%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 3–5 min down to 1–3 sec per asset." },
+          { val: "-81%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 5–7 min down to 1–3 min per asset." },
           { val: "$0.00", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
         ]
       },
