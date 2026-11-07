@@ -240,6 +240,82 @@
       <div class="experience-list" id="experience-container">
         <!-- Injected dynamically via app.js -->
       </div>
+
+      <!-- KHỐI RADAR CHART SYSTEM OPERATIONAL BENCHMARKS (LẤP ĐÁY TRANG DƯỚI MOTION GRAPHICS) -->
+      <div class="cv-radar-container-p5 cv-lego-block">
+        <div class="radar-header-p5">
+          <span class="hud-tag-cyan" data-key="radar_p5.tag">// TELEMETRY SYSTEM BENCHMARKS</span>
+          <h4 class="radar-title-p5" data-key="radar_p5.title">PRODUCTION ENGINE SLA &amp; LATENCY PROFILES</h4>
+        </div>
+
+        <div class="radar-legend-p5">
+          <span class="legend-item"><i class="dot dot-white"></i> <span data-key="radar_p5.leg_pim">AI PIM Pipeline</span></span>
+          <span class="legend-item"><i class="dot dot-purple"></i> <span data-key="radar_p5.leg_video">Video-as-Code Engine</span></span>
+          <span class="legend-item"><i class="dot dot-cyan"></i> <span data-key="radar_p5.leg_webgl">3D WebGL Engines</span></span>
+        </div>
+
+        <svg viewBox="0 0 420 380" class="radar-svg-full" xmlns="http://www.w3.org/2000/svg">
+          <!-- Lưới Đa Giác Lục Giác Đồng Tâm 6 Cấp -->
+          <polygon points="210,80 314,140 314,260 210,320 106,260 106,140" stroke="#27272A" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+          <polygon points="210,104 293,152 293,248 210,296 127,248 127,152" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+          <polygon points="210,128 272,164 272,236 210,272 148,236 148,164" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+          <polygon points="210,152 251,176 251,224 210,248 169,224 169,176" stroke="#18181E" stroke-width="1" fill="none"/>
+          <polygon points="210,176 231,188 231,212 210,224 189,212 189,188" stroke="#18181E" stroke-width="1" fill="none"/>
+
+          <!-- 6 Trục Tọa Độ Line Art -->
+          <line x1="210" y1="200" x2="210" y2="80" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="210" y1="200" x2="314" y2="140" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="210" y1="200" x2="314" y2="260" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="210" y1="200" x2="210" y2="320" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="210" y1="200" x2="106" y2="260" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="210" y1="200" x2="106" y2="140" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+
+          <!-- Nhãn Thước Số Scale Tâm (100%, 80%, 60%, 40%, 20%, 0%) -->
+          <text x="210" y="76" fill="#A1A1AA" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">100%</text>
+          <text x="210" y="100" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">80%</text>
+          <text x="210" y="124" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">60%</text>
+          <text x="210" y="148" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">40%</text>
+          <text x="210" y="172" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">20%</text>
+
+          <!-- LAYER 1: AI PIM Pipeline (Màu Trắng Trong Suốt) -->
+          <polygon points="210,104 298,149 283,242 210,314 116,254 122,149"
+                   fill="#FFFFFF" fill-opacity="0.18" stroke="#FFFFFF" stroke-width="1.5"/>
+          <circle cx="210" cy="104" r="3.5" fill="#FFFFFF"/>
+          <circle cx="298" cy="149" r="3.5" fill="#FFFFFF"/>
+          <circle cx="283" cy="242" r="3.5" fill="#FFFFFF"/>
+          <circle cx="210" cy="314" r="3.5" fill="#FFFFFF"/>
+          <circle cx="116" cy="254" r="3.5" fill="#FFFFFF"/>
+          <circle cx="122" cy="149" r="3.5" fill="#FFFFFF"/>
+
+          <!-- LAYER 2: Video-as-Code Engine (Màu Tím Electric #6B46FF) -->
+          <polygon points="210,82 308,143 293,248 210,296 111,257 117,146"
+                   fill="#6B46FF" fill-opacity="0.4" stroke="#6B46FF" stroke-width="1.8"/>
+          <circle cx="210" cy="82" r="4" fill="#6B46FF"/>
+          <circle cx="308" cy="143" r="4" fill="#6B46FF"/>
+          <circle cx="293" cy="248" r="4" fill="#6B46FF"/>
+          <circle cx="210" cy="296" r="4" fill="#6B46FF"/>
+          <circle cx="111" cy="257" r="4" fill="#6B46FF"/>
+          <circle cx="117" cy="146" r="4" fill="#6B46FF"/>
+
+          <!-- LAYER 3: 3D WebGL Spatial Engines (Màu Neon Cyan #00E5FF) -->
+          <polygon points="210,92 283,162 309,257 210,320 127,248 108,141"
+                   fill="#00E5FF" fill-opacity="0.35" stroke="#00E5FF" stroke-width="1.8"/>
+          <circle cx="210" cy="92" r="4" fill="#00E5FF"/>
+          <circle cx="283" cy="162" r="4" fill="#00E5FF"/>
+          <circle cx="309" cy="257" r="4" fill="#00E5FF"/>
+          <circle cx="210" cy="320" r="4" fill="#00E5FF"/>
+          <circle cx="127" cy="248" r="4" fill="#00E5FF"/>
+          <circle cx="108" cy="141" r="4" fill="#00E5FF"/>
+
+          <!-- Nhãn 6 Trục Xung Quanh -->
+          <text x="210" y="62" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">EXECUTION SLA (99.99%)</text>
+          <text x="325" y="135" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="start">LATENCY REDUCTION (-98%)</text>
+          <text x="325" y="268" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="start">COST SAVINGS ($0.00 / -70%)</text>
+          <text x="210" y="342" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">ZERO-DRIFT RELIABILITY (0%)</text>
+          <text x="95" y="268" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="end">SCALE THROUGHPUT (60 FPS)</text>
+          <text x="95" y="135" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="end">SCHEMA SAFETY (ZOD 100%)</text>
+        </svg>
+      </div>
     </section>
 
     <!-- 03 // TECH STACK MATRIX -->
@@ -390,85 +466,10 @@
         </div>
       </div>
 
-      <!-- KHỐI RADAR CHART SYSTEM OPERATIONAL BENCHMARKS (LẤP ĐÁY TRANG 5) -->
-      <div class="cv-radar-container-p5 cv-lego-block">
-        <div class="radar-header-p5">
-          <span class="hud-tag-cyan" data-key="radar_p5.tag">// TELEMETRY SYSTEM BENCHMARKS</span>
-          <h4 class="radar-title-p5" data-key="radar_p5.title">PRODUCTION ENGINE SLA &amp; LATENCY PROFILES</h4>
-        </div>
-
-        <div class="radar-legend-p5">
-          <span class="legend-item"><i class="dot dot-white"></i> <span data-key="radar_p5.leg_pim">AI PIM Pipeline</span></span>
-          <span class="legend-item"><i class="dot dot-purple"></i> <span data-key="radar_p5.leg_video">Video-as-Code Engine</span></span>
-          <span class="legend-item"><i class="dot dot-emerald"></i> <span data-key="radar_p5.leg_webgl">3D WebGL Engines</span></span>
-        </div>
-
-        <svg viewBox="0 0 420 380" class="radar-svg-full" xmlns="http://www.w3.org/2000/svg">
-          <!-- Lưới Đa Giác Lục Giác Đồng Tâm 6 Cấp -->
-          <polygon points="210,80 314,140 314,260 210,320 106,260 106,140" stroke="#27272A" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
-          <polygon points="210,104 293,152 293,248 210,296 127,248 127,152" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
-          <polygon points="210,128 272,164 272,236 210,272 148,236 148,164" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
-          <polygon points="210,152 251,176 251,224 210,248 169,224 169,176" stroke="#18181E" stroke-width="1" fill="none"/>
-          <polygon points="210,176 231,188 231,212 210,224 189,212 189,188" stroke="#18181E" stroke-width="1" fill="none"/>
-
-          <!-- 6 Trục Tọa Độ Line Art -->
-          <line x1="210" y1="200" x2="210" y2="80" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="210" y1="200" x2="314" y2="140" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="210" y1="200" x2="314" y2="260" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="210" y1="200" x2="210" y2="320" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="210" y1="200" x2="106" y2="260" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="210" y1="200" x2="106" y2="140" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-
-          <!-- Nhãn Thước Số Scale Tâm (100%, 80%, 60%, 40%, 20%, 0%) -->
-          <text x="210" y="76" fill="#A1A1AA" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">100%</text>
-          <text x="210" y="100" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">80%</text>
-          <text x="210" y="124" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">60%</text>
-          <text x="210" y="148" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">40%</text>
-          <text x="210" y="172" fill="#71717A" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">20%</text>
-
-          <!-- LAYER 1: AI PIM Pipeline (Màu Trắng Trong Suốt) -->
-          <polygon points="210,104 298,149 283,242 210,314 116,254 122,149"
-                   fill="#FFFFFF" fill-opacity="0.18" stroke="#FFFFFF" stroke-width="1.5"/>
-          <circle cx="210" cy="104" r="3.5" fill="#FFFFFF"/>
-          <circle cx="298" cy="149" r="3.5" fill="#FFFFFF"/>
-          <circle cx="283" cy="242" r="3.5" fill="#FFFFFF"/>
-          <circle cx="210" cy="314" r="3.5" fill="#FFFFFF"/>
-          <circle cx="116" cy="254" r="3.5" fill="#FFFFFF"/>
-          <circle cx="122" cy="149" r="3.5" fill="#FFFFFF"/>
-
-          <!-- LAYER 2: Video-as-Code Engine (Màu Tím Electric #6B46FF) -->
-          <polygon points="210,82 308,143 293,248 210,296 111,257 117,146"
-                   fill="#6B46FF" fill-opacity="0.4" stroke="#6B46FF" stroke-width="1.8"/>
-          <circle cx="210" cy="82" r="4" fill="#6B46FF"/>
-          <circle cx="308" cy="143" r="4" fill="#6B46FF"/>
-          <circle cx="293" cy="248" r="4" fill="#6B46FF"/>
-          <circle cx="210" cy="296" r="4" fill="#6B46FF"/>
-          <circle cx="111" cy="257" r="4" fill="#6B46FF"/>
-          <circle cx="117" cy="146" r="4" fill="#6B46FF"/>
-
-          <!-- LAYER 3: 3D WebGL Spatial Engines (Màu Emerald Green #10B981) -->
-          <polygon points="210,92 283,162 309,257 210,320 127,248 108,141"
-                   fill="#10B981" fill-opacity="0.45" stroke="#10B981" stroke-width="1.8"/>
-          <circle cx="210" cy="92" r="4" fill="#10B981"/>
-          <circle cx="283" cy="162" r="4" fill="#10B981"/>
-          <circle cx="309" cy="257" r="4" fill="#10B981"/>
-          <circle cx="210" cy="320" r="4" fill="#10B981"/>
-          <circle cx="127" cy="248" r="4" fill="#10B981"/>
-          <circle cx="108" cy="141" r="4" fill="#10B981"/>
-
-          <!-- Nhãn 6 Trục Xung Quanh -->
-          <text x="210" y="62" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">EXECUTION SLA (99.99%)</text>
-          <text x="325" y="135" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="start">LATENCY REDUCTION (-98%)</text>
-          <text x="325" y="268" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="start">COST SAVINGS ($0.00 / -70%)</text>
-          <text x="210" y="342" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">ZERO-DRIFT RELIABILITY (0%)</text>
-          <text x="95" y="268" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="end">SCALE THROUGHPUT (60 FPS)</text>
-          <text x="95" y="135" fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="end">SCHEMA SAFETY (ZOD 100%)</text>
-        </svg>
-      </div>
     </section>
 
     <!-- SITE FOOTER -->
-    <footer class="site-footer">
+    <footer class="site-footer cv-footer cv-lego-block">
       <div class="footer-rights" data-key="footer.rights">
         &copy; 2026 THUY VU // MIZUBLUE2711. ALL RIGHTS RESERVED.
       </div>
