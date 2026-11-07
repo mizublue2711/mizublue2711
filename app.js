@@ -81,7 +81,7 @@
           },
           {
             id: "exp-3",
-            period: "2018 – 2025",
+            period: "2020 – 2025",
             role: "SENIOR PUBLISHING & EDITORIAL DESIGNER",
             company: "HUBBIS (HONG KONG)",
             scope: "Institutional Wealth Management Publications & Financial Infographics",
