@@ -147,7 +147,10 @@
       },
       radar_stack: {
         tag: "// TELEMETRY MATRIX",
-        title: "FULLSTACK COMPETENCY RATIO"
+        title: "FULLSTACK COMPETENCY RATIO",
+        legend_automation: "Automation",
+        legend_design: "Design",
+        legend_devops: "DevOps"
       },
       education: {
         prefix: "04 // ACCREDITATIONS & CERTIFICATIONS",
@@ -323,7 +326,10 @@
       },
       radar_stack: {
         tag: "// MA TRẬN ĐỊNH LƯỢNG",
-        title: "TỶ LỆ NĂNG LỰC TOÀN DIỆN"
+        title: "TỶ LỆ NĂNG LỰC TOÀN DIỆN",
+        legend_automation: "Tự động hóa",
+        legend_design: "Thiết kế đồ họa",
+        legend_devops: "Hạ tầng & DevOps"
       },
       education: {
         prefix: "04 // HỌC VẤN & CHỨNG CHỈ NÂNG CẤP",
@@ -548,15 +554,17 @@
     document.querySelector('[data-key="footer.spec"]').textContent = d.footer.spec;
 
     // Radar Charts (Telemetry Spectrum & Competency Ratio)
-    const radarMetricsTag = document.querySelector('[data-key="radar_metrics.tag"]');
-    if (radarMetricsTag && d.radar_metrics) radarMetricsTag.textContent = d.radar_metrics.tag;
-    const radarMetricsTitle = document.querySelector('[data-key="radar_metrics.title"]');
-    if (radarMetricsTitle && d.radar_metrics) radarMetricsTitle.textContent = d.radar_metrics.title;
-
     const radarStackTag = document.querySelector('[data-key="radar_stack.tag"]');
     if (radarStackTag && d.radar_stack) radarStackTag.textContent = d.radar_stack.tag;
     const radarStackTitle = document.querySelector('[data-key="radar_stack.title"]');
     if (radarStackTitle && d.radar_stack) radarStackTitle.textContent = d.radar_stack.title;
+
+    const legAuto = document.querySelector('[data-key="radar.legend_automation"]');
+    if (legAuto && d.radar_stack) legAuto.textContent = d.radar_stack.legend_automation;
+    const legDesign = document.querySelector('[data-key="radar.legend_design"]');
+    if (legDesign && d.radar_stack) legDesign.textContent = d.radar_stack.legend_design;
+    const legDevops = document.querySelector('[data-key="radar.legend_devops"]');
+    if (legDevops && d.radar_stack) legDevops.textContent = d.radar_stack.legend_devops;
   }
 
   // Accordion Toggle
