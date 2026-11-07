@@ -45,6 +45,10 @@
           { val: "$0.00", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
         ]
       },
+      radar_metrics: {
+        tag: "// TELEMETRY BENCHMARK",
+        title: "PERFORMANCE & VELOCITY SPECTRUM"
+      },
       experience: {
         prefix: "02 // CHRONOLOGICAL PRODUCTION LOGS",
         heading: "HANDS-ON WORK EXPERIENCE",
@@ -141,6 +145,10 @@
           }
         ]
       },
+      radar_stack: {
+        tag: "// TELEMETRY MATRIX",
+        title: "FULLSTACK COMPETENCY RATIO"
+      },
       education: {
         prefix: "04 // ACCREDITATIONS & CERTIFICATIONS",
         heading: "CONTINUOUS SKILL UPGRADES",
@@ -212,6 +220,10 @@
           { val: "-60%", unit: "THỜI GIAN PIM", label: "Pipeline AI Xử lý Ảnh", desc: "Tự động hóa quy trình quản lý ảnh sản phẩm AI từ 5-10 phút xuống còn 2-3 phút mỗi tài nguyên." },
           { val: "$0.00", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
         ]
+      },
+      radar_metrics: {
+        tag: "// TIÊU CHUẨN ĐO LƯỜNG",
+        title: "QUANG PHỔ HIỆU SUẤT & TỐC ĐỘ"
       },
       experience: {
         prefix: "02 // NHẬT KÝ SẢN XUẤT THEO THỜI GIAN",
@@ -308,6 +320,10 @@
             tools: ["Python (FastAPI, Pillow, OpenCV)", "n8n Event Orchestrator", "Dify.ai Workflow Engine", "Docker Containers", "Zod Schema Validation", "Cloudflare R2 & Tunnels", "GitOps & CLI Pipelines"]
           }
         ]
+      },
+      radar_stack: {
+        tag: "// MA TRẬN ĐỊNH LƯỢNG",
+        title: "TỶ LỆ NĂNG LỰC TOÀN DIỆN"
       },
       education: {
         prefix: "04 // HỌC VẤN & CHỨNG CHỈ NÂNG CẤP",
@@ -530,6 +546,17 @@
     // Footer
     document.querySelector('[data-key="footer.rights"]').textContent = d.footer.rights;
     document.querySelector('[data-key="footer.spec"]').textContent = d.footer.spec;
+
+    // Radar Charts (Telemetry Spectrum & Competency Ratio)
+    const radarMetricsTag = document.querySelector('[data-key="radar_metrics.tag"]');
+    if (radarMetricsTag && d.radar_metrics) radarMetricsTag.textContent = d.radar_metrics.tag;
+    const radarMetricsTitle = document.querySelector('[data-key="radar_metrics.title"]');
+    if (radarMetricsTitle && d.radar_metrics) radarMetricsTitle.textContent = d.radar_metrics.title;
+
+    const radarStackTag = document.querySelector('[data-key="radar_stack.tag"]');
+    if (radarStackTag && d.radar_stack) radarStackTag.textContent = d.radar_stack.tag;
+    const radarStackTitle = document.querySelector('[data-key="radar_stack.title"]');
+    if (radarStackTitle && d.radar_stack) radarStackTitle.textContent = d.radar_stack.title;
   }
 
   // Accordion Toggle
