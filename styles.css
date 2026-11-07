@@ -1200,11 +1200,17 @@ body {
    ========================================================================== */
 @page {
   size: A4 portrait;
-  margin: 18mm; /* Chuẩn W3C Paged Media: Áp dụng lề 18mm đồng đều trên 100% TẤT CẢ các trang A4 */
+  margin: 0 !important; /* Xóa lề máy in -> Nền đen phủ kín 100% không viền trắng khi chọn Margins: None */
 }
 
 @media print {
-  /* 1. Ép màu nền đen phủ kín toàn bộ trang giấy */
+  /* 1. Ép tờ giấy A4 xóa sạch lề máy in -> Nền đen phủ kín 100% không viền trắng */
+  @page {
+    size: A4 portrait;
+    margin: 0 !important;
+  }
+
+  /* 2. Ép màu nền tối cho toàn bộ trang in */
   html, body {
     background-color: #09090B !important;
     color: #F4F8FF !important;
@@ -1217,6 +1223,25 @@ body {
     line-height: 1.45 !important;
   }
 
+  /* 3. BỌC THÉP LỀ AN TOÀN: Ép TẤT CẢ khung chứa trực tiếp phải thụt lề 18mm */
+  body > *,
+  .cv-container,
+  main,
+  .page-wrapper,
+  .app-container {
+    box-sizing: border-box !important;
+    padding: 18mm !important; /* Tạo lề an toàn 18mm cả 4 chiều */
+    width: 100% !important;
+    max-width: 210mm !important;
+    margin: 0 auto !important;
+  }
+
+  /* 4. Khống chế tất cả thẻ con không được bứt phá chiều rộng */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   *, *::before, *::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -1224,7 +1249,7 @@ body {
     text-shadow: none !important;
   }
 
-  /* 2. Ẩn toàn bộ UI không liên quan đến bản in */
+  /* Ẩn toàn bộ UI không liên quan đến bản in */
   #cyber-canvas,
   .top-nav,
   .swiss-grid-lines,
@@ -1233,47 +1258,20 @@ body {
     display: none !important;
   }
 
-  /* 3. Container không cộng dồn padding vì @page đã có lề an toàn 18mm trên mọi trang */
-  .cv-container, main, .page-wrapper, .app-container {
-    box-sizing: border-box !important;
-    padding: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
+  /* 5. Ép tiêu đề và văn bản tự rớt dòng, không tràn ngang */
+  h1, h2, h3, h4, p, span, div, a {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
   }
 
-  /* 4. Section Spacing & Phân trang khoa học: Ngăn triệt để tình trạng tiêu đề lẻ loi */
-  .hero-section {
-    padding: 0 0 16pt 0 !important;
-    border-bottom: 1px solid #1F1F2E !important;
-    break-after: page !important;
-    page-break-after: always !important; /* Hero kết thúc trang 1 trang trọng */
+  /* 6. Gắn Header dính liền với khối nội dung bên dưới (chống tiêu đề mồ côi) */
+  h1, h2, h3, h4, .section-title, .hero-name, .section-prefix, .section-subtitle, .pillar-title, .exp-role-title {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
   }
 
-  .section-wrapper {
-    padding: 16pt 0 14pt 0 !important;
-    border-bottom: 1px solid #1F1F2E !important;
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Mục 2 (Kinh nghiệm) & Mục 5 (Liên hệ) luôn bắt đầu trang mới, tuyệt đối không bị kẹt ở đáy trang */
-  #experience {
-    break-before: page !important;
-    page-break-before: always !important;
-  }
-
-  #stack {
-    break-before: page !important;
-    page-break-before: always !important;
-  }
-
-  #contact {
-    break-before: page !important;
-    page-break-before: always !important;
-  }
-
-  /* 5. KHÓA CHẶT TIÊU ĐỀ: Khối Header luôn đi liền với nội dung đầu tiên của mục */
+  /* Khóa cụm Header với phần tử con đầu tiên của mỗi danh sách */
   .section-header-block {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
@@ -1282,16 +1280,6 @@ body {
     margin-bottom: 12pt !important;
   }
 
-  h1, h2, h3, h4, .hero-title, .section-title, .hero-name, .section-prefix, .section-subtitle, .pillar-title, .exp-role-title {
-    max-width: 100% !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-    white-space: normal !important;
-    break-after: avoid !important;
-    page-break-after: avoid !important;
-  }
-
-  /* Khóa phần tử đầu tiên của mỗi danh sách không được ngắt trang tách khỏi Header */
   .section-header-block + *,
   .experience-list > .experience-card:first-child,
   .metrics-grid > .metric-card:first-child,
@@ -1300,6 +1288,40 @@ body {
   .contact-container > *:first-child {
     break-before: avoid !important;
     page-break-before: avoid !important;
+  }
+
+  /* Phân tách các phần lớn một cách trang trọng */
+  .hero-section {
+    padding: 0 0 16pt 0 !important;
+    border-bottom: 1px solid #1F1F2E !important;
+    break-after: page !important;
+    page-break-after: always !important; /* Hero kết thúc trang 1 trang trọng */
+  }
+
+  .section-wrapper {
+    padding: 18mm 0 14pt 0 !important;
+    border-bottom: 1px solid #1F1F2E !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Mục 2 (Kinh nghiệm) & Mục 5 (Liên hệ) luôn bắt đầu trang mới, thụt lề trên an toàn 18mm */
+  #experience {
+    break-before: page !important;
+    page-break-before: always !important;
+    padding-top: 18mm !important;
+  }
+
+  #stack {
+    break-before: page !important;
+    page-break-before: always !important;
+    padding-top: 18mm !important;
+  }
+
+  #contact {
+    break-before: page !important;
+    page-break-before: always !important;
+    padding-top: 18mm !important;
   }
 
   /* Co nhẹ font Header riêng khi in để không bị đè khối */
@@ -1317,8 +1339,8 @@ body {
     page-break-after: avoid !important;
   }
 
-  /* 6. Chống cắt đôi khối nội dung giữa các trang */
-  .cv-lego-block,
+  /* 7. Giữ nguyên các khối Lego không bị cắt ngang trang */
+  .cv-lego-block, section, article, .card,
   .experience-item,
   .metric-card,
   .experience-card,
