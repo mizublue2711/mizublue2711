@@ -192,6 +192,50 @@
       <div class="metrics-grid" id="metrics-container">
         <!-- Injected dynamically via app.js -->
       </div>
+
+      <!-- KHỐI RADAR CHART VECTOR CO GIÃN TỰ ĐỘNG (PERFORMANCE TELEMETRY) -->
+      <div class="cv-radar-container cv-lego-block">
+        <div class="radar-header">
+          <span class="hud-tag" data-key="radar_metrics.tag">// TELEMETRY BENCHMARK</span>
+          <h4 class="radar-title" data-key="radar_metrics.title">PERFORMANCE &amp; VELOCITY SPECTRUM</h4>
+        </div>
+
+        <svg viewBox="0 0 300 300" class="radar-svg" xmlns="http://www.w3.org/2000/svg">
+          <!-- Lưới Radar Grid Lines (Các vòng đa giác đồng tâm) -->
+          <polygon points="150,30 254,90 254,210 150,270 46,210 46,90" stroke="#27272A" stroke-width="1" fill="none"/>
+          <polygon points="150,60 228,105 228,195 150,240 72,195 72,105" stroke="#18181E" stroke-width="1" fill="none"/>
+          <polygon points="150,90 202,120 202,180 150,210 98,180 98,120" stroke="#18181E" stroke-width="1" fill="none"/>
+
+          <!-- Trục tọa độ 6 hướng (Line Art Spoke Lines) -->
+          <line x1="150" y1="150" x2="150" y2="30" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="254" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="254" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="150" y2="270" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="46" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="46" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+
+          <!-- Vùng phủ dữ liệu Performance -->
+          <polygon points="150,38 248,93 234,204 150,265 60,204 52,93"
+                   fill="#5322FF" fill-opacity="0.3"
+                   stroke="#00E5FF" stroke-width="1.5"/>
+
+          <!-- Các điểm Node Anchors đỉnh chỉ số -->
+          <rect x="148" y="36" width="4" height="4" fill="#00E5FF"/>
+          <rect x="246" y="91" width="4" height="4" fill="#00E5FF"/>
+          <rect x="232" y="202" width="4" height="4" fill="#00E5FF"/>
+          <rect x="148" y="263" width="4" height="4" fill="#00E5FF"/>
+          <rect x="58" y="202" width="4" height="4" fill="#00E5FF"/>
+          <rect x="50" y="91" width="4" height="4" fill="#00E5FF"/>
+
+          <!-- Nhãn văn bản font JetBrains Mono -->
+          <text x="150" y="20" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">LATENCY REDUCTION (-98%)</text>
+          <text x="260" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">CLOUD COST ($0.00)</text>
+          <text x="260" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">RETENTION RATE (92%)</text>
+          <text x="150" y="285" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">PUBLICATIONS (500+)</text>
+          <text x="40" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">CONVERSION (100+ LPs)</text>
+          <text x="40" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">DETERMINISTIC SLA (99.99%)</text>
+        </svg>
+      </div>
     </section>
 
     <!-- 02 // EXPERIENCE SECTION -->
@@ -221,6 +265,50 @@
 
       <div class="stack-matrix-grid" id="stack-container">
         <!-- Injected dynamically via app.js -->
+      </div>
+
+      <!-- KHỐI RADAR CHART VECTOR CO GIÃN TỰ ĐỘNG (CORE COMPETENCY MATRIX) -->
+      <div class="cv-radar-container cv-lego-block">
+        <div class="radar-header">
+          <span class="hud-tag" data-key="radar_stack.tag">// TELEMETRY MATRIX</span>
+          <h4 class="radar-title" data-key="radar_stack.title">FULLSTACK COMPETENCY RATIO</h4>
+        </div>
+
+        <svg viewBox="0 0 300 300" class="radar-svg" xmlns="http://www.w3.org/2000/svg">
+          <!-- Lưới Radar Grid Lines (Các vòng đa giác đồng tâm) -->
+          <polygon points="150,30 254,90 254,210 150,270 46,210 46,90" stroke="#27272A" stroke-width="1" fill="none"/>
+          <polygon points="150,60 228,105 228,195 150,240 72,195 72,105" stroke="#18181E" stroke-width="1" fill="none"/>
+          <polygon points="150,90 202,120 202,180 150,210 98,180 98,120" stroke="#18181E" stroke-width="1" fill="none"/>
+
+          <!-- Trục tọa độ 6 hướng (Line Art Spoke Lines) -->
+          <line x1="150" y1="150" x2="150" y2="30" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="254" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="254" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="150" y2="270" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="46" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="150" y1="150" x2="46" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+
+          <!-- Vùng phủ dữ liệu Skill (Polygon Area) -->
+          <polygon points="150,42 243,96 238,201 150,252 62,201 56,96"
+                   fill="#5322FF" fill-opacity="0.3"
+                   stroke="#00E5FF" stroke-width="1.5"/>
+
+          <!-- Các điểm Node Anchors đỉnh chỉ số -->
+          <rect x="148" y="40" width="4" height="4" fill="#00E5FF"/>
+          <rect x="241" y="94" width="4" height="4" fill="#00E5FF"/>
+          <rect x="236" y="199" width="4" height="4" fill="#00E5FF"/>
+          <rect x="148" y="250" width="4" height="4" fill="#00E5FF"/>
+          <rect x="60" y="199" width="4" height="4" fill="#00E5FF"/>
+          <rect x="54" y="94" width="4" height="4" fill="#00E5FF"/>
+
+          <!-- Nhãn văn bản font JetBrains Mono -->
+          <text x="150" y="20" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">AUTOMATION &amp; CODE (95%)</text>
+          <text x="260" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">3D &amp; WEBGL (90%)</text>
+          <text x="260" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">MOTION ADS (92%)</text>
+          <text x="150" y="285" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">PRINT &amp; PUBLISHING (98%)</text>
+          <text x="40" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">BRANDING (90%)</text>
+          <text x="40" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">UI/UX LANDERS (94%)</text>
+        </svg>
       </div>
     </section>
 
