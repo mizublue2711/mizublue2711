@@ -184,7 +184,7 @@
         ]
       },
       footer: {
-        rights: "© 2026 THUY VU // MIZUBLUE2711. ALL RIGHTS RESERVED.",
+        rights: "© 2026 THUY VU // MIZU2711. ALL RIGHTS RESERVED.",
         spec: "ENGINEERED UNDER CYBERNETIC SWISS BRUTALISM • ZERO SOFT RADIUS • 60 FPS DETERMINISTIC CANVAS"
       },
       radar_p5: {
@@ -228,7 +228,7 @@
           { val: "100+", unit: "TRANG", label: "Landing Page Bán Hàng", desc: "Tối ưu UI/UX cho trang thương mại điện tử VGS Shop, đóng góp tăng trưởng doanh số tới +30%." },
           { val: "200+", unit: "VIDEO ADS", label: "Đồ họa chuyển động", desc: "Dựng video ngắn tốc độ cao (khung thời gian 4 tiếng/video), 70% có nhạc nền sản xuất riêng." },
           { val: "-60%", unit: "THỜI GIAN PIM", label: "Pipeline AI Xử lý Ảnh", desc: "Tự động hóa quy trình quản lý ảnh sản phẩm AI từ 5-10 phút xuống còn 2-3 phút mỗi tài nguyên." },
-          { val: "$0.00", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
+          { val: "$0.0", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
         ]
       },
       radar_metrics: {
