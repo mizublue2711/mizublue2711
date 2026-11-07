@@ -301,6 +301,10 @@ body {
   color: var(--text-secondary);
   font-size: 13px;
   max-width: 680px;
+  margin-bottom: 0;
+}
+
+.section-header-block {
   margin-bottom: 32px;
 }
 
@@ -1194,14 +1198,13 @@ body {
 /* ==========================================================================
    A4 PORTRAIT SEAMLESS BLEED MULTI-PAGE PRINT & PDF ENGINE
    ========================================================================== */
-@media print {
-  /* 1. Xóa lề mặc định của máy in để màu nền tràn viền 100% */
-  @page {
-    size: A4 portrait;
-    margin: 0; /* Xóa khung viền trắng bao ngoài */
-  }
+@page {
+  size: A4 portrait;
+  margin: 18mm; /* Chuẩn W3C Paged Media: Áp dụng lề 18mm đồng đều trên 100% TẤT CẢ các trang A4 */
+}
 
-  /* 2. Thiết lập Body tràn viền nhưng bắt buộc ép màu nền */
+@media print {
+  /* 1. Ép màu nền đen phủ kín toàn bộ trang giấy */
   html, body {
     background-color: #09090B !important;
     color: #F4F8FF !important;
@@ -1209,8 +1212,7 @@ body {
     print-color-adjust: exact !important;
     margin: 0 !important;
     padding: 0 !important;
-    width: 210mm !important;
-    min-height: 100% !important;
+    width: 100% !important;
     font-size: 10pt !important;
     line-height: 1.45 !important;
   }
@@ -1222,7 +1224,7 @@ body {
     text-shadow: none !important;
   }
 
-  /* Hide interactive web-only chrome */
+  /* 2. Ẩn toàn bộ UI không liên quan đến bản in */
   #cyber-canvas,
   .top-nav,
   .swiss-grid-lines,
@@ -1231,43 +1233,78 @@ body {
     display: none !important;
   }
 
-  /* 3. VÙNG ĐỆM AN TOÀN (SAFE ZONE): Giữ chữ cách mép giấy 18mm cân đối sang trọng */
+  /* 3. Container không cộng dồn padding vì @page đã có lề an toàn 18mm trên mọi trang */
   .cv-container, main, .page-wrapper, .app-container {
     box-sizing: border-box !important;
-    padding: 18mm 18mm !important; /* Lề an toàn chuẩn A4 cân xứng 18mm */
+    padding: 0 !important;
     width: 100% !important;
-    max-width: 210mm !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
   }
 
-  /* Section Spacing on A4 */
+  /* 4. Section Spacing & Phân trang khoa học: Ngăn triệt để tình trạng tiêu đề lẻ loi */
   .hero-section {
-    padding: 0 0 14pt 0 !important;
+    padding: 0 0 16pt 0 !important;
     border-bottom: 1px solid #1F1F2E !important;
-    break-after: auto !important;
-    page-break-after: auto !important;
+    break-after: page !important;
+    page-break-after: always !important; /* Hero kết thúc trang 1 trang trọng */
   }
 
   .section-wrapper {
-    padding: 14pt 0 12pt 0 !important;
+    padding: 16pt 0 14pt 0 !important;
     border-bottom: 1px solid #1F1F2E !important;
     break-inside: auto !important;
     page-break-inside: auto !important;
   }
 
-  /* 4. ĐIỀU CHỈNH TIÊU ĐỀ (H1-H4, SECTION-TITLE): Tự động co tỷ lệ, rớt dòng & luôn dính liền khối nội dung */
-  h1, h2, h3, h4, .hero-title, .section-title, .hero-name, .section-prefix, .pillar-title, .exp-role-title {
+  /* Mục 2 (Kinh nghiệm) & Mục 5 (Liên hệ) luôn bắt đầu trang mới, tuyệt đối không bị kẹt ở đáy trang */
+  #experience {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  #stack {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  #contact {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* 5. KHÓA CHẶT TIÊU ĐỀ: Khối Header luôn đi liền với nội dung đầu tiên của mục */
+  .section-header-block {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    margin-bottom: 12pt !important;
+  }
+
+  h1, h2, h3, h4, .hero-title, .section-title, .hero-name, .section-prefix, .section-subtitle, .pillar-title, .exp-role-title {
     max-width: 100% !important;
     overflow-wrap: break-word !important;
     word-break: break-word !important;
-    white-space: normal !important; /* Không cho chữ tràn ngang */
+    white-space: normal !important;
     break-after: avoid !important;
     page-break-after: avoid !important;
   }
 
+  /* Khóa phần tử đầu tiên của mỗi danh sách không được ngắt trang tách khỏi Header */
+  .section-header-block + *,
+  .experience-list > .experience-card:first-child,
+  .metrics-grid > .metric-card:first-child,
+  .stack-matrix-grid > .stack-pillar-card:first-child,
+  .education-grid > .edu-card:first-child,
+  .contact-container > *:first-child {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
   /* Co nhẹ font Header riêng khi in để không bị đè khối */
   h1, .hero-title, .hero-name {
-    font-size: 28pt !important; /* Giảm nhẹ từ size màn hình xuống size in */
+    font-size: 26pt !important;
     line-height: 1.2 !important;
     break-after: avoid !important;
     page-break-after: avoid !important;
@@ -1280,12 +1317,7 @@ body {
     page-break-after: avoid !important;
   }
 
-  h3, h4 {
-    break-after: avoid !important;
-    page-break-after: avoid !important;
-  }
-
-  /* 5. Chống cắt đôi khối nội dung giữa các trang */
+  /* 6. Chống cắt đôi khối nội dung giữa các trang */
   .cv-lego-block,
   .experience-item,
   .metric-card,
@@ -1303,7 +1335,7 @@ body {
     position: relative !important;
   }
 
-  /* Always expand all experience accordion cards in PDF */
+  /* Luôn mở rộng toàn bộ nội dung kinh nghiệm */
   .experience-card .exp-body,
   .experience-card.collapsed .exp-body {
     display: block !important;
@@ -1311,7 +1343,7 @@ body {
     visibility: visible !important;
   }
 
-  /* Ensure backgrounds and borders stay crisp Dark Obsidian (#09090B / #0B0B0F) */
+  /* Đảm bảo nền và đường viền Dark Obsidian (#0B0B0F / #1F1F2E) */
   .hero-main-frame,
   .metric-card,
   .experience-card,
@@ -1326,7 +1358,7 @@ body {
     color: #F4F8FF !important;
   }
 
-  /* Retain Vibrant Tactical Signal Accents */
+  /* Giữ nguyên màu tương phản cao */
   .hero-name, .section-title, h1, h2, h3, h4, .text-white {
     color: #FFFFFF !important;
   }
@@ -1361,7 +1393,7 @@ body {
     color: #A1A1AA !important;
   }
 
-  /* Grid Layouts for A4 printing */
+  /* Bố cục lưới in ấn A4 */
   .metrics-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -1386,7 +1418,7 @@ body {
     gap: 10pt !important;
   }
 
-  /* Clickable PDF Links */
+  /* Link nhấp được trong PDF */
   a, a:link, a:visited {
     color: inherit !important;
     text-decoration: none !important;
@@ -1402,7 +1434,7 @@ body {
     display: inline-flex !important;
   }
 
-  /* Ensure QR code cluster displays crisply in PDF */
+  /* Hiển thị mã QR sắc nét */
   .hero-qr-cluster {
     display: flex !important;
     gap: 8pt !important;
