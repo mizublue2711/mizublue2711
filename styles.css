@@ -946,7 +946,7 @@ body {
 .cv-radar-container {
   background-color: #0D0D11;
   border: 1px solid #18181E;
-  padding: 20px 24px;
+  padding: 24px;
   margin-top: 28px;
   box-sizing: border-box;
   position: relative;
@@ -983,12 +983,81 @@ body {
   text-transform: uppercase;
 }
 
-.radar-svg {
+/* Styling cho Chú thích Legend Biểu đồ Radar */
+.radar-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--text-white, #F4F8FF);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.05em;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50% !important;
+  display: inline-block;
+}
+
+.dot-white {
+  background: #FFFFFF;
+  box-shadow: 0 0 6px #FFFFFF;
+}
+
+.dot-purple {
+  background: #6B46FF;
+  box-shadow: 0 0 6px #6B46FF;
+}
+
+.dot-cyan {
+  background: #00E5FF;
+  box-shadow: 0 0 6px #00E5FF;
+}
+
+.radar-svg-3layer {
   width: 100%;
-  max-width: 360px;
-  max-height: 280px;
+  max-width: 440px;
+  max-height: 380px;
   margin: 0 auto;
   display: block;
+}
+
+/* Khung Con Dấu Tròn Đặt Dưới Cột Hình Đại Diện (Avatar Column) */
+.avatar-column,
+.hero-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-stamp-wrapper {
+  margin-top: 16px;
+  width: 140px;
+  height: 140px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyber-stamp-svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avatar-stamp-wrapper:hover .cyber-stamp-svg {
+  transform: rotate(20deg) scale(1.04);
 }
 
 /* --------------------------------------------------------------------------
@@ -1410,40 +1479,46 @@ body {
   }
 
   /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa ở cuối trang */
-  #metrics,
   #stack {
     display: flex !important;
     flex-direction: column !important;
-    min-height: 235mm !important;
+    min-height: 240mm !important;
   }
 
   .cv-radar-container {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
     margin-top: auto !important; /* Đẩy khối Radar xuống bám đáy trang */
-    padding: 12px !important;
+    padding: 16px !important;
     border: 1px solid #18181E !important;
     background-color: #0D0D11 !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  .radar-svg {
-    width: 100% !important;
-    max-height: 220px !important; /* Khống chế chiều cao vừa vặn nửa trang trống */
-    height: auto !important;
-  }
-
-  .hud-tag {
-    color: #00E5FF !important;
-    font-family: monospace !important;
+  .radar-legend {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    margin-bottom: 8px !important;
     font-size: 8pt !important;
   }
 
-  .radar-title {
-    color: #F4F8FF !important;
-    font-size: 11pt !important;
-    margin: 4px 0 8px 0 !important;
+  .radar-svg-3layer {
+    width: 100% !important;
+    max-height: 240px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .avatar-stamp-wrapper {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    display: block !important;
+    margin-top: 10pt !important;
+    width: 120px !important;
+    height: 120px !important;
   }
 
   /* Luôn mở rộng toàn bộ nội dung kinh nghiệm */

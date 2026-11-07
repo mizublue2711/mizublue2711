@@ -121,7 +121,7 @@
 
         <div class="hero-grid-layout">
           <!-- LEFT: CIRCULAR AVATAR FRAME -->
-          <div class="hero-avatar-col">
+          <div class="hero-avatar-col avatar-column">
             <div class="hero-avatar-frame">
               <img src="assets/avatar.png" alt="Thuy Vu" class="hero-avatar-img" />
               <div class="avatar-status-pill">
@@ -133,6 +133,39 @@
               <span class="telemetry-coord">LAT 10.82° N</span>
               <span class="telemetry-coord">LNG 106.63° E</span>
               <span class="telemetry-tag">[ 01 // ARCHITECT ]</span>
+            </div>
+
+            <!-- LOGO CON DẤU TRÒN ĐẶT DƯỚI COLUM AVATAR -->
+            <div class="avatar-stamp-wrapper">
+              <svg viewBox="0 0 240 240" class="cyber-stamp-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <!-- Đường Dẫn Cong Cho Chữ Chạy Vòng Quanh -->
+                  <path id="stampTextPath" d="M 120, 120 m -95, 0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"/>
+                </defs>
+
+                <!-- Họa Tiết Lưới Sóng Elip Xoắn Ở Tâm (Parametric Wave Mesh) -->
+                <g stroke="#5322FF" stroke-width="0.8" fill="none" opacity="0.85">
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(0 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(15 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(30 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(45 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(60 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(75 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(90 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(105 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(120 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(135 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(150 120 120)"/>
+                  <ellipse cx="120" cy="120" rx="65" ry="22" transform="rotate(165 120 120)"/>
+                </g>
+
+                <!-- Chữ Uốn Cong Vòng Tròn Outer Circle Text -->
+                <text fill="#F4F8FF" font-size="10.5" font-family="'JetBrains Mono', monospace" letter-spacing="2px">
+                  <textPath href="#stampTextPath" xlink:href="#stampTextPath" startOffset="0%">
+                    SENIOR DESIGNER - 9+ YEARS OF EXPERIENCE - SINCE 2016 -
+                  </textPath>
+                </text>
+              </svg>
             </div>
           </div>
 
@@ -192,50 +225,6 @@
       <div class="metrics-grid" id="metrics-container">
         <!-- Injected dynamically via app.js -->
       </div>
-
-      <!-- KHỐI RADAR CHART VECTOR CO GIÃN TỰ ĐỘNG (PERFORMANCE TELEMETRY) -->
-      <div class="cv-radar-container cv-lego-block">
-        <div class="radar-header">
-          <span class="hud-tag" data-key="radar_metrics.tag">// TELEMETRY BENCHMARK</span>
-          <h4 class="radar-title" data-key="radar_metrics.title">PERFORMANCE &amp; VELOCITY SPECTRUM</h4>
-        </div>
-
-        <svg viewBox="0 0 300 300" class="radar-svg" xmlns="http://www.w3.org/2000/svg">
-          <!-- Lưới Radar Grid Lines (Các vòng đa giác đồng tâm) -->
-          <polygon points="150,30 254,90 254,210 150,270 46,210 46,90" stroke="#27272A" stroke-width="1" fill="none"/>
-          <polygon points="150,60 228,105 228,195 150,240 72,195 72,105" stroke="#18181E" stroke-width="1" fill="none"/>
-          <polygon points="150,90 202,120 202,180 150,210 98,180 98,120" stroke="#18181E" stroke-width="1" fill="none"/>
-
-          <!-- Trục tọa độ 6 hướng (Line Art Spoke Lines) -->
-          <line x1="150" y1="150" x2="150" y2="30" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="254" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="254" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="150" y2="270" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="46" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="46" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-
-          <!-- Vùng phủ dữ liệu Performance -->
-          <polygon points="150,38 248,93 234,204 150,265 60,204 52,93"
-                   fill="#5322FF" fill-opacity="0.3"
-                   stroke="#00E5FF" stroke-width="1.5"/>
-
-          <!-- Các điểm Node Anchors đỉnh chỉ số -->
-          <rect x="148" y="36" width="4" height="4" fill="#00E5FF"/>
-          <rect x="246" y="91" width="4" height="4" fill="#00E5FF"/>
-          <rect x="232" y="202" width="4" height="4" fill="#00E5FF"/>
-          <rect x="148" y="263" width="4" height="4" fill="#00E5FF"/>
-          <rect x="58" y="202" width="4" height="4" fill="#00E5FF"/>
-          <rect x="50" y="91" width="4" height="4" fill="#00E5FF"/>
-
-          <!-- Nhãn văn bản font JetBrains Mono -->
-          <text x="150" y="20" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">LATENCY REDUCTION (-98%)</text>
-          <text x="260" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">CLOUD COST ($0.00)</text>
-          <text x="260" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">RETENTION RATE (92%)</text>
-          <text x="150" y="285" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">PUBLICATIONS (500+)</text>
-          <text x="40" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">CONVERSION (100+ LPs)</text>
-          <text x="40" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">DETERMINISTIC SLA (99.99%)</text>
-        </svg>
-      </div>
     </section>
 
     <!-- 02 // EXPERIENCE SECTION -->
@@ -267,47 +256,80 @@
         <!-- Injected dynamically via app.js -->
       </div>
 
-      <!-- KHỐI RADAR CHART VECTOR CO GIÃN TỰ ĐỘNG (CORE COMPETENCY MATRIX) -->
+      <!-- KHỐI RADAR CHART 3 BIẾN MULTI-LAYER -->
       <div class="cv-radar-container cv-lego-block">
         <div class="radar-header">
           <span class="hud-tag" data-key="radar_stack.tag">// TELEMETRY MATRIX</span>
           <h4 class="radar-title" data-key="radar_stack.title">FULLSTACK COMPETENCY RATIO</h4>
         </div>
 
-        <svg viewBox="0 0 300 300" class="radar-svg" xmlns="http://www.w3.org/2000/svg">
-          <!-- Lưới Radar Grid Lines (Các vòng đa giác đồng tâm) -->
-          <polygon points="150,30 254,90 254,210 150,270 46,210 46,90" stroke="#27272A" stroke-width="1" fill="none"/>
-          <polygon points="150,60 228,105 228,195 150,240 72,195 72,105" stroke="#18181E" stroke-width="1" fill="none"/>
-          <polygon points="150,90 202,120 202,180 150,210 98,180 98,120" stroke="#18181E" stroke-width="1" fill="none"/>
+        <div class="radar-legend">
+          <span class="legend-item"><i class="dot dot-white"></i> <span data-key="radar.legend_automation">Automation</span></span>
+          <span class="legend-item"><i class="dot dot-purple"></i> <span data-key="radar.legend_design">Design</span></span>
+          <span class="legend-item"><i class="dot dot-cyan"></i> <span data-key="radar.legend_devops">DevOps</span></span>
+        </div>
 
-          <!-- Trục tọa độ 6 hướng (Line Art Spoke Lines) -->
-          <line x1="150" y1="150" x2="150" y2="30" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="254" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="254" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="150" y2="270" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="46" y2="210" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
-          <line x1="150" y1="150" x2="46" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+        <svg viewBox="0 0 400 380" class="radar-svg-3layer" xmlns="http://www.w3.org/2000/svg">
+          <!-- Lưới Đa Giác Lục Giác Đồng Tâm (Hexagonal Grid Lines) -->
+          <polygon points="200,90 304,150 304,270 200,330 96,270 96,150" stroke="#27272A" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+          <polygon points="200,114 283,162 283,258 200,306 117,258 117,162" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+          <polygon points="200,138 262,174 262,246 200,282 138,246 138,174" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+          <polygon points="200,162 241,186 241,234 200,258 159,234 159,186" stroke="#18181E" stroke-width="1" fill="none"/>
+          <polygon points="200,186 221,198 221,222 200,234 179,222 179,198" stroke="#18181E" stroke-width="1" fill="none"/>
 
-          <!-- Vùng phủ dữ liệu Skill (Polygon Area) -->
-          <polygon points="150,42 243,96 238,201 150,252 62,201 56,96"
-                   fill="#5322FF" fill-opacity="0.3"
-                   stroke="#00E5FF" stroke-width="1.5"/>
+          <!-- 6 Trục Tọa Độ Xoay 60 Độ -->
+          <line x1="200" y1="210" x2="200" y2="90" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="200" y1="210" x2="304" y2="150" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="200" y1="210" x2="304" y2="270" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="200" y1="210" x2="200" y2="330" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="200" y1="210" x2="96" y2="270" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="200" y1="210" x2="96" y2="150" stroke="#27272A" stroke-width="1" stroke-dasharray="2 2"/>
 
-          <!-- Các điểm Node Anchors đỉnh chỉ số -->
-          <rect x="148" y="40" width="4" height="4" fill="#00E5FF"/>
-          <rect x="241" y="94" width="4" height="4" fill="#00E5FF"/>
-          <rect x="236" y="199" width="4" height="4" fill="#00E5FF"/>
-          <rect x="148" y="250" width="4" height="4" fill="#00E5FF"/>
-          <rect x="60" y="199" width="4" height="4" fill="#00E5FF"/>
-          <rect x="54" y="94" width="4" height="4" fill="#00E5FF"/>
+          <!-- Nhãn Thước Số Tâm Axis Scale (10, 8, 6, 4, 2, 0) -->
+          <text x="200" y="86" fill="#A1A1AA" font-size="10" font-family="'JetBrains Mono', monospace" text-anchor="middle">10</text>
+          <text x="200" y="110" fill="#71717A" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">8</text>
+          <text x="200" y="134" fill="#71717A" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">6</text>
+          <text x="200" y="158" fill="#71717A" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">4</text>
+          <text x="200" y="182" fill="#71717A" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">2</text>
+          <text x="200" y="206" fill="#71717A" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">0</text>
 
-          <!-- Nhãn văn bản font JetBrains Mono -->
-          <text x="150" y="20" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">AUTOMATION &amp; CODE (95%)</text>
-          <text x="260" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">3D &amp; WEBGL (90%)</text>
-          <text x="260" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="start">MOTION ADS (92%)</text>
-          <text x="150" y="285" fill="#00E5FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">PRINT &amp; PUBLISHING (98%)</text>
-          <text x="40" y="215" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">BRANDING (90%)</text>
-          <text x="40" y="90" fill="#F4F8FF" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="500" text-anchor="end">UI/UX LANDERS (94%)</text>
+          <!-- LAYER 1: Automation (Màu Trắng Trong Suốt) -->
+          <polygon points="200,162 252,180 293,264 200,324 111,261 122,165"
+                   fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" stroke-width="1.5"/>
+          <circle cx="200" cy="162" r="3.5" fill="#FFFFFF"/>
+          <circle cx="252" cy="180" r="3.5" fill="#FFFFFF"/>
+          <circle cx="293" cy="264" r="3.5" fill="#FFFFFF"/>
+          <circle cx="200" cy="324" r="3.5" fill="#FFFFFF"/>
+          <circle cx="111" cy="261" r="3.5" fill="#FFFFFF"/>
+          <circle cx="122" cy="165" r="3.5" fill="#FFFFFF"/>
+
+          <!-- LAYER 2: Design (Màu Tím Electric Indigo #6B46FF) -->
+          <polygon points="200,96 267,171 272,252 200,258 106,264 153,183"
+                   fill="#6B46FF" fill-opacity="0.45" stroke="#6B46FF" stroke-width="1.8"/>
+          <circle cx="200" cy="96" r="4" fill="#6B46FF"/>
+          <circle cx="267" cy="171" r="4" fill="#6B46FF"/>
+          <circle cx="272" cy="252" r="4" fill="#6B46FF"/>
+          <circle cx="200" cy="258" r="4" fill="#6B46FF"/>
+          <circle cx="106" cy="264" r="4" fill="#6B46FF"/>
+          <circle cx="153" cy="183" r="4" fill="#6B46FF"/>
+
+          <!-- LAYER 3: DevOps (Màu Cyan #00E5FF) -->
+          <polygon points="200,150 288,159 241,234 200,246 101,267 168,192"
+                   fill="#00E5FF" fill-opacity="0.55" stroke="#00E5FF" stroke-width="1.8"/>
+          <circle cx="200" cy="150" r="4" fill="#00E5FF"/>
+          <circle cx="288" cy="159" r="4" fill="#00E5FF"/>
+          <circle cx="241" cy="234" r="4" fill="#00E5FF"/>
+          <circle cx="200" cy="246" r="4" fill="#00E5FF"/>
+          <circle cx="101" cy="267" r="4" fill="#00E5FF"/>
+          <circle cx="168" cy="192" r="4" fill="#00E5FF"/>
+
+          <!-- Nhãn 6 Trục Xung Quanh -->
+          <text x="200" y="72" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="middle">Video &amp; Motion</text>
+          <text x="315" y="145" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="start">Bespoke Visuals</text>
+          <text x="315" y="278" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="start">Editorial &amp; Layout</text>
+          <text x="200" y="352" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="middle">Data Visualization</text>
+          <text x="85" y="278" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="end">Python &amp; AI Agent</text>
+          <text x="85" y="145" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="end">Brand &amp; Packaging</text>
         </svg>
       </div>
     </section>
