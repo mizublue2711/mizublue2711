@@ -41,7 +41,7 @@
           { val: "500+", unit: "REPORTS & CHARTS", label: "Financial Publications", desc: "Complex financial journals and data infographics for Hong Kong / global wealth management markets (Hubbis)." },
           { val: "100+", unit: "PAGES", label: "E-Commerce Landers", desc: "High-converting UI/UX layouts for VGS Shop, driving up to a 30% increase in online sales volume." },
           { val: "200+", unit: "MOTION ADS", label: "Video Production", desc: "Rapid 4-hour editing turnarounds, with 70% featuring custom-composed audio tracks." },
-          { val: "-60%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 5–7 min down to 1–3 min per asset." },
+          { val: "-60%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 5-7 min down to 1-3 min per asset." },
           { val: "$0.0", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
         ]
       },
@@ -56,7 +56,7 @@
         items: [
           {
             id: "exp-1",
-            period: "2025 – PRESENT",
+            period: "2025 - PRESENT",
             role: "LEAD AUTOMATION ARCHITECT & SPATIAL DEVELOPER",
             company: "ARTIFICIAL CRAFT",
             scope: "Hybrid AI Automation, 3D Web Graphics & Video-as-Code Ecosystem",
@@ -69,7 +69,7 @@
           },
           {
             id: "exp-2",
-            period: "2020 – 2026",
+            period: "2020 - 2026",
             role: "SENIOR BRAND & PACKAGING DESIGNER",
             company: "PROJECT 98 & THE DEER PROJECT",
             scope: "Export Agribusiness & Curved Structural Eco-Packaging",
@@ -81,7 +81,7 @@
           },
           {
             id: "exp-3",
-            period: "2020 – 2025",
+            period: "2020 - 2025",
             role: "SENIOR PUBLISHING & EDITORIAL DESIGNER",
             company: "HUBBIS (HONG KONG)",
             scope: "Institutional Wealth Management Publications & Financial Infographics",
@@ -93,7 +93,7 @@
           },
           {
             id: "exp-4",
-            period: "2016 – 2018",
+            period: "2016 - 2018",
             role: "CREATIVE LEAD & PRODUCTION COORDINATOR",
             company: "THE GROWTH AGENCY & VGS SHOP",
             scope: "Offshore Multi-channel Agency Delivery & Broadcast E-Commerce",
@@ -105,7 +105,7 @@
           },
           {
             id: "exp-5",
-            period: "AUG 2025 – DEC 2025",
+            period: "AUG 2025 - DEC 2025",
             role: "MOTION GRAPHICS & VIDEO PRODUCTION",
             company: "AUSTRALIA EXPERIENCES",
             scope: "Australia · Remote // Hospitality Brand Identity & Rapid Video Engine",
@@ -227,7 +227,7 @@
           { val: "500+", unit: "BÁO CÁO & BIỂU ĐỒ", label: "Ấn phẩm tài chính", desc: "Báo cáo tài chính phức tạp cho thị trường quản lý tài sản Hong Kong và quốc tế (Hubbis)." },
           { val: "100+", unit: "TRANG", label: "Landing Page Bán Hàng", desc: "Tối ưu UI/UX cho trang thương mại điện tử VGS Shop, đóng góp tăng trưởng doanh số tới +30%." },
           { val: "200+", unit: "VIDEO ADS", label: "Đồ họa chuyển động", desc: "Dựng video ngắn tốc độ cao (khung thời gian 4 tiếng/video), 70% có nhạc nền sản xuất riêng." },
-          { val: "-60%", unit: "THỜI GIAN PIM", label: "Pipeline AI Xử lý Ảnh", desc: "Tự động hóa quy trình quản lý ảnh sản phẩm AI từ 5-10 phút xuống còn 2-3 phút mỗi tài nguyên." },
+          { val: "-60%", unit: "THỜI GIAN PIM", label: "Pipeline AI Xử lý Ảnh", desc: "Tự động hóa quy trình quản lý ảnh sản phẩm AI từ 5-7 phút xuống còn 1-3 phút mỗi tài nguyên." },
           { val: "$0.0", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
         ]
       },
@@ -242,7 +242,7 @@
         items: [
           {
             id: "exp-1",
-            period: "2025 – HIỆN TẠI",
+            period: "2025 - HIỆN TẠI",
             role: "LEAD AUTOMATION ARCHITECT & SPATIAL DEVELOPER",
             company: "ARTIFICIAL CRAFT",
             scope: "Hệ sinh thái tự động hóa AI đồ họa, 3D Web & Video-as-Code (CRAFT//CODE)",
@@ -255,7 +255,7 @@
           },
           {
             id: "exp-2",
-            period: "2020 – 2026",
+            period: "2020 - 2026",
             role: "SENIOR BRAND & PACKAGING DESIGNER",
             company: "PROJECT 98 & THE DEER PROJECT",
             scope: "Nông sản xuất khẩu & Bao bì sinh thái uốn cong kỹ thuật cao",
@@ -267,7 +267,7 @@
           },
           {
             id: "exp-3",
-            period: "2018 – 2025",
+            period: "2018 - 2025",
             role: "SENIOR PUBLISHING & EDITORIAL DESIGNER",
             company: "HUBBIS (HONG KONG)",
             scope: "Ấn phẩm quản lý tài sản quốc tế & Biểu đồ tài chính chuyên sâu",
@@ -279,7 +279,7 @@
           },
           {
             id: "exp-4",
-            period: "2016 – 2018",
+            period: "2016 - 2018",
             role: "CREATIVE LEAD & PRODUCTION COORDINATOR",
             company: "THE GROWTH AGENCY & VGS SHOP",
             scope: "Điều phối Agency đa kênh offshore & Thương mại điện tử truyền hình",
@@ -291,15 +291,15 @@
           },
           {
             id: "exp-5",
-            period: "08/2025 – 12/2025",
+            period: "08/2025 - 12/2025",
             role: "MOTION GRAPHICS & VIDEO PRODUCTION",
             company: "AUSTRALIA EXPERIENCES",
             scope: "Australia · Làm việc từ xa (Remote) // Nhận diện ngành Hospitality & Dựng video tốc độ cao",
             tag: "MOTION & BRANDING",
             bullets: [
               "<strong>Xây dựng nhanh chóng bộ nhận diện thương hiệu:</strong> Thiết kế toàn diện hệ thống nhận diện hình ảnh, logo cùng các bố cục nội dung có tính tương tác cao trên Instagram, YouTube và TikTok cho nhiều thương hiệu trong ngành dịch vụ khách hàng (hospitality). Đảm bảo câu chuyện thương hiệu trên nền tảng số luôn nhất quán, ngay cả trong những dự án có tiến độ ra mắt thị trường vô cùng gấp rút.",
-              "<strong>Quy trình làm việc tốc độ cao (phong cách \"đặc nhiệm\"):</strong> Xử lý từ 2GB đến 10GB dữ liệu thô cho mỗi dự án; từ khâu lên ý tưởng, biên tập đến hoàn thiện các video dạng ngắn (short-form) đầy sống động chỉ trong vòng 4 giờ – thể hiện khả năng làm chủ các quy trình đòi hỏi cường độ cao.",
-              "<strong>Thông thạo đa dạng công cụ phần mềm:</strong> Kết hợp linh hoạt các phần mềm chuyên dụng – DaVinci Resolve (chỉnh màu/phân loại màu), Adobe After Effects (đồ họa chuyển động) và CapCut (tối ưu nhịp độ nhanh) – nhằm tối đa hóa khả năng giữ chân người xem và nâng cao độ nhận diện thương hiệu."
+              "<strong>Quy trình làm việc tốc độ cao (phong cách \"đặc nhiệm\"):</strong> Xử lý từ 2GB đến 10GB dữ liệu thô cho mỗi dự án; từ khâu lên ý tưởng, biên tập đến hoàn thiện các video dạng ngắn (short-form) đầy sống động chỉ trong vòng 4 giờ - thể hiện khả năng làm chủ các quy trình đòi hỏi cường độ cao.",
+              "<strong>Thông thạo đa dạng công cụ phần mềm:</strong> Kết hợp linh hoạt các phần mềm chuyên dụng - DaVinci Resolve (chỉnh màu/phân loại màu), Adobe After Effects (đồ họa chuyển động) và CapCut (tối ưu nhịp độ nhanh) - nhằm tối đa hóa khả năng giữ chân người xem và nâng cao độ nhận diện thương hiệu."
             ]
           }
         ]
