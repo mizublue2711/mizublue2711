@@ -1072,8 +1072,8 @@ body {
 }
 
 .cv-radar-container-p5:hover {
-  border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: 0 0 24px rgba(16, 185, 129, 0.08);
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.08);
 }
 
 .radar-header-p5 {
@@ -1112,9 +1112,14 @@ body {
   color: #F4F8FF;
 }
 
+.dot-cyan {
+  background: #00E5FF;
+  box-shadow: 0 0 6px #00E5FF;
+}
+
 .dot-emerald {
-  background: #10B981;
-  box-shadow: 0 0 6px #10B981;
+  background: #00E5FF;
+  box-shadow: 0 0 6px #00E5FF;
 }
 
 .radar-svg-full {
@@ -1287,7 +1292,8 @@ body {
 /* --------------------------------------------------------------------------
    FOOTER
    -------------------------------------------------------------------------- */
-.site-footer {
+.site-footer,
+.cv-footer {
   padding: 48px 0;
   border-top: 1px solid var(--border-strong);
   margin-top: 48px;
@@ -1297,6 +1303,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  break-inside: avoid;
+  break-before: avoid;
 }
 
 .footer-rights {
@@ -1524,7 +1532,7 @@ body {
     page-break-after: avoid !important;
   }
 
-  /* 7. Giữ nguyên các khối Lego không bị cắt ngang trang */
+  /* 7. Giữ nguyên các khối Lego không bị cắt ngang trang, thu gọn lề còn 12px */
   .cv-lego-block, section, article, .card,
   .experience-item,
   .metric-card,
@@ -1540,34 +1548,65 @@ body {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
     break-inside: avoid-page !important;
-    margin-bottom: 10pt !important;
+    margin-bottom: 12px !important;
     position: relative !important;
   }
 
-  /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa ở cuối trang 4 & 5 */
+  /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa */
   #stack {
     display: flex !important;
     flex-direction: column !important;
-    min-height: 240mm !important;
+    min-height: 230mm !important;
   }
 
-  #contact {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 240mm !important;
-  }
-
-  .cv-radar-container,
-  .cv-radar-container-p5 {
+  .cv-radar-container {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
-    margin-top: auto !important; /* Đẩy khối Radar xuống bám đáy trang */
+    margin-top: auto !important; /* Đẩy khối Radar xuống bám đáy trang ở mục Tech Stack */
     padding: 16px !important;
     border: 1px solid #18181E !important;
     background-color: #0D0D11 !important;
     width: 100% !important;
     box-sizing: border-box !important;
     display: block !important;
+  }
+
+  .cv-radar-container-p5 {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-top: 14px !important; /* Bám sát ngay dưới phần Motion Graphics & Video Production */
+    padding: 16px !important;
+    border: 1px solid #18181E !important;
+    background-color: #0D0D11 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+  /* Khóa chặt Footer với Section Contact - Tuyệt đối không để rơi 1 dòng sang trang sau */
+  footer,
+  .site-footer,
+  .cv-footer {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+    margin-top: 14px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid #1F1F2E !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+
+  .footer-rights,
+  .footer-spec {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    font-size: 8pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .radar-legend,
