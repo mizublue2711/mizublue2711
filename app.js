@@ -246,7 +246,7 @@
             role: "LEAD AUTOMATION ARCHITECT & SPATIAL DEVELOPER",
             company: "ARTIFICIAL CRAFT",
             scope: "Hệ sinh thái tự động hóa AI đồ họa, 3D Web & Video-as-Code (CRAFT//CODE)",
-            tag: "HẠ TẦNG HIỆN HÀNH",
+            tag: "NỀN TẢNG KỸ THUẬT",
             bullets: [
               "<strong>E2E AI-Image PIM Pipeline:</strong> Lập trình luồng tự động hóa bằng Python FastAPI, n8n và Cloudflare R2; tích hợp kiểm định ảnh 2 lớp (Gemini Flash + Claude Sonnet) giúp giảm 60% thời gian xử lý và tiết kiệm 70% chi phí AI Vision token.",
               "<strong>Video-as-Code Engine:</strong> Lập trình khung video chuyển động bằng Remotion 4.0 & React, render serverless trên GCP Cloud Run đạt chuẩn 80% deterministic SLA, không bị lệch khung hình.",
@@ -355,7 +355,7 @@
         subheading: "Kênh liên lạc trực tiếp cho các dự án tư vấn doanh nghiệp, đồ họa 3D và tự động hóa",
         email_label: "EMAIL CHÍNH",
         email: "mizu2711@gmail.com",
-        phone_label: "SỐ ĐIỆN THOẠI TRỰC TIẾP",
+        phone_label: "SỐ ĐIỆN THOẠI",
         phone: "+84 979 203 507",
         location_label: "ĐỊA BÀN HOẠT ĐỘNG",
         location: "TP. Hồ Chí Minh, Việt Nam (Làm việc từ xa toàn cầu)",
@@ -370,7 +370,7 @@
         ]
       },
       footer: {
-        rights: "© 2026 VŨ THU THỦY // MIZUBLUE2711. TOÀN BỘ QUYỀN ĐƯỢC BẢO LƯU.",
+        rights: "© 2026 VŨ THU THỦY // MIZU2711. BẢN QUYỀN CÁ NHÂN.",
         spec: "THIẾT KẾ THEO CYBERNETIC SWISS BRUTALISM • ZERO SOFT RADIUS • CANVAS 60 FPS ĐỒNG BỘ"
       },
       radar_p5: {
