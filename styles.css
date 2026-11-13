@@ -1748,8 +1748,7 @@ body {
   }
 
   .exp-company-sub,
-  .edu-type-tag,
-  .btn-indigo {
+  .edu-type-tag {
     color: #5322FF !important;
   }
 
@@ -1904,6 +1903,82 @@ body {
   .contact-meta-link {
     pointer-events: auto !important;
     display: inline-flex !important;
+  }
+
+  /* ========================================================
+     NÚT BẤM CTA TRONG BẢN IN PDF (ĐẢM BẢO ĐỘ TƯƠNG PHẢN CHUẨN)
+     ======================================================== */
+  /* Nút 1: Framer Portfolio - Nền Cyan, chữ và biểu tượng MÀU ĐEN TUYỆT ĐỐI */
+  a.btn-primary,
+  a.btn-primary:link,
+  a.btn-primary:visited,
+  .btn-primary {
+    background-color: #00E5FF !important;
+    color: #050507 !important;
+    border-color: #00E5FF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .btn-primary span,
+  .btn-primary [data-key],
+  a.btn-primary span {
+    color: #050507 !important;
+    background: transparent !important;
+  }
+
+  .btn-primary svg,
+  a.btn-primary svg {
+    stroke: #050507 !important;
+    color: #050507 !important;
+  }
+
+  /* Nút 2: Artificial Craft - Nền tối, chữ trắng */
+  a.btn-secondary,
+  a.btn-secondary:link,
+  a.btn-secondary:visited,
+  .btn-secondary {
+    background-color: #121217 !important;
+    color: #F4F8FF !important;
+    border: 1px solid #27272A !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .btn-secondary span,
+  a.btn-secondary span {
+    color: #F4F8FF !important;
+    background: transparent !important;
+  }
+
+  .btn-secondary svg,
+  a.btn-secondary svg {
+    stroke: #F4F8FF !important;
+    color: #F4F8FF !important;
+  }
+
+  /* Nút 3: Transmit Message - Nền tím, chữ trắng */
+  a.btn-indigo,
+  a.btn-indigo:link,
+  a.btn-indigo:visited,
+  .btn-indigo {
+    background-color: #5322FF !important;
+    color: #FFFFFF !important;
+    border: 1px solid #5322FF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .btn-indigo span,
+  a.btn-indigo span {
+    color: #FFFFFF !important;
+    background: transparent !important;
+  }
+
+  .btn-indigo svg,
+  a.btn-indigo svg {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
   }
 
   /* Hiển thị mã QR sắc nét */
