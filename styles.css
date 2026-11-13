@@ -703,15 +703,26 @@ body {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 8px;
+  gap: 8px;
 }
 
-.metric-val {
+.metric-val,
+.metric-value,
+.metric-number,
+.stat-number,
+.stat-value,
+.telemetry-number {
   font-family: var(--font-display);
   font-size: 38px;
   font-weight: 800;
   color: var(--cyan);
   letter-spacing: -0.02em;
   line-height: 1;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
 }
 
 .metric-unit {
@@ -719,6 +730,8 @@ body {
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.08em;
+  text-align: right;
+  line-height: 1.25;
 }
 
 .metric-label {
@@ -1454,8 +1467,8 @@ body {
     display: none !important;
   }
 
-  /* 5. Ép tiêu đề và văn bản tự rớt dòng, không tràn ngang */
-  h1, h2, h3, h4, p, span, div, a {
+  /* 5. Ép tiêu đề và văn bản tự rớt dòng, không tràn ngang (ngoại trừ các con số đo lường) */
+  h1, h2, h3, h4, p, span:not(.metric-val):not(.metric-value):not(.metric-number), div, a {
     overflow-wrap: break-word !important;
     word-break: break-word !important;
     white-space: normal !important;
@@ -1722,6 +1735,66 @@ body {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 8pt !important;
+  }
+
+  /* CHỐNG BẺ DÒNG SỐ LỚN & BỐ CỤC THẺ METRIC IN A4 */
+  .metric-card {
+    padding: 10pt 12pt !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .metric-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
+    gap: 4pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .metric-val,
+  .metric-value,
+  .metric-number,
+  .stat-number,
+  .stat-value,
+  .telemetry-number,
+  .metric-card .metric-val {
+    font-size: 26pt !important; /* Co nhẹ 26pt - 28pt vừa vặn khổ A4 */
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    color: #00E5FF !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .metric-unit {
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+    color: #A1A1AA !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    text-align: right !important;
+    line-height: 1.2 !important;
+    max-width: 48% !important;
+    word-break: break-word !important;
+  }
+
+  .metric-label {
+    font-size: 9.5pt !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 4pt !important;
+    line-height: 1.3 !important;
+  }
+
+  .metric-desc {
+    font-size: 8pt !important;
+    line-height: 1.4 !important;
+    color: #A1A1AA !important;
   }
 
   .stack-matrix-grid {

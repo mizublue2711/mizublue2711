@@ -41,8 +41,8 @@
           { val: "500+", unit: "REPORTS & CHARTS", label: "Financial Publications", desc: "Complex financial journals and data infographics for Hong Kong / global wealth management markets (Hubbis)." },
           { val: "100+", unit: "PAGES", label: "E-Commerce Landers", desc: "High-converting UI/UX layouts for VGS Shop, driving up to a 30% increase in online sales volume." },
           { val: "200+", unit: "MOTION ADS", label: "Video Production", desc: "Rapid 4-hour editing turnarounds, with 70% featuring custom-composed audio tracks." },
-          { val: "-60%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 5-7 min down to 1-3 min per asset." },
-          { val: "$0.0", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
+          { val: "-98%", unit: "LATENCY", label: "AI PIM Pipeline", desc: "Automated product image pipeline, collapsing processing from 3–5 min down to 1–3 sec per asset." },
+          { val: "$0.00", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
         ]
       },
       radar_metrics: {
@@ -241,7 +241,7 @@
           { val: "100+", unit: "TRANG", label: "Landing Page Bán Hàng", desc: "Tối ưu UI/UX cho trang thương mại điện tử VGS Shop, đóng góp tăng trưởng doanh số tới +30%." },
           { val: "200+", unit: "VIDEO ADS", label: "Đồ họa chuyển động", desc: "Dựng video ngắn tốc độ cao (khung thời gian 4 tiếng/video), 70% có nhạc nền sản xuất riêng." },
           { val: "-60%", unit: "THỜI GIAN PIM", label: "Pipeline AI Xử lý Ảnh", desc: "Tự động hóa quy trình quản lý ảnh sản phẩm AI từ 5-7 phút xuống còn 1-3 phút mỗi tài nguyên." },
-          { val: "$0.0", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
+          { val: "$0.00", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
         ]
       },
       radar_metrics: {
@@ -480,7 +480,7 @@
           (m) => `
         <div class="metric-card chamfer-tr cv-lego-block">
           <div class="metric-header">
-            <span class="metric-val">${m.val}</span>
+            <span class="metric-val metric-value metric-number">${m.val}</span>
             <span class="metric-unit">${m.unit}</span>
           </div>
           <div class="metric-label">${m.label}</div>
