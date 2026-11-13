@@ -71,6 +71,19 @@
       "subheading": "Nine-year timeline spanning agency creative leadership to deterministic code automation",
       "items": [
         {
+          "id": "exp-0",
+          "period": "2025 – PRESENT",
+          "role": "SPATIAL UI/UX & TACTICAL CAD DESIGN SYSTEMS",
+          "company": "ARTIFICIAL CRAFT, VIBEPATH, 3D DATA METROPOLIS",
+          "scope": "Enterprise UI/UX Architecture, Cybernetic Swiss Brutalism & 3D Spatial Ergonomics",
+          "tag": "FLAGSHIP UI/UX & CAD",
+          "bullets": [
+            "<strong>Cybernetic Swiss Brutalism Design System:</strong> Built an enterprise-grade Cybernetic Swiss Brutalism design system (border-radius: 0px, 1px CAD lines, 4-tier planar elevation).",
+            "<strong>Asynchronous Creator Workflows:</strong> Architected asynchronous creator workflows with decoupled state/command controls and dynamic async locks.",
+            "<strong>Interactive 3D Voxel Cities:</strong> Transformed static corporate spreadsheets into interactive 60 FPS 3D Voxel cities with sub-level negative risk indicators."
+          ]
+        },
+        {
           "id": "exp-1",
           "period": "2025 – PRESENT",
           "role": "LEAD AUTOMATION ARCHITECT & SPATIAL DEVELOPER",
@@ -250,7 +263,7 @@
       "title": "ITERATIVE SYSTEM SLA & TEST PASS RATES",
       "leg_pim": "AI PIM Pipeline",
       "leg_video": "Video-as-Code Engine",
-      "leg_webgl": "3D WebGL Engines"
+      "leg_webgl": "Spatial UI/UX & CAD Systems"
     }
   },
   "vi": {
@@ -324,6 +337,19 @@
       "heading": "KINH NGHIỆM LÀM VIỆC THỰC CHIẾN",
       "subheading": "Hành trình 9 năm từ điều phối sáng tạo agency đến kỹ sư tự động hóa tất định",
       "items": [
+        {
+          "id": "exp-0",
+          "period": "2025 – HIỆN TẠI",
+          "role": "HỆ THỐNG THIẾT KẾ SPATIAL UI/UX & TACTICAL CAD",
+          "company": "ARTIFICIAL CRAFT, VIBEPATH, 3D DATA METROPOLIS",
+          "scope": "Kiến trúc UI/UX Doanh nghiệp, Cybernetic Swiss Brutalism & Công thái học không gian 3D",
+          "tag": "DỰ ÁN CỜ ĐẦU UI/UX & CAD",
+          "bullets": [
+            "<strong>Hệ thống Design System Cybernetic Swiss Brutalism:</strong> Xây dựng hệ thống thiết kế chuẩn doanh nghiệp (border-radius: 0px, đường nét CAD 1px, phân tầng cao độ 4 lớp phẳng).",
+            "<strong>Luồng làm việc Creator bất đồng bộ:</strong> Thiết kế kiến trúc luồng làm việc creator bất đồng bộ với cơ chế tách biệt điều khiển trạng thái/lệnh thực thi và khóa async động.",
+            "<strong>Công thái học không gian 3D Voxel:</strong> Biến đổi bảng tính doanh nghiệp phẳng tĩnh thành thành phố 3D Voxel tương tác 60 FPS với chỉ báo rủi ro âm chìm dưới lòng đất."
+          ]
+        },
         {
           "id": "exp-1",
           "period": "2025 – HIỆN TẠI",
@@ -504,7 +530,7 @@
       "title": "SLA VẬN HÀNH THỰC TẾ & TỶ LỆ TEST PASS",
       "leg_pim": "Pipeline AI Xử lý Ảnh PIM",
       "leg_video": "Động cơ Video-as-Code",
-      "leg_webgl": "Không gian 3D WebGL Engines"
+      "leg_webgl": "Spatial UI/UX & Hệ thống CAD"
     }
   }
 }
