@@ -45,6 +45,36 @@
           { val: "$0.00", unit: "RENDER COST", label: "Client GPU Offload", desc: "Architected WebGL 3D web applications offloading high-fidelity spatial graphics directly to user hardware." }
         ]
       },
+      mindmap: {
+        tag: "// OPERATIONAL WORKFLOW TOPOLOGY",
+        title: "4-STAGE DETERMINISTIC PRODUCTION PIPELINE",
+        node1_tag: "01 // DISCOVERY",
+        node1_title: "Brief Decoding",
+        node1_b1: "• Constraint Audit",
+        node1_b2: "• Market Matrix",
+        node1_b3: "• Technical Scope",
+        node1_out: "> WIREFRAME AST",
+        node2_tag: "02 // PROTOTYPE",
+        node2_title: "Visual Blueprint",
+        node2_b1: "• Swiss 1px Grids",
+        node2_b2: "• 60 FPS Kinetic Spec",
+        node2_b3: "• 3D Space Shaders",
+        node2_out: "> DESIGN TOKENS",
+        node3_tag: "03 // EXECUTION",
+        node3_title: "Production Engine",
+        node3_b1: "• InDesign Pre-press",
+        node3_b2: "• Remotion Video Code",
+        node3_b3: "• Python / n8n / Zod",
+        node3_out: "> DETERMINISTIC ASSETS",
+        node4_tag: "04 // DELIVERY",
+        node4_title: "Zero-Drift SLA",
+        node4_b1: "• Color / Print QA",
+        node4_b2: "• Client GPU Offload",
+        node4_b3: "• GitOps & PIM Sync",
+        node4_out: "> $0.00 RENDER DEPLOY",
+        footer_left: "[ PROTOCOL: ISO-PRECISION CAD ]",
+        footer_right: "[ CONTINUOUS AUTOMATION LOOP // 60 FPS ]"
+      },
       radar_metrics: {
         tag: "// TELEMETRY BENCHMARK",
         title: "PERFORMANCE & VELOCITY SPECTRUM"
@@ -243,6 +273,36 @@
           { val: "-60%", unit: "THỜI GIAN PIM", label: "Pipeline AI Xử lý Ảnh", desc: "Tự động hóa quy trình quản lý ảnh sản phẩm AI từ 5-7 phút xuống còn 1-3 phút mỗi tài nguyên." },
           { val: "$0.00", unit: "RENDER SERVER", label: "Offload GPU Máy Khách", desc: "Xây dựng các ứng dụng WebGL 3D chạy trực tiếp trên GPU máy khách, không tốn phí render cloud." }
         ]
+      },
+      mindmap: {
+        tag: "// CẤU TRÚC LUỒNG VẬN HÀNH SẢN XUẤT",
+        title: "QUY TRÌNH SẢN XUẤT TẤT ĐỊNH 4 GIAI ĐOẠN",
+        node1_tag: "01 // KHẢO SÁT",
+        node1_title: "Giải mã Đề bài",
+        node1_b1: "• Rà soát Ràng buộc",
+        node1_b2: "• Ma trận Thị trường",
+        node1_b3: "• Phạm vi Kỹ thuật",
+        node1_out: "> WIREFRAME AST",
+        node2_tag: "02 // NGUYÊN MẪU",
+        node2_title: "Bản thiết kế Hình ảnh",
+        node2_b1: "• Hệ lưới 1px Swiss",
+        node2_b2: "• Đồ họa Động 60 FPS",
+        node2_b3: "• Shaders Không gian 3D",
+        node2_out: "> DESIGN TOKENS",
+        node3_tag: "03 // THỰC THI",
+        node3_title: "Động cơ Sản xuất",
+        node3_b1: "• Chế bản InDesign",
+        node3_b2: "• Lập trình Remotion",
+        node3_b3: "• Python / n8n / Zod",
+        node3_out: "> TÀI NGUYÊN TẤT ĐỊNH",
+        node4_tag: "04 // BÀN GIAO",
+        node4_title: "SLA Chuẩn Tuyệt đối",
+        node4_b1: "• Kiểm chuẩn Màu & In",
+        node4_b2: "• Offload GPU Máy khách",
+        node4_b3: "• Đồng bộ GitOps & PIM",
+        node4_out: "> TRIỂN KHAI RENDER $0",
+        footer_left: "[ TIÊU CHUẨN: CAD ĐỘ CHÍNH XÁC CAO ]",
+        footer_right: "[ VÒNG LẶP TỰ ĐỘNG HÓA LIÊN TỤC // 60 FPS ]"
       },
       radar_metrics: {
         tag: "// TIÊU CHUẨN ĐO LƯỜNG",
@@ -618,6 +678,14 @@
     if (legVideo && d.radar_p5) legVideo.textContent = d.radar_p5.leg_video;
     const legWebgl = document.querySelector('[data-key="radar_p5.leg_webgl"]');
     if (legWebgl && d.radar_p5) legWebgl.textContent = d.radar_p5.leg_webgl;
+
+    // Mind Map Topology
+    if (d.mindmap) {
+      Object.keys(d.mindmap).forEach((k) => {
+        const el = document.querySelector(`[data-key="mindmap.${k}"]`);
+        if (el) el.textContent = d.mindmap[k];
+      });
+    }
   }
 
   // Accordion Toggle
