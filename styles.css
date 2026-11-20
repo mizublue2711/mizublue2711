@@ -793,10 +793,10 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   02 // PORTFOLIO ARCHITECTURE & 3-TIER SHOWCASE
+   02 // WORK EXPERIENCE & PRODUCTION ARCHITECTURE (3-TIER DOSSIER)
    -------------------------------------------------------------------------- */
 .showcase-tier-block {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   padding: 24px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -862,115 +862,187 @@ body {
 .showcase-tier-subtitle {
   font-size: 12px;
   color: var(--text-secondary);
-  max-width: 540px;
+  max-width: 560px;
 }
 
-/* Tier 1 Grid: 3 Flagship Product Cards */
-.showcase-flagship-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* Tier 1 Layout: Vertical Flagship Dossier Stack */
+.career-tier1-list {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
-/* Tier 2 Grid: 2x2 Enterprise Client Cards */
-.showcase-clients-grid {
+/* Tier 2 Layout: 2x2 Enterprise Retainer Grid */
+.career-tier2-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
-/* Tier 3 Grid: 3-Column Innovation Vault */
-.showcase-vault-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-/* Shared Showcase Card */
-.showcase-card {
+/* Shared Career Dossier Card */
+.career-card {
   background: var(--panel);
   border: 1px solid var(--border);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   position: relative;
   transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.showcase-card-tier1:hover {
+.career-card-tier1 {
+  border-left: 3px solid var(--cyan);
+}
+
+.career-card-tier1:hover {
   border-color: var(--cyan);
   background: var(--subpanel);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
-.showcase-card-tier2 {
-  border-left: 2px solid var(--indigo);
+.career-card-tier2 {
+  border-left: 3px solid var(--indigo);
 }
 
-.showcase-card-tier2:hover {
+.career-card-tier2:hover {
   border-color: var(--indigo);
   background: var(--subpanel);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
-.showcase-card-top {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
-.showcase-card-meta {
+.career-card-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.career-head-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
-.showcase-badge-cyan {
+.career-timeframe-badge {
   display: inline-block;
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--cyan);
   background: var(--surface);
   border: 1px solid var(--border-strong);
   padding: 3px 8px;
 }
 
-.showcase-badge-indigo {
+.career-timeframe-indigo {
+  background-color: #5322FF;
+  border-color: #5322FF;
+  color: #ffffff;
+}
+
+.career-project-badge {
   display: inline-block;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  background-color: #5322FF;
-  color: #ffffff;
-  border: 1px solid #5322FF;
+  color: var(--text-white);
+  background: var(--subpanel);
+  border: 1px solid var(--border-strong);
   padding: 3px 8px;
 }
 
-.showcase-card-title {
+.career-head-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.career-card-title {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 800;
+  text-transform: uppercase;
   color: var(--text-white);
   line-height: 1.25;
   letter-spacing: -0.01em;
 }
 
-.showcase-card-desc {
+/* CAD Meta Grid (Role / Entity / Domain) */
+.career-meta-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.career-meta-grid-stack {
+  grid-template-columns: 1fr;
+}
+
+.career-meta-cell {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 1px solid var(--border);
+}
+
+.career-meta-cell:last-child {
+  border-right: none;
+}
+
+.career-meta-grid-stack .career-meta-cell {
+  border-right: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.career-meta-grid-stack .career-meta-cell:last-child {
+  border-bottom: none;
+}
+
+.career-meta-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+}
+
+.career-meta-label-indigo {
+  color: #a78bfa;
+}
+
+.career-meta-val {
   font-size: 12px;
-  color: var(--text-secondary);
-  line-height: 1.55;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* Stack Pills Row */
+.career-stack-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.career-stack-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  padding-top: 3px;
+  flex-shrink: 0;
 }
 
 .showcase-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 2px;
 }
 
 .showcase-tag {
@@ -983,33 +1055,25 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Expandable Deep-Dive Drawer */
-.showcase-card-details {
-  display: none;
-  padding-top: 12px;
-  border-top: 1px dashed var(--border-strong);
-}
-
-.showcase-card.expanded .showcase-card-details {
-  display: block;
-}
-
-.showcase-detail-list {
+/* Always-Visible Technical & Commercial Bullets */
+.career-bullets {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-strong);
 }
 
-.showcase-detail-list li {
+.career-bullets li {
   position: relative;
-  padding-left: 14px;
-  font-size: 11.5px;
+  padding-left: 16px;
+  font-size: 12.5px;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-.showcase-detail-list li::before {
+.career-bullets li::before {
   content: "▸";
   position: absolute;
   left: 0;
@@ -1018,78 +1082,30 @@ body {
   font-size: 10px;
 }
 
-.showcase-detail-list-indigo li::before {
+.career-bullets-indigo li::before {
   color: #8b6cff;
 }
 
-.showcase-detail-list li strong {
+.career-bullets li strong {
   color: var(--text-white);
   font-weight: 600;
 }
 
-/* Card Actions & Links */
-.showcase-card-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border);
-}
-
-.showcase-toggle-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--surface);
-  border: 1px solid var(--border-strong);
-  color: var(--cyan);
-  padding: 6px 10px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.showcase-toggle-btn:hover {
-  border-color: var(--cyan);
-  background: var(--subpanel);
-}
-
-.showcase-toggle-indigo {
-  color: #c4b5fd;
-  border-color: rgba(83, 34, 255, 0.55);
-}
-
-.showcase-toggle-indigo:hover {
-  border-color: #5322FF;
-  color: #ffffff;
-  background: rgba(83, 34, 255, 0.25);
-}
-
-.showcase-links-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
+/* Compact Action Links */
 .showcase-link-live,
 .showcase-link-case {
-  flex: 1;
-  min-width: 110px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 10px;
+  padding: 5px 10px;
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-decoration: none;
   transition: all 0.15s ease;
   text-align: center;
+  white-space: nowrap;
 }
 
 .showcase-link-live {
@@ -1126,7 +1142,13 @@ body {
   color: #ffffff;
 }
 
-/* Tier 3: Innovation Vault Clusters & Micro-Nodes */
+/* Tier 3 Grid: 3-Column Innovation Vault */
+.showcase-vault-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
 .vault-cluster {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -1250,138 +1272,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   03 // EXPERIENCE SECTION (ACCORDION & CARDS)
-   -------------------------------------------------------------------------- */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.experience-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  transition: border-color 0.2s ease;
-}
-
-.experience-card.active,
-.experience-card:hover {
-  border-color: var(--border-strong);
-}
-
-.experience-card.active {
-  border-left: 3px solid var(--cyan);
-}
-
-.exp-header {
-  padding: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  cursor: pointer;
-  user-select: none;
-}
-
-.exp-primary-meta {
-  flex: 1;
-}
-
-.exp-period-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--cyan);
-  background: var(--panel);
-  border: 1px solid var(--border-strong);
-  padding: 2px 8px;
-  margin-bottom: 8px;
-  letter-spacing: 0.05em;
-}
-
-.exp-role-title {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--text-white);
-  letter-spacing: -0.01em;
-  margin-bottom: 4px;
-}
-
-.exp-company-sub {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--indigo);
-  margin-bottom: 6px;
-}
-
-.exp-scope-summary {
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.exp-toggle-btn {
-  background: var(--panel);
-  border: 1px solid var(--border-strong);
-  color: var(--text-muted);
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.experience-card.active .exp-toggle-btn {
-  background: var(--cyan);
-  color: var(--canvas);
-  border-color: var(--cyan);
-}
-
-.exp-body {
-  padding: 0 24px 24px 24px;
-  border-top: 1px solid var(--border);
-  display: block;
-}
-
-.experience-card.collapsed .exp-body {
-  display: none;
-}
-
-.exp-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.exp-bullets li {
-  position: relative;
-  padding-left: 20px;
-  color: var(--text-secondary);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.exp-bullets li::before {
-  content: "►";
-  position: absolute;
-  left: 0;
-  color: var(--cyan);
-  font-size: 9px;
-  top: 3px;
-}
-
-.exp-bullets li strong {
-  color: var(--text-white);
-  font-weight: 600;
-}
-
-/* --------------------------------------------------------------------------
-   04 // TECH STACK MATRIX (4 PILLARS)
+   03 // TECH STACK MATRIX (4 PILLARS)
    -------------------------------------------------------------------------- */
 .stack-matrix-grid {
   display: grid;
@@ -1838,11 +1729,11 @@ body {
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .nav-links {
-    gap: 10px;
+    gap: 12px;
   }
 
   .nav-links a {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .hero-grid-layout {
@@ -1859,10 +1750,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .showcase-flagship-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .showcase-vault-grid {
     grid-template-columns: 1fr;
   }
@@ -1873,6 +1760,12 @@ body {
   
   .hero-name {
     font-size: 44px;
+  }
+}
+
+@media (max-width: 960px) {
+  .career-tier2-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1911,8 +1804,24 @@ body {
     padding: 16px;
   }
 
-  .showcase-flagship-grid,
-  .showcase-clients-grid,
+  .career-card {
+    padding: 16px;
+  }
+
+  .career-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-meta-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .career-meta-cell:last-child {
+    border-bottom: none;
+  }
+
+  .career-tier2-grid,
   .showcase-vault-grid {
     grid-template-columns: 1fr;
   }
@@ -1994,8 +1903,6 @@ body {
   #cyber-canvas,
   .top-nav,
   .swiss-grid-lines,
-  .exp-toggle-btn,
-  .showcase-toggle-btn,
   .copy-btn-action {
     display: none !important;
   }
@@ -2008,7 +1915,7 @@ body {
   }
 
   /* 6. Gắn Header dính liền với khối nội dung bên dưới (chống tiêu đề mồ côi) */
-  h1, h2, h3, h4, .section-title, .hero-name, .section-prefix, .section-subtitle, .pillar-title, .exp-role-title {
+  h1, h2, h3, h4, .section-title, .hero-name, .section-prefix, .section-subtitle, .pillar-title, .career-card-title {
     break-after: avoid !important;
     page-break-after: avoid !important;
   }
@@ -2023,8 +1930,7 @@ body {
   }
 
   .section-header-block + *,
-  #projects-container > .showcase-tier-block:first-child,
-  .experience-list > .experience-card:first-child,
+  #experience-showcase-container > .showcase-tier-block:first-child,
   .metrics-grid > .metric-card:first-child,
   .stack-matrix-grid > .stack-pillar-card:first-child,
   .education-grid > .edu-card:first-child,
@@ -2034,6 +1940,8 @@ body {
   }
 
   .showcase-tier-header {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
     break-after: avoid !important;
     page-break-after: avoid !important;
     margin-bottom: 10pt !important;
@@ -2055,13 +1963,7 @@ body {
     page-break-inside: auto !important;
   }
 
-  /* Mục 2 (Showcase), Mục 3 (Kinh nghiệm), Mục 4 (Tech Stack), Mục 6 (Liên hệ) bắt đầu trang mới, thụt lề trên an toàn 18mm */
-  #projects {
-    break-before: page !important;
-    page-break-before: always !important;
-    padding-top: 18mm !important;
-  }
-
+  /* Mục 2 (Kinh nghiệm & Showcase), Mục 3 (Tech Stack), Mục 5 (Liên hệ) bắt đầu trang mới, thụt lề trên an toàn 18mm */
   #experience {
     break-before: page !important;
     page-break-before: always !important;
@@ -2097,13 +1999,11 @@ body {
 
   /* 7. Giữ nguyên các khối Lego không bị cắt ngang trang, thu gọn lề còn 12px */
   .cv-lego-block, section, article, .card,
-  .experience-item,
   .metric-card,
-  .showcase-tier-block,
-  .showcase-card,
+  .career-card,
+  .showcase-tier-3,
   .vault-cluster,
   .showcase-cta-bar,
-  .experience-card,
   .stack-pillar-card,
   .edu-card,
   .contact-terminal-box,
@@ -2118,6 +2018,12 @@ body {
     break-inside: avoid-page !important;
     margin-bottom: 12px !important;
     position: relative !important;
+  }
+
+  .showcase-tier-1,
+  .showcase-tier-2 {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 
   /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa */
@@ -2216,23 +2122,14 @@ body {
     height: 120px !important;
   }
 
-  /* Luôn mở rộng toàn bộ nội dung kinh nghiệm & showcase deep-dive */
-  .experience-card .exp-body,
-  .experience-card.collapsed .exp-body,
-  .showcase-card-details {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
   /* Đảm bảo nền và đường viền Dark Obsidian (#0B0B0F / #1F1F2E) */
   .hero-main-frame,
   .metric-card,
   .showcase-tier-block,
-  .showcase-card,
+  .career-card,
+  .career-meta-grid,
   .vault-cluster,
   .vault-node,
-  .experience-card,
   .stack-pillar-card,
   .edu-card,
   .contact-terminal-box,
@@ -2252,7 +2149,6 @@ body {
   .section-prefix,
   .hero-role,
   .metric-val,
-  .exp-period-badge,
   .pillar-subtitle,
   .edu-year,
   .highlight,
@@ -2262,14 +2158,13 @@ body {
     color: #00E5FF !important;
   }
 
-  .exp-company-sub,
   .edu-type-tag {
     color: #5322FF !important;
   }
 
   /* SỬA LỖI CHỮ TRÙNG MÀU NỀN TÍM TRONG BẢN IN PDF */
   .badge-purple, .tag-purple, .hero-experience-badge, .badge-experience,
-  .showcase-tier-tag-indigo, .showcase-badge-indigo {
+  .showcase-tier-tag-indigo, .career-timeframe-indigo {
     background-color: #5322FF !important;
     color: #FFFFFF !important;
     border-color: #5322FF !important;
@@ -2286,36 +2181,45 @@ body {
     border-top: 2px solid #5322FF !important;
   }
 
-  .showcase-card-tier2 {
-    border-left: 2px solid #5322FF !important;
+  .career-card-tier1 {
+    border-left: 2.5px solid #00E5FF !important;
+  }
+
+  .career-card-tier2 {
+    border-left: 2.5px solid #5322FF !important;
   }
 
   .showcase-tier-tag,
-  .showcase-badge-cyan,
+  .career-timeframe-badge:not(.career-timeframe-indigo),
+  .career-meta-label:not(.career-meta-label-indigo),
   .vault-cluster-index,
   .vault-node-arrow {
     color: #00E5FF !important;
   }
 
+  .career-meta-label-indigo {
+    color: #a78bfa !important;
+  }
+
   .showcase-tier-title,
-  .showcase-card-title,
+  .career-card-title,
+  .career-project-badge,
+  .career-meta-val,
   .vault-cluster-title,
   .vault-node-title,
-  .showcase-detail-list li strong {
+  .career-bullets li strong {
     color: #FFFFFF !important;
   }
 
   .showcase-tier-subtitle,
-  .showcase-card-desc,
-  .showcase-detail-list li,
+  .career-bullets li,
+  .career-stack-label,
   .vault-node-desc,
   .showcase-tag {
     color: #A1A1AA !important;
   }
 
   .metric-desc,
-  .exp-scope-summary,
-  .exp-bullets li,
   .section-subtitle,
   .hero-summary,
   .edu-institution,
@@ -2434,16 +2338,16 @@ body {
     margin-bottom: 10pt !important;
   }
 
-  .showcase-flagship-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 7pt !important;
+  .career-tier1-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8pt !important;
   }
 
-  .showcase-clients-grid {
+  .career-tier2-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 7pt !important;
+    gap: 8pt !important;
   }
 
   .showcase-vault-grid {
@@ -2452,22 +2356,44 @@ body {
     gap: 7pt !important;
   }
 
-  .showcase-card,
+  .career-card,
   .vault-cluster {
     padding: 8pt !important;
     gap: 6pt !important;
     margin-bottom: 0 !important;
   }
 
-  .showcase-card-title {
+  .career-card-title {
     font-size: 9.5pt !important;
+    line-height: 1.25 !important;
   }
 
-  .showcase-card-desc,
-  .showcase-detail-list li,
+  .career-meta-cell {
+    padding: 4pt 6pt !important;
+  }
+
+  .career-meta-label {
+    font-size: 6.5pt !important;
+  }
+
+  .career-meta-val {
+    font-size: 7.5pt !important;
+  }
+
+  .career-bullets {
+    gap: 4pt !important;
+    padding-top: 6pt !important;
+  }
+
+  .career-bullets li,
   .vault-node-desc {
     font-size: 7.5pt !important;
     line-height: 1.35 !important;
+  }
+
+  .showcase-tag {
+    font-size: 6.5pt !important;
+    padding: 1.5pt 4pt !important;
   }
 
   .vault-node {
