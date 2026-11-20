@@ -124,24 +124,28 @@
         <div class="hero-corner-bracket bracket-br"></div>
 
         <div class="hero-grid-layout">
-          <!-- LEFT: CIRCULAR AVATAR FRAME -->
+          <!-- LEFT: CIRCULAR AVATAR FRAME & ROSETTE SEAL (2-CLUSTER ARCHITECTURE) -->
           <div class="hero-avatar-col left-column-avatar-stack avatar-column">
-            <div class="hero-avatar-frame">
-              <img src="assets/avatar.png" alt="Thuy Vu" class="hero-avatar-img" />
-              <div class="avatar-status-pill">
-                <span class="status-dot"></span>
-                <span>ONLINE</span>
+            <!-- CLUSTER 1: Top Identity Node (Avatar + Geolocation Telemetry) -->
+            <div class="avatar-identity-cluster">
+              <div class="hero-avatar-frame avatar-wrapper">
+                <img src="assets/avatar.png" alt="Thuy Vu" class="hero-avatar-img avatar-img" />
+                <div class="avatar-status-pill badge-online">
+                  <span class="status-dot"></span>
+                  <span>ONLINE</span>
+                </div>
+              </div>
+
+              <div class="avatar-telemetry telemetry-coords-block">
+                <div class="telemetry-coord coords-line">LAT 10.82° N</div>
+                <div class="telemetry-coord coords-line">LNG 106.63° E</div>
+                <div class="telemetry-tag role-tag">[ 01 // CREATIVE TECHNOLOGIST ]</div>
               </div>
             </div>
-            <div class="avatar-telemetry">
-              <span class="telemetry-coord">LAT 10.82° N</span>
-              <span class="telemetry-coord">LNG 106.63° E</span>
-              <span class="telemetry-tag">[ 01 // CREATIVE TECHNOLOGIST ]</span>
-            </div>
 
-            <!-- LOGO CON DẤU TRÒN ĐẶT DƯỚI COLUM AVATAR -->
-            <div class="avatar-stamp-wrapper rosette-graphic">
-              <svg viewBox="0 0 240 240" class="cyber-stamp-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- CLUSTER 2: Bottom Tactical Seal (Anchored with Bottom CTAs) -->
+            <div class="rosette-seal-cluster avatar-stamp-wrapper">
+              <svg viewBox="0 0 240 240" class="cyber-stamp-svg rosette-graphic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                   <!-- Đường Dẫn Cong Cho Chữ Chạy Vòng Quanh -->
                   <path id="stampTextPath" d="M 120, 120 m -95, 0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"/>

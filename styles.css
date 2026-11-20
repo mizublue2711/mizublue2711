@@ -450,8 +450,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 20px;
   padding-top: 8px;
+}
+
+.avatar-identity-cluster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-avatar-frame {
@@ -501,7 +508,9 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
-.avatar-telemetry {
+.avatar-telemetry,
+.telemetry-coords-block {
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -510,6 +519,13 @@ body {
   color: var(--text-muted);
   text-align: center;
   font-family: var(--font-mono);
+}
+
+.rosette-seal-cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .telemetry-coord {
@@ -2095,31 +2111,77 @@ body {
     flex: 1 !important;
   }
 
-  /* Left column avatar & guilloche rosette spacing */
+  /* Left column avatar & guilloche rosette spacing (2-Cluster Architecture) */
   .hero-avatar-col,
   .left-column-avatar-stack {
     display: flex !important;
     flex-direction: column !important;
+    justify-content: space-between !important; /* Spaces Cluster 1 to top, Cluster 2 to bottom */
     align-items: center !important;
-    justify-content: space-between !important;
     height: 100% !important;
     padding-top: 2pt !important;
+    box-sizing: border-box !important;
   }
 
-  .hero-avatar-frame {
+  /* CLUSTER 1: Tight, cohesive grouping */
+  .avatar-identity-cluster {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .hero-avatar-frame,
+  .avatar-wrapper {
     width: 136px !important;
     height: 136px !important;
   }
 
-  .avatar-telemetry {
-    margin-top: 4pt !important;
+  /* Telemetry text pinned directly beneath the avatar */
+  .avatar-telemetry,
+  .telemetry-coords-block {
+    margin-top: 18px !important; /* Controlled breathing room, no runaway void */
+    text-align: center !important;
+    font-family: inherit !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+
+  .telemetry-coord,
+  .coords-line {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    color: #6b7280 !important; /* Subdued secondary telemetry tone */
+    letter-spacing: 0.08em !important;
+  }
+
+  .telemetry-tag,
+  .role-tag {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    color: #00ffff !important; /* Cyan accent matching design system */
+    font-weight: 700 !important;
+    margin-top: 6px !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* CLUSTER 2: Bottom Rosette Seal */
+  .rosette-seal-cluster {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: auto !important;
   }
 
   .rosette-graphic,
-  .avatar-stamp-wrapper {
-    margin-top: 36px !important; /* Push rosette downward to align with buttons */
-    width: 125px !important;
-    height: 125px !important;
+  .cyber-stamp-svg,
+  .avatar-stamp-wrapper svg {
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: contain !important;
     display: block !important;
   }
 
