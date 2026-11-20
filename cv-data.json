@@ -3,10 +3,11 @@
     "nav": {
       "status": "ONLINE // 60 FPS",
       "metrics": "01 // METRICS",
-      "experience": "02 // EXPERIENCE",
-      "stack": "03 // TECH STACK",
-      "education": "04 // CREDENTIALS",
-      "contact": "05 // TRANSMIT",
+      "projects": "02 // SHOWCASE",
+      "experience": "03 // EXPERIENCE",
+      "stack": "04 // TECH STACK",
+      "education": "05 // CREDENTIALS",
+      "contact": "06 // TRANSMIT",
       "download_cv": "DOWNLOAD CV.PDF",
       "lang_label": "$ lang:"
     },
@@ -95,8 +96,192 @@
       "footer_left": "[ PROTOCOL: ISO-PRECISION CAD ]",
       "footer_right": "[ CONTINUOUS AUTOMATION LOOP // 60 FPS ]"
     },
+    "showcase": {
+      "prefix": "02 // PORTFOLIO ARCHITECTURE",
+      "heading": "3-TIER PRODUCTION SHOWCASE",
+      "subheading": "Flagship proprietary platforms, multi-year enterprise retainers, and applied spatial R&D",
+      "labels": {
+        "live_demo": "LIVE DEMO ↗",
+        "case_study": "CASE STUDY ↗",
+        "deep_dive": "TECH DEEP-DIVE",
+        "highlights": "KEY HIGHLIGHTS",
+        "cta_prefix": "[ FULL ARCHIVE // 11 CASE STUDIES ]",
+        "cta_banner": "EXPLORE FULL CASE STUDIES ON FRAMER ↗",
+        "cta_url": "https://thuy-vu-designer.framer.website/"
+      },
+      "tier1": {
+        "tag": "TIER 01 // PROPRIETARY PRODUCTS & CREATIVE TECH",
+        "title": "ARTIFICIAL CRAFT LAB",
+        "subtitle": "Full-Stack Product Architect capability — owning UI/UX, system logic, and production code",
+        "items": [
+          {
+            "id": "proj-puffy",
+            "number": "01",
+            "category": "WEBGL 3D ENGINE",
+            "title": "Puffy 3D Interactive Showroom & Creative Engine",
+            "desc": "60 FPS WebGL spatial showroom and automated creative engine offloading 3D asset synthesis directly to client hardware.",
+            "tags": ["WebGL 60 FPS", "Two-Tier Physics", "Canvas Capture", "AGENT.md"],
+            "details": [
+              "<strong>Two-Pass Synchronous Canvas Capture:</strong> Atomic-frame buffer flush resolving blank mobile WebGL screenshots.",
+              "<strong>Two-Tier Tactile Physics:</strong> Decoupled interaction loop maintaining 60 FPS responsiveness under scene load.",
+              "<strong>&lt;60ms 12-Node Colorway Swapper:</strong> Automated multi-material PBR swapping governed by AGENT.md codebase rules."
+            ],
+            "live_url": "https://puffy.artificialcraft.space/",
+            "case_url": "https://thuy-vu-designer.framer.website/work/puffy-3d-creative-engine"
+          },
+          {
+            "id": "proj-vibepath",
+            "number": "02",
+            "category": "SPATIAL STUDIO UI/UX",
+            "title": "VibePath Multi-Tab Studio Platform",
+            "desc": "Multi-tab spatial studio pairing async state-locked creator UI/UX with smoothed 3D GPS trajectories and AI co-pilots.",
+            "tags": ["Complex UI/UX", "Async State Lock", "FastAPI B-Spline", "Dify Co-Pilot"],
+            "details": [
+              "<strong>Async State Locking Architecture:</strong> Decoupled command controls preventing race conditions across multi-tab sessions.",
+              "<strong>FastAPI Cubic B-Spline GPS Smoothing:</strong> Server-side trajectory regularization for fluid 3D map camera flythroughs.",
+              "<strong>Dify Bilingual Co-Pilot:</strong> Integrated AI narrative assistant structuring multilingual travel telemetry."
+            ],
+            "live_url": "https://vibepath.mizu2711.workers.dev/",
+            "case_url": "https://thuy-vu-designer.framer.website/work/vibepath-gps-3d-map-pipeline"
+          },
+          {
+            "id": "proj-remotion",
+            "number": "03",
+            "category": "VIDEO-AS-CODE",
+            "title": "Video-as-Code Engine via Remotion",
+            "desc": "Deterministic React-to-Video rendering architecture generating batch motion assets with strict schema safety.",
+            "tags": ["React-to-Video", "Remotion 4.0", "Zod Schemas", "GCP Cloud Run"],
+            "details": [
+              "<strong>Strict Zod Schema Contracts:</strong> Compile-time and runtime payload validation eliminating broken renders.",
+              "<strong>Headless GCP Cloud Run Rendering:</strong> Serverless containerized Chromium pipeline achieving 0% silent drift.",
+              "<strong>Code-Driven Motion Templates:</strong> Parameterized React timelines replacing manual After Effects versioning."
+            ],
+            "live_url": "https://auto-video-engine.artificialcraft.space/",
+            "case_url": "https://thuy-vu-designer.framer.website/work/video-as-code-remotion-pipeline"
+          }
+        ]
+      },
+      "tier2": {
+        "tag": "TIER 02 // ENTERPRISE CLIENT RETAINERS",
+        "title": "9+ YEARS TRACK RECORD",
+        "subtitle": "Senior operational reliability, institutional publishing discipline, and multi-channel creative delivery",
+        "items": [
+          {
+            "id": "client-hubbis",
+            "tenure": "5+ YEARS",
+            "title": "Hubbis",
+            "deliverables": "500+ Financial Journals, Pre-press Grid, 0-Code Flipbook",
+            "highlights": [
+              "Transformed dense institutional wealth data into 500+ publication-grade journals and charts.",
+              "Enforced precision InDesign pre-press grid calibration eliminating print discrepancies.",
+              "Built a JSON-driven 0-code digital flipbook workflow for rapid online distribution."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/hubbis"
+          },
+          {
+            "id": "client-growth-agency",
+            "tenure": "MULTI-YEAR",
+            "title": "The Growth Agency",
+            "deliverables": "Full-Funnel Art Direction, Key Visuals & Performance Landers",
+            "highlights": [
+              "Directed 30+ brand identities, key visuals, and multi-channel systems for AU/UK clients.",
+              "Coordinated offshore Ho Chi Minh City production squads under agency velocity SLAs.",
+              "Designed conversion-engineered landing pages integrated with paid acquisition funnels."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/the-growth-agency"
+          },
+          {
+            "id": "client-vgs-shop",
+            "tenure": "MULTI-YEAR",
+            "title": "VGS Shop",
+            "deliverables": "High-Volume Retail Packaging & Broadcast Motion Graphics",
+            "highlights": [
+              "Designed 100+ high-converting e-commerce landing pages driving up to +30% online sales.",
+              "Produced broadcast TV homeshopping motion graphics and promotional ad packages.",
+              "Standardized high-volume retail packaging deliverables across multi-SKU launches."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/vgs-shop"
+          },
+          {
+            "id": "client-australia-experiences",
+            "tenure": "1+ YEAR",
+            "title": "Australia Experiences",
+            "deliverables": "Experiential Tourism Identity & Multi-Channel Assets",
+            "highlights": [
+              "Crafted end-to-end hospitality and tourism visual identities for tight market launch windows.",
+              "Executed 4-hour rapid short-form motion turnarounds from 2–10GB raw footage.",
+              "Orchestrated DaVinci Resolve, After Effects, and CapCut social campaign toolchains."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/australia-experiences"
+          }
+        ]
+      },
+      "tier3": {
+        "tag": "TIER 03 // APPLIED R&D, SPATIAL SIMULATION & MEDIA OPS",
+        "title": "INNOVATION VAULT",
+        "subtitle": "Applied spatial computing experiments, micro-automation tooling, and bespoke design archive",
+        "clusters": [
+          {
+            "id": "cluster-spatial",
+            "index": "CLUSTER 01",
+            "title": "Spatial Simulation & Digital Twins",
+            "nodes": [
+              {
+                "title": "3D Data Metropolis",
+                "desc": "Financial Voxel City visualization, negative-profit sub-floor (Sink of Shame)",
+                "url": "https://thuy-vu-designer.framer.website/work/spatial-uiux-tactical-cad-systems"
+              },
+              {
+                "title": "3D Robotics Factory",
+                "desc": "11-DOF Kinematics Digital Twin, Spatial Point Cloud",
+                "url": "https://thuy-vu-designer.framer.website/work/spatial-uiux-tactical-cad-systems"
+              },
+              {
+                "title": "Spatial UI/UX & Tactical CAD Systems",
+                "desc": "Cybernetic Swiss Brutalism 1px CAD design system",
+                "url": "https://thuy-vu-designer.framer.website/work/spatial-uiux-tactical-cad-systems"
+              }
+            ]
+          },
+          {
+            "id": "cluster-media",
+            "index": "CLUSTER 02",
+            "title": "Autonomous Media & Tooling",
+            "nodes": [
+              {
+                "title": "E2E AI-Image PIM Automation Pipeline",
+                "desc": "Multi-model PIM image processing, 2-stage Vision QA, Cloudflare R2",
+                "url": "https://thuy-vu-designer.framer.website/work/e2e-ai-image-pim-automation"
+              },
+              {
+                "title": "0-Code Digital Flipbook Engine & GPS B-Spline Path Smoothing",
+                "desc": "JSON-driven 3D canvas reader & RDP/B-Spline path smoothing",
+                "url": "https://thuy-vu-designer.framer.website/work/vibepath-gps-3d-map-pipeline"
+              }
+            ]
+          },
+          {
+            "id": "cluster-boutique",
+            "index": "CLUSTER 03",
+            "title": "Boutique Design Archive",
+            "nodes": [
+              {
+                "title": "Project 98",
+                "desc": "Lam Dong export agricultural repositioning & Python file-delivery automation",
+                "url": "https://thuy-vu-designer.framer.website/work/project-98"
+              },
+              {
+                "title": "The Deer Project",
+                "desc": "Load-bearing curved-corner eco-packaging dieline engineering",
+                "url": "https://thuy-vu-designer.framer.website/work/the-deer-project"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "experience": {
-      "prefix": "02 // CHRONOLOGICAL PRODUCTION LOGS",
+      "prefix": "03 // CHRONOLOGICAL PRODUCTION LOGS",
       "heading": "HANDS-ON WORK EXPERIENCE",
       "subheading": "Nine-year timeline spanning agency creative leadership to deterministic code automation",
       "items": [
@@ -178,7 +363,7 @@
       ]
     },
     "tech_stack": {
-      "prefix": "03 // CAPABILITY MATRIX & TOOLKIT",
+      "prefix": "04 // CAPABILITY MATRIX & TOOLKIT",
       "heading": "TECHNICAL STACK & ECOSYSTEM",
       "subheading": "Four pillars bridging meticulous graphic design precision with automated engineering",
       "pillars": [
@@ -233,8 +418,15 @@
         }
       ]
     },
+    "radar_stack": {
+      "tag": "// TELEMETRY MATRIX",
+      "title": "FULLSTACK COMPETENCY RATIO",
+      "legend_automation": "Automation",
+      "legend_design": "Design",
+      "legend_devops": "DevOps"
+    },
     "education": {
-      "prefix": "04 // ACCREDITATIONS & CERTIFICATIONS",
+      "prefix": "05 // ACCREDITATIONS & CERTIFICATIONS",
       "heading": "CONTINUOUS SKILL UPGRADES",
       "subheading": "Rigorous academic and technical credentialing in systems, AI, and languages",
       "items": [
@@ -265,7 +457,7 @@
       ]
     },
     "contact": {
-      "prefix": "05 // TELEMETRY TRANSMISSION",
+      "prefix": "06 // TELEMETRY TRANSMISSION",
       "heading": "CONNECT & COLLABORATE",
       "subheading": "Direct communication line for enterprise consulting, spatial engineering, and automation",
       "email_label": "PRIMARY EMAIL",
@@ -275,7 +467,7 @@
       "location_label": "BASE OF OPERATIONS",
       "location": "Ho Chi Minh City, Vietnam (Global Remote)",
       "copy_button": "COPY EMAIL",
-      "copied_msg": "COPIED TO CLIPBOARD",
+      "copied_msg": "COPIED TO CLIPBOARD!",
       "links": [
         { "name": "PORTFOLIO", "url": "https://thuy-vu-designer.framer.website/", "tag": "FRAMER LIVE" },
         { "name": "PLATFORM", "url": "https://artificialcraft.space/", "tag": "SYSTEM HUB" },
@@ -300,10 +492,11 @@
     "nav": {
       "status": "ONLINE // 60 FPS",
       "metrics": "01 // CHỈ SỐ",
-      "experience": "02 // KINH NGHIỆM",
-      "stack": "03 // KỸ THUẬT",
-      "education": "04 // HỌC VẤN",
-      "contact": "05 // LIÊN HỆ",
+      "projects": "02 // DỰ ÁN",
+      "experience": "03 // KINH NGHIỆM",
+      "stack": "04 // KỸ THUẬT",
+      "education": "05 // HỌC VẤN",
+      "contact": "06 // LIÊN HỆ",
       "download_cv": "TẢI CV.PDF",
       "lang_label": "$ lang:"
     },
@@ -392,8 +585,192 @@
       "footer_left": "[ TIÊU CHUẨN: CAD ĐỘ CHÍNH XÁC CAO ]",
       "footer_right": "[ VÒNG LẶP TỰ ĐỘNG HÓA LIÊN TỤC // 60 FPS ]"
     },
+    "showcase": {
+      "prefix": "02 // KIẾN TRÚC DỰ ÁN & PORTFOLIO",
+      "heading": "HỆ THỐNG DỰ ÁN & SẢN PHẨM 3 TẦNG",
+      "subheading": "Danh mục 3 tầng từ sản phẩm công nghệ sáng tạo tự chủ, hợp đồng doanh nghiệp dài hạn đến R&D không gian",
+      "labels": {
+        "live_demo": "LIVE DEMO ↗",
+        "case_study": "CASE STUDY ↗",
+        "deep_dive": "CHI TIẾT KỸ THUẬT",
+        "highlights": "ĐIỂM NHẤN TRIỂN KHAI",
+        "cta_prefix": "[ KHO LƯU TRỮ // 11 CASE STUDY CHUYÊN SÂU ]",
+        "cta_banner": "KHÁM PHÁ TOÀN BỘ CASE STUDY TRÊN FRAMER ↗",
+        "cta_url": "https://thuy-vu-designer.framer.website/"
+      },
+      "tier1": {
+        "tag": "TẦNG 01 // SẢN PHẨM TỰ CHỦ & CÔNG NGHỆ SÁNG TẠO",
+        "title": "ARTIFICIAL CRAFT LAB",
+        "subtitle": "Năng lực Full-Stack Product Architect — làm chủ UI/UX, logic hệ thống và mã nguồn production",
+        "items": [
+          {
+            "id": "proj-puffy",
+            "number": "01",
+            "category": "WEBGL 3D ENGINE",
+            "title": "Puffy 3D Interactive Showroom & Creative Engine",
+            "desc": "Showroom WebGL 3D không gian 60 FPS và công cụ sáng tạo tự động offload toàn bộ xử lý đồ họa về GPU máy khách.",
+            "tags": ["WebGL 60 FPS", "Two-Tier Physics", "Canvas Capture", "AGENT.md"],
+            "details": [
+              "<strong>Two-Pass Synchronous Canvas Capture:</strong> Cơ chế flush buffer trong một khung hình đơn trị dứt lỗi xuất ảnh đen trên WebGL di động.",
+              "<strong>Động cơ Vật lý Two-Tier:</strong> Vòng lặp tương tác tách biệt giữ vững độ mượt 60 FPS ngay cả khi scene tải nặng.",
+              "<strong>Đổi màu 12 Node dưới 60ms:</strong> Tự động hoán đổi vật liệu PBR và quản trị ranh giới mã nguồn bằng AGENT.md."
+            ],
+            "live_url": "https://puffy.artificialcraft.space/",
+            "case_url": "https://thuy-vu-designer.framer.website/work/puffy-3d-creative-engine"
+          },
+          {
+            "id": "proj-vibepath",
+            "number": "02",
+            "category": "SPATIAL STUDIO UI/UX",
+            "title": "VibePath Multi-Tab Studio Platform",
+            "desc": "Nền tảng Studio đa tab kết hợp khóa trạng thái bất đồng bộ với làm mượt lộ trình GPS 3D và trợ lý AI Dify.",
+            "tags": ["UI/UX Phức hợp", "Async State Lock", "FastAPI B-Spline", "Dify Co-Pilot"],
+            "details": [
+              "<strong>Kiến trúc Async State Locking:</strong> Tách biệt điều khiển trạng thái ngăn xung đột dữ liệu trên các phiên đa tab.",
+              "<strong>FastAPI Cubic B-Spline GPS Smoothing:</strong> Thuật toán làm mượt quỹ đạo GPS phục vụ bay lượn camera 3D mượt mà.",
+              "<strong>Trợ lý AI Song ngữ Dify:</strong> Tích hợp co-pilot hỗ trợ biên tập và chuẩn hóa dữ liệu hành trình đa ngôn ngữ."
+            ],
+            "live_url": "https://vibepath.mizu2711.workers.dev/",
+            "case_url": "https://thuy-vu-designer.framer.website/work/vibepath-gps-3d-map-pipeline"
+          },
+          {
+            "id": "proj-remotion",
+            "number": "03",
+            "category": "VIDEO-AS-CODE",
+            "title": "Video-as-Code Engine via Remotion",
+            "desc": "Kiến trúc lập trình React-to-Video xuất bản video chuyển động hàng loạt với chuẩn kiểm định dữ liệu nghiêm ngặt.",
+            "tags": ["React-to-Video", "Remotion 4.0", "Zod Schema", "GCP Cloud Run"],
+            "details": [
+              "<strong>Hợp đồng Dữ liệu Zod Nghiêm ngặt:</strong> Kiểm chuẩn payload đầu vào loại bỏ hoàn toàn lỗi lệch bố cục khi render.",
+              "<strong>Render Headless trên GCP Cloud Run:</strong> Pipeline serverless đạt độ chuẩn xác tất định 0% silent drift.",
+              "<strong>Template Chuyển động Dạng Code:</strong> Timeline React tham số hóa thay thế quy trình chỉnh sửa thủ công lặp lại."
+            ],
+            "live_url": "https://auto-video-engine.artificialcraft.space/",
+            "case_url": "https://thuy-vu-designer.framer.website/work/video-as-code-remotion-pipeline"
+          }
+        ]
+      },
+      "tier2": {
+        "tag": "TẦNG 02 // ĐỐI TÁC DOANH NGHIỆP DÀI HẠN",
+        "title": "BỀ DÀY THỰC CHIẾN 9+ NĂM",
+        "subtitle": "Bảo chứng kinh nghiệm senior, độ tin cậy vận hành dài hạn và kỷ luật xuất bản doanh nghiệp",
+        "items": [
+          {
+            "id": "client-hubbis",
+            "tenure": "5+ NĂM",
+            "title": "Hubbis",
+            "deliverables": "500+ Tạp chí Tài chính, Hệ lưới Pre-press & Flipbook 0-Code",
+            "highlights": [
+              "Chuyển hóa dữ liệu quản lý tài sản phức tạp thành 500+ tạp chí và biểu đồ chuẩn xuất bản.",
+              "Kiểm chuẩn hệ lưới InDesign và quản lý màu pre-press loại bỏ sai lệch số liệu trước khi in.",
+              "Xây dựng luồng xuất bản flipbook kỹ thuật số 0-code vận hành trực tiếp qua JSON."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/hubbis"
+          },
+          {
+            "id": "client-growth-agency",
+            "tenure": "NHIỀU NĂM",
+            "title": "The Growth Agency",
+            "deliverables": "Chỉ đạo Mỹ thuật Toàn phễu, Key Visuals & Landing Page Hiệu suất",
+            "highlights": [
+              "Chỉ đạo 30+ bộ nhận diện thương hiệu, key visuals và chiến dịch đa kênh cho thị trường Úc/Anh.",
+              "Điều phối đội ngũ sản xuất tại TP.HCM đáp ứng nhịp độ vận hành khắt khe của agency quốc tế.",
+              "Thiết kế hệ thống landing page tối ưu chuyển đổi gắn kết trực tiếp với phễu tăng trưởng."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/the-growth-agency"
+          },
+          {
+            "id": "client-vgs-shop",
+            "tenure": "NHIỀU NĂM",
+            "title": "VGS Shop",
+            "deliverables": "Bao bì Bán lẻ Số lượng lớn & Đồ họa Chuyển động Truyền hình",
+            "highlights": [
+              "Thiết kế 100+ landing page thương mại điện tử tối ưu chuyển đổi, góp phần tăng +30% doanh số.",
+              "Sản xuất đồ họa chuyển động phát sóng truyền hình homeshopping với tiến độ quay vòng nhanh.",
+              "Chuẩn hóa hệ thống bao bì bán lẻ khối lượng lớn cho nhiều dòng sản phẩm đa SKU."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/vgs-shop"
+          },
+          {
+            "id": "client-australia-experiences",
+            "tenure": "1+ NĂM",
+            "title": "Australia Experiences",
+            "deliverables": "Nhận diện Du lịch Trải nghiệm & Tài nguyên Đa kênh",
+            "highlights": [
+              "Xây dựng nhận diện thương hiệu du lịch & hospitality hoàn chỉnh trong khung thời gian ra mắt gấp rút.",
+              "Xử lý 2–10GB tư liệu thô để bàn giao video short-form trong khung SLA 4 giờ.",
+              "Kết hợp chuỗi công cụ DaVinci Resolve, After Effects và CapCut cho chiến dịch đa nền tảng."
+            ],
+            "case_url": "https://thuy-vu-designer.framer.website/work/australia-experiences"
+          }
+        ]
+      },
+      "tier3": {
+        "tag": "TẦNG 03 // R&D ỨNG DỤNG, MÔ PHỎNG KHÔNG GIAN & VẬN HÀNH MEDIA",
+        "title": "KHO SÁNG CHẾ & DỰ ÁN TINH GỌN",
+        "subtitle": "Tổng hợp các thử nghiệm công nghệ không gian, tự động hóa công cụ và lưu trữ thiết kế chọn lọc",
+        "clusters": [
+          {
+            "id": "cluster-spatial",
+            "index": "CỤM 01",
+            "title": "Mô phỏng Không gian & Digital Twins",
+            "nodes": [
+              {
+                "title": "3D Data Metropolis",
+                "desc": "Trực quan hóa Đô thị Voxel Tài chính, tầng hầm lợi nhuận âm (Sink of Shame)",
+                "url": "https://thuy-vu-designer.framer.website/work/spatial-uiux-tactical-cad-systems"
+              },
+              {
+                "title": "3D Robotics Factory",
+                "desc": "Digital Twin Động học 11-DOF, Đám mây điểm không gian (Spatial Point Cloud)",
+                "url": "https://thuy-vu-designer.framer.website/work/spatial-uiux-tactical-cad-systems"
+              },
+              {
+                "title": "Spatial UI/UX & Tactical CAD Systems",
+                "desc": "Hệ thống thiết kế Cybernetic Swiss Brutalism chuẩn lưới CAD 1px",
+                "url": "https://thuy-vu-designer.framer.website/work/spatial-uiux-tactical-cad-systems"
+              }
+            ]
+          },
+          {
+            "id": "cluster-media",
+            "index": "CỤM 02",
+            "title": "Tự động hóa Media & Công cụ",
+            "nodes": [
+              {
+                "title": "E2E AI-Image PIM Automation Pipeline",
+                "desc": "Xử lý ảnh PIM đa mô hình, kiểm định Vision QA 2 lớp, Cloudflare R2",
+                "url": "https://thuy-vu-designer.framer.website/work/e2e-ai-image-pim-automation"
+              },
+              {
+                "title": "0-Code Digital Flipbook Engine & GPS B-Spline Path Smoothing",
+                "desc": "Trình đọc canvas 3D chạy JSON & làm mượt đường đi RDP/B-Spline",
+                "url": "https://thuy-vu-designer.framer.website/work/vibepath-gps-3d-map-pipeline"
+              }
+            ]
+          },
+          {
+            "id": "cluster-boutique",
+            "index": "CỤM 03",
+            "title": "Lưu trữ Thiết kế Chuyên biệt",
+            "nodes": [
+              {
+                "title": "Project 98",
+                "desc": "Tái định vị nông sản xuất khẩu Lâm Đồng & tự động hóa giao nhận file Python",
+                "url": "https://thuy-vu-designer.framer.website/work/project-98"
+              },
+              {
+                "title": "The Deer Project",
+                "desc": "Kỹ thuật hóa rập dieline bao bì sinh thái bo góc cong chịu lực",
+                "url": "https://thuy-vu-designer.framer.website/work/the-deer-project"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "experience": {
-      "prefix": "02 // NHẬT KÝ SẢN XUẤT THEO THỜI GIAN",
+      "prefix": "03 // NHẬT KÝ SẢN XUẤT THEO THỜI GIAN",
       "heading": "KINH NGHIỆM LÀM VIỆC THỰC CHIẾN",
       "subheading": "Hành trình 9 năm từ điều phối sáng tạo agency đến kỹ sư tự động hóa tất định",
       "items": [
@@ -475,7 +852,7 @@
       ]
     },
     "tech_stack": {
-      "prefix": "03 // MA TRẬN NĂNG LỰC & CÔNG CỤ",
+      "prefix": "04 // MA TRẬN NĂNG LỰC & CÔNG CỤ",
       "heading": "BỘ CÔNG CỤ & KỸ THUẬT",
       "subheading": "4 trụ cột giao thoa giữa kỷ luật đồ họa chính xác và kỹ thuật tự động hóa",
       "pillars": [
@@ -530,8 +907,15 @@
         }
       ]
     },
+    "radar_stack": {
+      "tag": "// MA TRẬN ĐỊNH LƯỢNG",
+      "title": "TỶ LỆ NĂNG LỰC TOÀN DIỆN",
+      "legend_automation": "Tự động hóa",
+      "legend_design": "Thiết kế đồ họa",
+      "legend_devops": "Hạ tầng & DevOps"
+    },
     "education": {
-      "prefix": "04 // HỌC VẤN & CHỨNG CHỈ NÂNG CẤP",
+      "prefix": "05 // HỌC VẤN & CHỨNG CHỈ NÂNG CẤP",
       "heading": "CHỨNG NHẬN CHUYÊN MÔN & ĐÀO TẠO",
       "subheading": "Không ngừng nâng cấp kiến thức hệ thống, trí tuệ nhân tạo và ngoại ngữ",
       "items": [
@@ -562,7 +946,7 @@
       ]
     },
     "contact": {
-      "prefix": "05 // TRUYỀN PHÁT TÍN HIỆU",
+      "prefix": "06 // TRUYỀN PHÁT TÍN HIỆU",
       "heading": "KẾT NỐI & HỢP TÁC",
       "subheading": "Kênh liên lạc trực tiếp cho các dự án tư vấn doanh nghiệp, đồ họa 3D và tự động hóa",
       "email_label": "EMAIL CHÍNH",
