@@ -1374,6 +1374,26 @@
     window.print();
   };
 
+  // Dual-Tab UI Switcher (CV <-> Cover Letter)
+  window.switchTab = function (target) {
+    document.querySelectorAll('.tab-content-pane').forEach((el) => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach((el) => el.classList.remove('active'));
+
+    if (target === 'cv') {
+      document.getElementById('pane-cv')?.classList.add('active');
+      document.getElementById('tab-btn-cv')?.classList.add('active');
+    } else if (target === 'letter') {
+      document.getElementById('pane-letter')?.classList.add('active');
+      document.getElementById('tab-btn-letter')?.classList.add('active');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
+  window.triggerNativePrint = function () {
+    window.print();
+  };
+
   // Initialize Language Switcher Buttons
   document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('cv_lang_pref');

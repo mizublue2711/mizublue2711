@@ -2953,3 +2953,334 @@ body {
     height: 100% !important;
   }
 }
+
+/* ==========================================================================
+   DUAL-TAB ARCHITECTURE & COVER LETTER A4 VIEW
+   ========================================================================== */
+.tab-content-pane {
+  display: none;
+}
+
+.tab-content-pane.active {
+  display: block;
+}
+
+.tactical-tab-bar {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 99;
+  background: rgba(9, 9, 11, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-strong);
+  padding: 10px 24px;
+}
+
+.tactical-tab-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tab-triggers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid #3f3f46;
+  color: #a1a1aa;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--cyan);
+  color: var(--text-white);
+}
+
+.tab-btn.active {
+  background: var(--cyan);
+  color: #050505;
+  border-color: var(--cyan);
+  font-weight: 700;
+}
+
+.btn-print-tactical {
+  background: #18181b;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-print-tactical:hover {
+  background: var(--cyan);
+  color: #050505;
+}
+
+/* Cover Letter A4 Screen & Print Frame */
+#pane-letter {
+  position: relative;
+  z-index: 1;
+  padding: 28px 16px 48px;
+}
+
+.cover-letter-frame.cover-letter-page {
+  width: 210mm;
+  min-height: 297mm;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 18mm 16mm;
+  box-sizing: border-box;
+  background-color: #050505;
+  border: 1px solid var(--border-strong);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.cl-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cl-telemetry-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.text-cyan {
+  color: var(--cyan);
+}
+
+.cl-identity-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.cl-name {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--text-white);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.cl-role {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.03em;
+  margin-top: 4px;
+}
+
+.cl-contact-meta {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cl-body {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1 1 auto;
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.cl-salutation {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 0.02em;
+}
+
+.cl-lead,
+.cl-closing {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.cl-pillar-card {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--cyan);
+  padding: 10px 13px;
+}
+
+.cl-pillar-card.cl-pillar-indigo {
+  border-left-color: var(--indigo);
+}
+
+.pillar-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.cl-pillar-card.cl-pillar-indigo .pillar-label {
+  color: #a78bfa;
+}
+
+.cl-pillar-card p {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.cl-footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-strong);
+  gap: 12px;
+}
+
+.cl-signoff-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: 0.02em;
+}
+
+.cl-signoff-role {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.cl-signoff-url {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--cyan);
+  text-decoration: none;
+  margin-top: 3px;
+}
+
+.cl-seal {
+  text-align: right;
+  font-family: var(--font-mono);
+}
+
+.seal-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(0, 255, 102, 0.08);
+  border: 1px solid var(--matrix-green);
+  color: var(--matrix-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.seal-sub {
+  font-size: 8.5px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+@media print {
+  .tactical-tab-bar {
+    display: none !important;
+  }
+
+  .tab-content-pane:not(.active) {
+    display: none !important;
+  }
+
+  .tab-content-pane.active {
+    display: block !important;
+  }
+
+  #pane-letter {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cover-letter-frame.cover-letter-page,
+  .cover-letter-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    min-height: 297mm !important;
+    padding: 18mm 16mm !important;
+    margin: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    background-color: #050505 !important;
+  }
+
+  .cl-name {
+    font-size: 22pt !important;
+  }
+
+  .cl-body {
+    font-size: 9.5pt !important;
+    line-height: 1.55 !important;
+    gap: 8pt !important;
+  }
+
+  .cl-pillar-card {
+    padding: 8pt 10pt !important;
+  }
+
+  .cl-pillar-card p {
+    font-size: 9pt !important;
+    line-height: 1.5 !important;
+  }
+}

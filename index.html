@@ -67,8 +67,28 @@
     </div>
   </header>
 
-  <!-- MAIN APP CONTAINER -->
-  <main class="app-container">
+  <!-- TACTICAL DUAL-TAB NAVIGATION BAR -->
+  <nav class="tactical-tab-bar" aria-label="Document View Switcher">
+    <div class="tactical-tab-inner">
+      <div class="tab-triggers">
+        <button type="button" id="tab-btn-cv" class="tab-btn active" onclick="switchTab('cv')">
+          [ 01 // CURRICULUM VITAE ]
+        </button>
+        <button type="button" id="tab-btn-letter" class="tab-btn" onclick="switchTab('letter')">
+          [ 02 // COVER LETTER ]
+        </button>
+      </div>
+
+      <div class="tab-actions">
+        <button type="button" class="btn-print-tactical" onclick="triggerNativePrint()">
+          [ 📥 EXPORT CURRENT VIEW (PDF) ]
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TAB PANE 1: EXISTING CV CONTENT -->
+  <main id="pane-cv" class="app-container tab-content-pane active">
 
     <!-- PAGE 1: 00 // HERO COVER -->
     <section class="pdf-page pdf-page-1 hero-section" id="hero" data-page="1">
@@ -968,6 +988,71 @@
     </section>
 
   </main>
+
+  <!-- TAB PANE 2: DEDICATED COVER LETTER A4 VIEW -->
+  <section id="pane-letter" class="tab-content-pane" aria-label="Cover Letter">
+    <div class="pdf-page cover-letter-frame cover-letter-page">
+      <div class="hero-corner-bracket bracket-tl"></div>
+      <div class="hero-corner-bracket bracket-tr"></div>
+      <div class="hero-corner-bracket bracket-bl"></div>
+      <div class="hero-corner-bracket bracket-br"></div>
+
+      <!-- Header Telemetry -->
+      <header class="cl-header">
+        <div class="cl-telemetry-bar">
+          <div class="telemetry-mono">NODE: <span class="text-cyan">MIZU2711</span> // FORMAL STATEMENT OF CAPABILITY &amp; RIGOR</div>
+          <div class="telemetry-mono text-cyan">[ STATUS: OPEN TO ARCHITECTURE &amp; TECH LEAD ROLES ]</div>
+        </div>
+        <div class="cl-identity-strip">
+          <div>
+            <h2 class="cl-name">THUY VU</h2>
+            <div class="cl-role">FULL-STACK CREATIVE TECHNOLOGIST &amp; SENIOR MULTIMEDIA DESIGNER</div>
+          </div>
+          <div class="cl-contact-meta">
+            <div>mizu2711@gmail.com &bull; +84 979 203 507</div>
+            <div>HO CHI MINH CITY, VN (GLOBAL REMOTE) &bull; 9+ YRS EXP</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Formal Body -->
+      <article class="cl-body">
+        <h3 class="cl-salutation">Dear Hiring Committee &amp; Creative/Engineering Leadership,</h3>
+
+        <p class="cl-lead">I am writing to present my background as a Full-Stack Creative Technologist and Senior Multimedia Designer with 9+ years of cross-disciplinary production experience. In an industry often divided between aesthetic designers who cannot code and engineers who lack design sensitivity, my career has been dedicated to bridging that exact gap—transforming complex, high-friction workflows into deterministic, production-grade digital systems.</p>
+
+        <div class="cl-pillar-card">
+          <div class="pillar-label">01 // PROPRIETARY PRODUCT ARCHITECTURE (ARTIFICIAL CRAFT LAB):</div>
+          <p>Through independent R&amp;D, I architect and deploy end-to-end digital platforms. This includes Puffy 3D (a 60 FPS WebGL spatial showroom featuring two-tier tactile compression and sub-5-second automated canvas captures), VibePath Studio (a complex multi-tab platform converting raw mobile GPS telemetry into cinematic 3D map trajectories with AI bilingual copilot integration), and Remotion-based Video-as-Code engines that replace manual timeline dragging with headless, code-driven batch rendering.</p>
+        </div>
+
+        <div class="cl-pillar-card cl-pillar-indigo">
+          <div class="pillar-label">02 // ENTERPRISE COMMERCIAL RELIABILITY (9+ YEARS TRACK RECORD):</div>
+          <p>Beyond experimental tooling, my operational discipline is forged in demanding commercial environments. For Hubbis (Hong Kong), I served as an enterprise publishing partner for 5+ consecutive years, engineering master grid systems and delivering 500+ financial journals and data-heavy publications with zero pre-press errors. Concurrently, my work across Australian growth agencies and high-volume e-commerce broadcast networks (VGS Shop) has produced 30+ brand systems and 100+ high-converting campaign landers.</p>
+        </div>
+
+        <div class="cl-pillar-card">
+          <div class="pillar-label">03 // WORK ETHIC &amp; PRODUCTION RIGOR:</div>
+          <p>I approach every challenge as a systems architect: isolating bottlenecks, decoupling heavy rendering from user interaction, enforcing strict visual hierarchies, and ensuring that digital assets tangibly drive operational velocity and conversion value.</p>
+        </div>
+
+        <p class="cl-closing">Thank you for your time and consideration. I look forward to contributing my hybrid design-engineering capabilities to your upcoming initiatives.</p>
+      </article>
+
+      <!-- Sign-off Footer -->
+      <footer class="cl-footer">
+        <div class="cl-signoff">
+          <div class="cl-signoff-name">THUY VU</div>
+          <div class="cl-signoff-role">Full-Stack Creative Technologist &amp; Senior Multimedia Designer</div>
+          <a href="https://artificialcraft.space/" target="_blank" rel="noopener noreferrer" class="cl-signoff-url">https://artificialcraft.space/</a>
+        </div>
+        <div class="cl-seal">
+          <span class="seal-badge">[ VERIFIED PRODUCTION RECORD ]</span>
+          <div class="seal-sub">SINGLE-PAGE A4 DETERMINISTIC DOSSIER // 2026.V3</div>
+        </div>
+      </footer>
+    </div>
+  </section>
 
   <!-- Scripts -->
   <script src="canvas-bg.js"></script>
