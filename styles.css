@@ -343,9 +343,21 @@ body {
 
 .telemetry-info-left {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.telemetry-row-1 {
+  display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
+}
+
+.telemetry-row-2 {
+  font-size: 11px;
+  color: var(--text-muted);
 }
 
 .hero-telemetry-strip .highlight {
@@ -2002,45 +2014,125 @@ body {
     line-height: 1.35 !important;
   }
 
-  /* PAGE 1: UNIFIED HERO COVER (Telemetry Strip + Avatar + Bio) */
-  .hero-telemetry-strip {
-    margin-bottom: 14pt !important;
-    padding: 8pt 12pt !important;
-    font-size: 8pt !important;
+  /* PAGE 1: UNIFIED HERO COVER (Telemetry Strip + Tactical Frame + Avatar + Bio + Vertical Distribution) */
+  .pdf-page-1,
+  .pdf-page[data-page="1"],
+  .pdf-page.hero-section {
+    height: 297mm !important;
+    max-height: 297mm !important;
+    padding: 16mm 14mm 18mm 14mm !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
 
-  .hero-main-frame {
-    padding: 22pt 20pt !important;
-    flex: 0 0 auto !important;
+  /* Step B: 2-Line Header Telemetry */
+  .hero-telemetry-strip,
+  .top-telemetry-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin-bottom: 0 !important;
+    padding: 10px 14px !important;
+    font-size: 8pt !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .telemetry-info-left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    width: 100% !important;
+  }
+
+  .telemetry-row-1 {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .telemetry-row-2 {
+    font-size: 7.5pt !important;
+    color: #A1A1AA !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .hero-qr-cluster,
+  .qr-code-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-top: 2px !important;
+  }
+
+  /* Step C: Expand Main Cyan Container & Distribute Vertical Spacing */
+  .hero-main-frame,
+  .hero-tactical-frame {
+    flex: 1 !important; /* Stretch to fill bottom space */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; /* Push buttons to bottom quadrant */
+    margin-top: 14mm !important;
+    padding: 24px 20px !important;
+    position: relative !important;
+    box-sizing: border-box !important;
   }
 
   .hero-grid-layout {
     display: grid !important;
-    grid-template-columns: 155px 1fr !important;
+    grid-template-columns: 165px 1fr !important;
     gap: 20pt !important;
-    align-items: start !important;
+    align-items: stretch !important;
+    height: 100% !important;
+    flex: 1 !important;
   }
 
-  .hero-avatar-col {
+  /* Left column avatar & guilloche rosette spacing */
+  .hero-avatar-col,
+  .left-column-avatar-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100% !important;
     padding-top: 2pt !important;
-    gap: 8pt !important;
   }
 
   .hero-avatar-frame {
-    width: 132px !important;
-    height: 132px !important;
+    width: 136px !important;
+    height: 136px !important;
   }
 
+  .avatar-telemetry {
+    margin-top: 4pt !important;
+  }
+
+  .rosette-graphic,
   .avatar-stamp-wrapper {
+    margin-top: 36px !important; /* Push rosette downward to align with buttons */
+    width: 125px !important;
+    height: 125px !important;
     display: block !important;
-    margin-top: 6pt !important;
-    width: 110px !important;
-    height: 110px !important;
+  }
+
+  .hero-content-col {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
   }
 
   .hero-badge-row {
     gap: 6pt !important;
-    margin-bottom: 10pt !important;
+    margin-bottom: 8pt !important;
   }
 
   .hero-role {
@@ -2050,17 +2142,45 @@ body {
 
   .hero-specializations {
     font-size: 8.5pt !important;
-    margin-bottom: 12pt !important;
+    margin-bottom: 10pt !important;
   }
 
-  .hero-summary {
-    font-size: 9pt !important;
-    line-height: 1.5 !important;
-    margin-bottom: 16pt !important;
+  /* Give comfortable breathing room to typography */
+  .hero-summary,
+  .hero-bio-paragraph {
+    font-size: 13.5px !important;
+    line-height: 1.65 !important;
+    letter-spacing: 0.02em !important;
+    margin-top: 16px !important;
+    margin-bottom: 24px !important;
+    color: #d1d5db !important;
   }
 
-  .hero-cta-group {
-    gap: 8pt !important;
+  /* Step A: Force single-column CTA stack strictly for PDF export */
+  .hero-cta-group,
+  .cta-button-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-top: 28px !important;
+  }
+
+  .cta-button,
+  .hero-cta-group a,
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-secondary,
+  .hero-cta-group .btn-indigo {
+    width: 100% !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    box-sizing: border-box !important;
+    padding: 0 16px !important;
   }
 
   /* PAGE 2: METRICS + WORKFLOW MIND MAP */
@@ -2599,6 +2719,10 @@ body {
   }
 
   .hero-cta-group a,
+  .cta-button {
+    pointer-events: auto !important;
+  }
+
   .channel-link-card,
   .qr-mini-card,
   .contact-meta-link,
