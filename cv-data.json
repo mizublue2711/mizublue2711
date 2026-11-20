@@ -119,7 +119,7 @@
             "id": "proj-puffy",
             "project_label": "PROJECT 01",
             "timeframe": "2025 – PRESENT",
-            "title": "PUFFY 3D INTERACTIVE SHOWROOM & AUTOMATED CREATIVE ENGINE",
+            "title": "PUFFY 3D SHOWROOM & AUTOMATED CREATIVE ENGINE",
             "role": "Lead Spatial Engineer & Full-Stack Architect",
             "entity": "Artificial Craft Lab",
             "stack": [
@@ -132,9 +132,10 @@
             "live_url": "https://enter-to-dream.artificialcraft.space/",
             "case_url": "https://thuy-vu-designer.framer.website/work/puffy-3d-creative-engine",
             "bullets": [
-              "<strong>Two-Pass Synchronous Canvas Capture:</strong> Engineered an atomic-frame buffer capture mechanism that resolves mobile WebGL canvas blackout glitches during high-resolution snapshot generation.",
-              "<strong>Two-Tier Tactile Physics:</strong> Decoupled user touch and drag interaction loops from heavy scene matrix recomputations, maintaining a locked 60 FPS rendering threshold directly on client GPUs ($0.00 server cost).",
-              "<strong>&lt;60ms 12-Node Colorway Swapper:</strong> Built a procedural PBR material swapping engine governed by an AGENT.md multi-agent code orchestration protocol."
+              "<strong>Problem Solved:</strong> Eliminating Customer Hesitation in Online Mattress Buying & Costly Studio Photography.",
+              "<strong>Customer Experience:</strong> Engineered tactile compression physics, allowing shoppers to press and inspect realistic foam elasticity directly in mobile browsers at 60 FPS.",
+              "<strong>Exploded Anatomy:</strong> Built an interactive cutaway inspection mechanism that separates internal pocket coils, gel memory foam, and cooling fabrics on click.",
+              "<strong>Marketing Automation:</strong> Created a single-click canvas snapshot tool that exports high-res transparent product renders with pre-aligned logos in under 5 seconds."
             ]
           },
           {
@@ -155,16 +156,17 @@
             "live_url": "https://vibepath.artificialcraft.space/",
             "case_url": "https://thuy-vu-designer.framer.website/work/vibepath-gps-3d-map-pipeline",
             "bullets": [
-              "<strong>Async State Locking Architecture:</strong> Decoupled command triggers from background rendering states, eliminating race conditions and accidental double-submissions during high-load asset export.",
-              "<strong>FastAPI Cubic B-Spline Smoothing:</strong> Developed server-side geospatial telemetry regularization that transforms raw, jittery mobile GPS coordinates into cinematic 3D map camera trajectories.",
-              "<strong>Dify Bilingual Co-Pilot Integration:</strong> Embedded an autonomous LLM copilot generating structured bilingual metadata and narration scripts from raw telemetry."
+              "<strong>Problem Solved:</strong> Ending 4-to-8-Hour Manual Map Animation and Video Captioning for Travel Vloggers.",
+              "<strong>Jitter-Free GPS:</strong> Implemented cubic B-spline path smoothing to transform erratic mobile phone GPS logs into fluid, cinema-grade camera movements.",
+              "<strong>Turnaround Speed:</strong> Reduced post-production map rendering from half a day of manual After Effects keyframing down to an automated 45-second render.",
+              "<strong>Bilingual AI Co-Pilot:</strong> Integrated an automated linguistic pipeline generating synchronized English/Vietnamese subtitles and structured video descriptions instantly."
             ]
           },
           {
             "id": "proj-remotion",
             "project_label": "PROJECT 03",
             "timeframe": "2025 – PRESENT",
-            "title": "VIDEO-AS-CODE ENGINE VIA REMOTION",
+            "title": "VIDEO-AS-CODE AUTOMATED PRODUCTION ENGINE (REMOTION)",
             "role": "Creative Automation Engineer",
             "entity": "Artificial Craft Lab",
             "stack": [
@@ -177,9 +179,10 @@
             "live_url": "https://auto-video-engine.artificialcraft.space/",
             "case_url": "https://thuy-vu-designer.framer.website/work/video-as-code-remotion-pipeline",
             "bullets": [
-              "<strong>Strict Zod Schema Contracts:</strong> Enforced compile-time and runtime payload validation, eliminating broken renders and video generation drift across automated batch pipelines.",
-              "<strong>Headless GCP Cloud Run Rendering:</strong> Orchestrated a serverless containerized Chromium rendering pipeline that slashes video production turnarounds from hours down to seconds with zero visual artifacts.",
-              "<strong>Code-Driven Motion Templates:</strong> Programmed scalable, parameterized React components that replace manual After Effects timeline dragging with deterministic code execution."
+              "<strong>Problem Solved:</strong> Replacing Repetitive Manual Video Editing for High-Volume E-Commerce Campaigns.",
+              "<strong>Automated Batching:</strong> Replaced manual After Effects timeline manipulation with code-driven React components powered by structured spreadsheet feeds.",
+              "<strong>Zero Design Drift:</strong> Enforced rigid schema controls, guaranteeing that every generated video strictly adheres to brand guidelines, typography hierarchies, and layout rules.",
+              "<strong>Scalable Cloud Rendering:</strong> Deployed headless containerized rendering on Google Cloud Run, spitting out batches of ready-to-publish 60 FPS video ads in minutes."
             ]
           }
         ]
@@ -437,11 +440,31 @@
       "copy_button": "COPY EMAIL",
       "copied_msg": "COPIED TO CLIPBOARD!",
       "links": [
-        { "name": "PORTFOLIO", "url": "https://thuy-vu-designer.framer.website/", "tag": "FRAMER LIVE" },
-        { "name": "PLATFORM", "url": "https://artificialcraft.space/", "tag": "SYSTEM HUB" },
-        { "name": "LINKEDIN", "url": "https://www.linkedin.com/in/thuy-thu-vu-271190/", "tag": "PROFILE" },
-        { "name": "GITHUB", "url": "https://github.com/mizublue2711", "tag": "CODE REPO" },
-        { "name": "UNSPLASH", "url": "https://unsplash.com/@mizu2711", "tag": "PHOTO ARCHIVE" }
+        {
+          "name": "PORTFOLIO",
+          "url": "https://thuy-vu-designer.framer.website/",
+          "tag": "FRAMER LIVE"
+        },
+        {
+          "name": "PLATFORM",
+          "url": "https://artificialcraft.space/",
+          "tag": "SYSTEM HUB"
+        },
+        {
+          "name": "LINKEDIN",
+          "url": "https://www.linkedin.com/in/thuy-thu-vu-271190/",
+          "tag": "PROFILE"
+        },
+        {
+          "name": "GITHUB",
+          "url": "https://github.com/mizublue2711",
+          "tag": "CODE REPO"
+        },
+        {
+          "name": "UNSPLASH",
+          "url": "https://unsplash.com/@mizu2711",
+          "tag": "PHOTO ARCHIVE"
+        }
       ]
     },
     "footer": {
@@ -576,7 +599,7 @@
             "id": "proj-puffy",
             "project_label": "DỰ ÁN 01",
             "timeframe": "2025 – HIỆN TẠI",
-            "title": "PUFFY — SHOWROOM 3D TƯƠNG TÁC & ĐỘNG CƠ SÁNG TẠO TỰ ĐỘNG",
+            "title": "PUFFY — SHOWROOM 3D & ĐỘNG CƠ SÁNG TẠO TỰ ĐỘNG",
             "role": "Kỹ sư Không gian 3D & Kiến trúc sư Full-Stack",
             "entity": "Artificial Craft Lab",
             "stack": [
@@ -589,9 +612,10 @@
             "live_url": "https://enter-to-dream.artificialcraft.space/",
             "case_url": "https://thuy-vu-designer.framer.website/work/puffy-3d-creative-engine",
             "bullets": [
-              "<strong>Chụp Canvas Đồng bộ Hai Lượt (Two-Pass Synchronous Capture):</strong> Thiết kế cơ chế ghi buffer khung hình nguyên tử, xử lý triệt để lỗi đen khung ảnh WebGL trên di động khi xuất ảnh độ phân giải cao.",
-              "<strong>Động cơ Vật lý Chạm Hai Tầng (Two-Tier Tactile Physics):</strong> Tách biệt vòng lặp tương tác chạm/kéo khỏi tính toán ma trận scene nặng, giữ vững ngưỡng 60 FPS trực tiếp trên GPU máy khách ($0.00 chi phí server).",
-              "<strong>Đổi màu 12 Node dưới 60ms:</strong> Xây dựng engine hoán đổi vật liệu PBR tự động được điều phối và kiểm soát ranh giới code bởi hệ thống AGENT.md đa tác tử."
+              "<strong>Vấn đề Giải quyết:</strong> Loại bỏ rào cản tâm lý khi mua nệm online & cắt giảm chi phí chụp ảnh studio tốn kém.",
+              "<strong>Trải nghiệm Khách hàng:</strong> Thiết kế động cơ vật lý đàn hồi xúc giác, cho phép khách hàng nhấn và kiểm tra độ nảy thực tế của foam trực tiếp trên trình duyệt di động ở 60 FPS.",
+              "<strong>Mặt cắt Bóc tách:</strong> Xây dựng cơ chế bóc tách mặt cắt tương tác, tách rời từng lớp lò xo túi, gel memory foam và vải làm mát chỉ với một cú click.",
+              "<strong>Tự động hóa Marketing:</strong> Phát triển công cụ chụp ảnh canvas một chạm, xuất banner sản phẩm nền trong suốt độ phân giải cao kèm logo căn chỉnh tự động dưới 5 giây."
             ]
           },
           {
@@ -612,16 +636,17 @@
             "live_url": "https://vibepath.artificialcraft.space/",
             "case_url": "https://thuy-vu-designer.framer.website/work/vibepath-gps-3d-map-pipeline",
             "bullets": [
-              "<strong>Kiến trúc Khóa Trạng thái Bất đồng bộ (Async State Locking):</strong> Tách biệt nút kích hoạt lệnh khỏi trạng thái render nền, loại bỏ xung đột dữ liệu và thao tác gửi trùng khi xuất tài nguyên tải cao.",
-              "<strong>Làm mượt Quỹ đạo GPS bằng FastAPI Cubic B-Spline:</strong> Phát triển dịch vụ chuẩn hóa dữ liệu định vị phía server, biến tọa độ GPS di động nhiễu loạn thành đường bay camera 3D mượt mà.",
-              "<strong>Tích hợp Dify Co-Pilot Song ngữ:</strong> Nhúng trợ lý LLM tự chủ giúp tạo metadata có cấu trúc và kịch bản thuyết minh song ngữ trực tiếp từ dữ liệu hành trình thô."
+              "<strong>Vấn đề Giải quyết:</strong> Chấm dứt 4–8 giờ làm animation bản đồ & gõ phụ đề thủ công cho travel vlogger.",
+              "<strong>Khử nhiễu GPS:</strong> Ứng dụng thuật toán làm mượt cubic B-spline để biến các vết GPS điện thoại giật cục thành chuyển động camera điện ảnh mượt mà.",
+              "<strong>Tốc độ Render:</strong> Rút ngắn quy trình render bản đồ hậu kỳ từ nửa ngày đặt keyframe After Effects thủ công xuống còn 45 giây tự động.",
+              "<strong>Co-Pilot AI Song ngữ:</strong> Tích hợp pipeline ngôn ngữ tự động tạo phụ đề song ngữ Anh/Việt đồng bộ và mô tả video có cấu trúc tức thì."
             ]
           },
           {
             "id": "proj-remotion",
             "project_label": "DỰ ÁN 03",
             "timeframe": "2025 – HIỆN TẠI",
-            "title": "ĐỘNG CƠ VIDEO-AS-CODE TRÊN REMOTION",
+            "title": "ĐỘNG CƠ SẢN XUẤT VIDEO-AS-CODE TỰ ĐỘNG (REMOTION)",
             "role": "Kỹ sư Tự động hóa Sáng tạo",
             "entity": "Artificial Craft Lab",
             "stack": [
@@ -634,9 +659,10 @@
             "live_url": "https://auto-video-engine.artificialcraft.space/",
             "case_url": "https://thuy-vu-designer.framer.website/work/video-as-code-remotion-pipeline",
             "bullets": [
-              "<strong>Hợp đồng Schema Zod Nghiêm ngặt:</strong> Kiểm định dữ liệu đầu vào ở cả lúc biên dịch và chạy thực tế, triệt tiêu lỗi hỏng render và sai lệch khung hình trong các pipeline hàng loạt.",
-              "<strong>Render Headless trên GCP Cloud Run:</strong> Điều phối pipeline Chromium đóng gói serverless rút ngắn thời gian xuất video từ nhiều giờ xuống còn vài giây với độ chuẩn xác tuyệt đối.",
-              "<strong>Template Chuyển động Lập trình bằng Code:</strong> Xây dựng các React component tham số hóa thay thế thao tác kéo timeline After Effects thủ công bằng thực thi mã nguồn tất định."
+              "<strong>Vấn đề Giải quyết:</strong> Thay thế quy trình biên tập video thủ công lặp lại cho các chiến dịch e-commerce lớn.",
+              "<strong>Đóng gói Hàng loạt:</strong> Thay thế việc kéo timeline After Effects thủ công bằng các React component điều khiển bằng code từ dữ liệu bảng tính.",
+              "<strong>Triệt tiêu Sai lệch Thiết kế:</strong> Thực thi kiểm soát schema nghiêm ngặt, đảm bảo mỗi video sinh ra luôn tuân thủ chuẩn thương hiệu, phân cấp typography và bố cục.",
+              "<strong>Render Đám mây Khả mở:</strong> Triển khai cụm render headless không máy chủ trên Google Cloud Run, xuất hàng loạt video quảng cáo 60 FPS sẵn sàng phát hành trong vài phút."
             ]
           }
         ]
@@ -894,11 +920,31 @@
       "copy_button": "SAO CHÉP EMAIL",
       "copied_msg": "ĐÃ SAO CHÉP EMAIL!",
       "links": [
-        { "name": "PORTFOLIO", "url": "https://thuy-vu-designer.framer.website/", "tag": "FRAMER LIVE" },
-        { "name": "PLATFORM", "url": "https://artificialcraft.space/", "tag": "SYSTEM HUB" },
-        { "name": "LINKEDIN", "url": "https://www.linkedin.com/in/thuy-thu-vu-271190/", "tag": "HỒ SƠ" },
-        { "name": "GITHUB", "url": "https://github.com/mizublue2711", "tag": "MÃ NGUỒN" },
-        { "name": "UNSPLASH", "url": "https://unsplash.com/@mizu2711", "tag": "ẢNH CHỤP" }
+        {
+          "name": "PORTFOLIO",
+          "url": "https://thuy-vu-designer.framer.website/",
+          "tag": "FRAMER LIVE"
+        },
+        {
+          "name": "PLATFORM",
+          "url": "https://artificialcraft.space/",
+          "tag": "SYSTEM HUB"
+        },
+        {
+          "name": "LINKEDIN",
+          "url": "https://www.linkedin.com/in/thuy-thu-vu-271190/",
+          "tag": "HỒ SƠ"
+        },
+        {
+          "name": "GITHUB",
+          "url": "https://github.com/mizublue2711",
+          "tag": "MÃ NGUỒN"
+        },
+        {
+          "name": "UNSPLASH",
+          "url": "https://unsplash.com/@mizu2711",
+          "tag": "ẢNH CHỤP"
+        }
       ]
     },
     "footer": {
