@@ -70,8 +70,8 @@
   <!-- MAIN APP CONTAINER -->
   <main class="app-container">
 
-    <!-- 00 // HERO SECTION -->
-    <section class="hero-section" id="hero">
+    <!-- PAGE 1: 00 // HERO COVER -->
+    <section class="pdf-page hero-section" id="hero" data-page="1">
       <div class="hero-telemetry-strip cv-lego-block">
         <div class="telemetry-info-left">
           <span><span class="highlight">NODE:</span> MIZU2711 // CREATIVE TECHNOLOGIST</span>
@@ -212,8 +212,8 @@
       </div>
     </section>
 
-    <!-- 01 // METRICS GRID -->
-    <section class="section-wrapper" id="metrics">
+    <!-- PAGE 2: 01 // METRICS GRID & WORKFLOW TOPOLOGY -->
+    <section class="pdf-page section-wrapper" id="metrics" data-page="2">
       <div class="section-header-block cv-lego-block">
         <div class="section-prefix" data-key="metrics.prefix">01 // QUANTIFIABLE PERFORMANCE METRICS</div>
         <h2 class="section-title" data-key="metrics.heading">SYSTEM OUTPUT &amp; TELEMETRY</h2>
@@ -324,8 +324,8 @@
       </div>
     </section>
 
-    <!-- 02 // WORK EXPERIENCE & PRODUCTION ARCHITECTURE -->
-    <section class="section-wrapper" id="experience">
+    <!-- PAGE 3: 02 // WORK EXPERIENCE & PRODUCTION ARCHITECTURE (TIER 01) -->
+    <section class="pdf-page section-wrapper" id="experience" data-page="3">
       <div class="section-header-block cv-lego-block">
         <div class="section-prefix" data-key="experience.prefix">02 // WORK EXPERIENCE &amp; PRODUCTION ARCHITECTURE</div>
         <h2 class="section-title" data-key="experience.heading">HANDS-ON CAREER LOGS &amp; 3-TIER PRODUCTION SHOWCASE</h2>
@@ -334,7 +334,7 @@
         </p>
       </div>
 
-      <div id="experience-showcase-container">
+      <div id="experience-tier1-container">
         <!-- TIER 01: PROPRIETARY PRODUCTS & CREATIVE TECH (2025 – PRESENT) -->
         <div class="showcase-tier-block showcase-tier-1">
           <div class="showcase-tier-header cv-lego-block">
@@ -464,7 +464,12 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
 
+    <!-- PAGE 4: TIER 02 // ENTERPRISE CLIENT RETAINERS -->
+    <section class="pdf-page section-wrapper pdf-page-continuation" id="experience-retainers" data-page="4">
+      <div id="experience-tier2-container">
         <!-- TIER 02: ENTERPRISE CLIENT RETAINERS (2016 – 2025) -->
         <div class="showcase-tier-block showcase-tier-2">
           <div class="showcase-tier-header showcase-tier-header-indigo cv-lego-block">
@@ -619,7 +624,12 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
 
+    <!-- PAGE 5: TIER 03 // INNOVATION VAULT + REAL-WORLD TELEMETRY BENCHMARKS -->
+    <section class="pdf-page section-wrapper pdf-page-continuation" id="experience-vault" data-page="5">
+      <div id="experience-tier3-container">
         <!-- TIER 03: APPLIED R&D, SPATIAL SIMULATION & MEDIA OPS -->
         <div class="showcase-tier-block showcase-tier-3 cv-lego-block">
           <div class="showcase-tier-header showcase-tier-header-vault cv-lego-block">
@@ -727,7 +737,8 @@
           <span class="legend-item"><i class="dot dot-cyan"></i> <span data-key="radar_p5.leg_webgl">Spatial UI/UX &amp; CAD Systems</span></span>
         </div>
 
-        <svg viewBox="0 0 420 380" class="radar-svg-full" xmlns="http://www.w3.org/2000/svg">
+        <div class="radar-chart-container">
+        <svg viewBox="-90 42 600 320" class="radar-svg-full" xmlns="http://www.w3.org/2000/svg">
           <!-- Lưới Đa Giác Đồng Tâm -->
           <polygon points="210,80 314,140 314,260 210,320 106,260 106,140" stroke="#27272A" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
           <polygon points="210,104 293,152 293,248 210,296 127,248 127,152" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
@@ -778,11 +789,12 @@
           <text x="95" y="268" fill="#F4F8FF" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="end">SCALE THROUGHPUT (60 FPS)</text>
           <text x="95" y="135" fill="#F4F8FF" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="end">SCHEMA SAFETY (ZOD 85%)</text>
         </svg>
+        </div>
       </div>
     </section>
 
-    <!-- 03 // TECH STACK MATRIX -->
-    <section class="section-wrapper" id="stack">
+    <!-- PAGE 6: 03 // TECH STACK MATRIX & COMPETENCY RADAR -->
+    <section class="pdf-page section-wrapper" id="stack" data-page="6">
       <div class="section-header-block cv-lego-block">
         <div class="section-prefix" data-key="tech_stack.prefix">03 // CAPABILITY MATRIX &amp; TOOLKIT</div>
         <h2 class="section-title" data-key="tech_stack.heading">TECHNICAL STACK &amp; ECOSYSTEM</h2>
@@ -808,7 +820,8 @@
           <span class="legend-item"><i class="dot dot-cyan"></i> <span data-key="radar.legend_devops">DevOps</span></span>
         </div>
 
-        <svg viewBox="0 0 400 380" class="radar-svg-3layer" xmlns="http://www.w3.org/2000/svg">
+        <div class="radar-chart-container">
+        <svg viewBox="-95 45 590 330" class="radar-svg-3layer" xmlns="http://www.w3.org/2000/svg">
           <!-- Lưới Đa Giác Lục Giác Đồng Tâm (Hexagonal Grid Lines) -->
           <polygon points="200,90 304,150 304,270 200,330 96,270 96,150" stroke="#27272A" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
           <polygon points="200,114 283,162 283,258 200,306 117,258 117,162" stroke="#1E1E24" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
@@ -870,76 +883,78 @@
           <text x="85" y="278" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="end">Python &amp; AI Agent</text>
           <text x="85" y="145" fill="#F4F8FF" font-size="11" font-family="'Space Grotesk', sans-serif" font-weight="600" text-anchor="end">Brand &amp; Packaging</text>
         </svg>
+        </div>
       </div>
     </section>
 
-    <!-- 04 // EDUCATION & CREDENTIALS -->
-    <section class="section-wrapper" id="education">
-      <div class="section-header-block cv-lego-block">
-        <div class="section-prefix" data-key="education.prefix">04 // ACCREDITATIONS &amp; CERTIFICATIONS</div>
-        <h2 class="section-title" data-key="education.heading">CONTINUOUS SKILL UPGRADES</h2>
-        <p class="section-subtitle" data-key="education.subheading">
-          Rigorous academic and technical credentialing in systems, AI, and languages
-        </p>
-      </div>
-
-      <div class="education-grid" id="education-container">
-        <!-- Injected dynamically via app.js -->
-      </div>
-    </section>
-
-    <!-- 05 // TRANSMIT & CONTACT -->
-    <section class="section-wrapper" id="contact">
-      <div class="section-header-block cv-lego-block">
-        <div class="section-prefix" data-key="contact.prefix">05 // TELEMETRY TRANSMISSION</div>
-        <h2 class="section-title" data-key="contact.heading">CONNECT &amp; COLLABORATE</h2>
-        <p class="section-subtitle" data-key="contact.subheading">
-          Direct communication line for enterprise consulting, spatial engineering, and automation
-        </p>
-      </div>
-
-      <div class="contact-container">
-        <!-- Terminal Box -->
-        <div class="contact-terminal-box chamfer-tr cv-lego-block">
-          <div class="contact-meta-row">
-            <div class="contact-meta-label" data-key="contact.email_label">PRIMARY EMAIL</div>
-            <a href="mailto:mizu2711@gmail.com" class="contact-meta-val contact-meta-link">mizu2711@gmail.com</a>
-            <button type="button" class="copy-btn-action" onclick="window.copyEmail()">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              <span data-key="contact.copy_button">COPY EMAIL</span>
-            </button>
-          </div>
-
-          <div class="contact-meta-row">
-            <div class="contact-meta-label" data-key="contact.phone_label">SECURE TELEPHONE</div>
-            <a href="tel:+84979203507" class="contact-meta-val contact-meta-link">+84 979 203 507</a>
-          </div>
-
-          <div class="contact-meta-row" style="margin-bottom: 0;">
-            <div class="contact-meta-label" data-key="contact.location_label">BASE OF OPERATIONS</div>
-            <div class="contact-meta-val" style="font-size: 15px;" data-key="contact.location">
-              Ho Chi Minh City, Vietnam (Global Remote)
-            </div>
-          </div>
+    <!-- PAGE 7: 04 // CREDENTIALS + 05 // TRANSMIT & CONTACT + FOOTER -->
+    <section class="pdf-page section-wrapper" id="education" data-page="7">
+      <div class="pdf-page-edu-block">
+        <div class="section-header-block cv-lego-block">
+          <div class="section-prefix" data-key="education.prefix">04 // ACCREDITATIONS &amp; CERTIFICATIONS</div>
+          <h2 class="section-title" data-key="education.heading">CONTINUOUS SKILL UPGRADES</h2>
+          <p class="section-subtitle" data-key="education.subheading">
+            Rigorous academic and technical credentialing in systems, AI, and languages
+          </p>
         </div>
 
-        <!-- External Channels List -->
-        <div class="channels-list" id="channels-container">
+        <div class="education-grid" id="education-container">
           <!-- Injected dynamically via app.js -->
         </div>
       </div>
 
-    </section>
+      <!-- 05 // TRANSMIT & CONTACT -->
+      <div class="pdf-page-subblock" id="contact">
+        <div class="section-header-block cv-lego-block">
+          <div class="section-prefix" data-key="contact.prefix">05 // TELEMETRY TRANSMISSION</div>
+          <h2 class="section-title" data-key="contact.heading">CONNECT &amp; COLLABORATE</h2>
+          <p class="section-subtitle" data-key="contact.subheading">
+            Direct communication line for enterprise consulting, spatial engineering, and automation
+          </p>
+        </div>
 
-    <!-- SITE FOOTER -->
-    <footer class="site-footer cv-footer cv-lego-block">
-      <div class="footer-rights" data-key="footer.rights">
-        &copy; 2026 THUY VU // MIZU2711. ALL RIGHTS RESERVED.
+        <div class="contact-container">
+          <!-- Terminal Box -->
+          <div class="contact-terminal-box chamfer-tr cv-lego-block">
+            <div class="contact-meta-row">
+              <div class="contact-meta-label" data-key="contact.email_label">PRIMARY EMAIL</div>
+              <a href="mailto:mizu2711@gmail.com" class="contact-meta-val contact-meta-link">mizu2711@gmail.com</a>
+              <button type="button" class="copy-btn-action" onclick="window.copyEmail()">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span data-key="contact.copy_button">COPY EMAIL</span>
+              </button>
+            </div>
+
+            <div class="contact-meta-row">
+              <div class="contact-meta-label" data-key="contact.phone_label">SECURE TELEPHONE</div>
+              <a href="tel:+84979203507" class="contact-meta-val contact-meta-link">+84 979 203 507</a>
+            </div>
+
+            <div class="contact-meta-row" style="margin-bottom: 0;">
+              <div class="contact-meta-label" data-key="contact.location_label">BASE OF OPERATIONS</div>
+              <div class="contact-meta-val" style="font-size: 15px;" data-key="contact.location">
+                Ho Chi Minh City, Vietnam (Global Remote)
+              </div>
+            </div>
+          </div>
+
+          <!-- External Channels List -->
+          <div class="channels-list" id="channels-container">
+            <!-- Injected dynamically via app.js -->
+          </div>
+        </div>
       </div>
-      <div class="footer-spec" data-key="footer.spec">
-        ENGINEERED UNDER CYBERNETIC SWISS BRUTALISM &bull; ZERO SOFT RADIUS &bull; 60 FPS DETERMINISTIC CANVAS
-      </div>
-    </footer>
+
+      <!-- SITE FOOTER -->
+      <footer class="site-footer cv-footer cv-lego-block">
+        <div class="footer-rights" data-key="footer.rights">
+          &copy; 2026 THUY VU // MIZU2711. ALL RIGHTS RESERVED.
+        </div>
+        <div class="footer-spec" data-key="footer.spec">
+          ENGINEERED UNDER CYBERNETIC SWISS BRUTALISM &bull; ZERO SOFT RADIUS &bull; 60 FPS DETERMINISTIC CANVAS
+        </div>
+      </footer>
+    </section>
 
   </main>
 

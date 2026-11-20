@@ -942,12 +942,11 @@
       renderCurrentLanguage();
     });
 
-  // Render unified 3-Tier Work Experience & Production Architecture
-  function renderExperienceArchitecture(exp) {
-    if (!exp) return '';
+  // Render Tier 1: Proprietary Products & Creative Tech (Page 3)
+  function renderExperienceTier1(exp) {
+    if (!exp || !exp.tier1) return '';
     const labels = exp.labels || {};
-
-    const tier1Cards = (exp.tier1 && exp.tier1.items ? exp.tier1.items : [])
+    const tier1Cards = (exp.tier1.items || [])
       .map(
         (item) => `
           <article class="career-card career-card-tier1 chamfer-tr cv-lego-block" id="${item.id}">
@@ -990,7 +989,27 @@
       )
       .join('');
 
-    const tier2Cards = (exp.tier2 && exp.tier2.items ? exp.tier2.items : [])
+    return `
+      <div class="showcase-tier-block showcase-tier-1">
+        <div class="showcase-tier-header cv-lego-block">
+          <div class="showcase-tier-meta">
+            <span class="showcase-tier-tag">${exp.tier1.tag}</span>
+            <h3 class="showcase-tier-title">${exp.tier1.title}</h3>
+          </div>
+          <p class="showcase-tier-subtitle">${exp.tier1.subtitle}</p>
+        </div>
+        <div class="career-tier1-list">
+          ${tier1Cards}
+        </div>
+      </div>
+    `;
+  }
+
+  // Render Tier 2: Enterprise Client Retainers (Page 4)
+  function renderExperienceTier2(exp) {
+    if (!exp || !exp.tier2) return '';
+    const labels = exp.labels || {};
+    const tier2Cards = (exp.tier2.items || [])
       .map(
         (item) => `
           <article class="career-card career-card-tier2 chamfer-tr cv-lego-block" id="${item.id}">
@@ -1027,7 +1046,27 @@
       )
       .join('');
 
-    const tier3Clusters = (exp.tier3 && exp.tier3.clusters ? exp.tier3.clusters : [])
+    return `
+      <div class="showcase-tier-block showcase-tier-2">
+        <div class="showcase-tier-header showcase-tier-header-indigo cv-lego-block">
+          <div class="showcase-tier-meta">
+            <span class="showcase-tier-tag showcase-tier-tag-indigo">${exp.tier2.tag}</span>
+            <h3 class="showcase-tier-title">${exp.tier2.title}</h3>
+          </div>
+          <p class="showcase-tier-subtitle">${exp.tier2.subtitle}</p>
+        </div>
+        <div class="career-tier2-grid">
+          ${tier2Cards}
+        </div>
+      </div>
+    `;
+  }
+
+  // Render Tier 3: Innovation Vault & Framer Archive CTA (Page 5)
+  function renderExperienceTier3(exp) {
+    if (!exp || !exp.tier3) return '';
+    const labels = exp.labels || {};
+    const tier3Clusters = (exp.tier3.clusters || [])
       .map(
         (cluster) => `
           <div class="vault-cluster cv-lego-block" id="${cluster.id}">
@@ -1056,32 +1095,6 @@
       .join('');
 
     return `
-      <div class="showcase-tier-block showcase-tier-1">
-        <div class="showcase-tier-header cv-lego-block">
-          <div class="showcase-tier-meta">
-            <span class="showcase-tier-tag">${exp.tier1.tag}</span>
-            <h3 class="showcase-tier-title">${exp.tier1.title}</h3>
-          </div>
-          <p class="showcase-tier-subtitle">${exp.tier1.subtitle}</p>
-        </div>
-        <div class="career-tier1-list">
-          ${tier1Cards}
-        </div>
-      </div>
-
-      <div class="showcase-tier-block showcase-tier-2">
-        <div class="showcase-tier-header showcase-tier-header-indigo cv-lego-block">
-          <div class="showcase-tier-meta">
-            <span class="showcase-tier-tag showcase-tier-tag-indigo">${exp.tier2.tag}</span>
-            <h3 class="showcase-tier-title">${exp.tier2.title}</h3>
-          </div>
-          <p class="showcase-tier-subtitle">${exp.tier2.subtitle}</p>
-        </div>
-        <div class="career-tier2-grid">
-          ${tier2Cards}
-        </div>
-      </div>
-
       <div class="showcase-tier-block showcase-tier-3 cv-lego-block">
         <div class="showcase-tier-header showcase-tier-header-vault cv-lego-block">
           <div class="showcase-tier-meta">
@@ -1167,14 +1180,22 @@
         .join('');
     }
 
-    // Experience & 3-Tier Production Showcase (Merged Section 02)
+    // Experience & 3-Tier Production Showcase (Discrete Pages 3, 4, 5)
     document.querySelector('[data-key="experience.prefix"]').textContent = d.experience.prefix;
     document.querySelector('[data-key="experience.heading"]').textContent = d.experience.heading;
     document.querySelector('[data-key="experience.subheading"]').textContent = d.experience.subheading;
 
-    const expShowcaseContainer = document.getElementById('experience-showcase-container');
-    if (expShowcaseContainer) {
-      expShowcaseContainer.innerHTML = renderExperienceArchitecture(d.experience);
+    const tier1Container = document.getElementById('experience-tier1-container');
+    if (tier1Container) {
+      tier1Container.innerHTML = renderExperienceTier1(d.experience);
+    }
+    const tier2Container = document.getElementById('experience-tier2-container');
+    if (tier2Container) {
+      tier2Container.innerHTML = renderExperienceTier2(d.experience);
+    }
+    const tier3Container = document.getElementById('experience-tier3-container');
+    if (tier3Container) {
+      tier3Container.innerHTML = renderExperienceTier3(d.experience);
     }
 
     // Tech Stack

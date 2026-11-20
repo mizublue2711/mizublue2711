@@ -793,6 +793,43 @@ body {
 }
 
 /* --------------------------------------------------------------------------
+   DISCRETE PAGE CONTINUATIONS & SUBBLOCKS (SCREEN WEB FLOW)
+   -------------------------------------------------------------------------- */
+#experience {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.pdf-page-continuation {
+  padding-top: 20px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+#experience-vault {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pdf-page-subblock {
+  margin-top: 72px;
+  padding-top: 72px;
+  border-top: 1px solid var(--border);
+}
+
+#education {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.radar-chart-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
    02 // WORK EXPERIENCE & PRODUCTION ARCHITECTURE (3-TIER DOSSIER)
    -------------------------------------------------------------------------- */
 .showcase-tier-block {
@@ -1433,7 +1470,7 @@ body {
 
 .radar-svg-3layer {
   width: 100%;
-  max-width: 440px;
+  max-width: 620px;
   max-height: 380px;
   margin: 0 auto;
   display: block;
@@ -1531,7 +1568,7 @@ body {
 
 .radar-svg-full {
   width: 100%;
-  max-width: 440px;
+  max-width: 620px;
   max-height: 380px;
   margin: 0 auto;
   display: block;
@@ -1727,7 +1764,7 @@ body {
 /* --------------------------------------------------------------------------
    RESPONSIVE LAYOUT BREAKPOINTS
    -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .nav-links {
     gap: 12px;
   }
@@ -1763,13 +1800,13 @@ body {
   }
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 960px) {
   .career-tier2-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero-grid-layout {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -1846,21 +1883,21 @@ body {
 }
 
 /* ==========================================================================
-   A4 PORTRAIT SEAMLESS BLEED MULTI-PAGE PRINT & PDF ENGINE
+   DISCRETE A4 PORTRAIT PRINT ARCHITECTURE (7 HARD-BOUNDED .pdf-page CONTAINERS)
    ========================================================================== */
 @page {
   size: A4 portrait;
-  margin: 0 !important; /* Xóa lề máy in -> Nền đen phủ kín 100% không viền trắng khi chọn Margins: None */
+  margin: 0 !important;
 }
 
 @media print {
-  /* 1. Ép tờ giấy A4 xóa sạch lề máy in -> Nền đen phủ kín 100% không viền trắng */
+  /* 1. Zero out engine margins so .pdf-page owns 100% of box geometry */
   @page {
     size: A4 portrait;
     margin: 0 !important;
   }
 
-  /* 2. Ép màu nền tối cho toàn bộ trang in */
+  /* 2. Dark obsidian full-bleed base */
   html, body {
     background-color: #09090B !important;
     color: #F4F8FF !important;
@@ -1868,25 +1905,50 @@ body {
     print-color-adjust: exact !important;
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
-    font-size: 10pt !important;
-    line-height: 1.45 !important;
+    width: 210mm !important;
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
   }
 
-  /* 3. BỌC THÉP LỀ AN TOÀN: Ép TẤT CẢ khung chứa trực tiếp phải thụt lề 18mm */
+  /* 3. Strip outer container padding so .pdf-page sits flush edge-to-edge */
   body > *,
-  .cv-container,
   main,
-  .page-wrapper,
   .app-container {
     box-sizing: border-box !important;
-    padding: 18mm !important; /* Tạo lề an toàn 18mm cả 4 chiều */
-    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 210mm !important;
     max-width: 210mm !important;
-    margin: 0 auto !important;
   }
 
-  /* 4. Khống chế tất cả thẻ con không được bứt phá chiều rộng */
+  /* 4. Discrete A4 Container Contract (210mm x 297mm, 16mm 14mm internal padding) */
+  .pdf-page,
+  .pdf-page.hero-section,
+  .pdf-page.section-wrapper,
+  .pdf-page.pdf-page-continuation {
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    padding: 16mm 14mm !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #09090B !important;
+    border: none !important;
+  }
+
+  .pdf-page:last-of-type {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  /* 5. Constrain inner children */
   * {
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -1899,7 +1961,7 @@ body {
     text-shadow: none !important;
   }
 
-  /* Ẩn toàn bộ UI không liên quan đến bản in */
+  /* Hide web-only chrome */
   #cyber-canvas,
   .top-nav,
   .swiss-grid-lines,
@@ -1907,222 +1969,527 @@ body {
     display: none !important;
   }
 
-  /* 5. Ép tiêu đề và văn bản tự rớt dòng, không tràn ngang (ngoại trừ các con số đo lường) */
   h1, h2, h3, h4, p, span:not(.metric-val):not(.metric-value):not(.metric-number), div, a {
     overflow-wrap: break-word !important;
     word-break: break-word !important;
     white-space: normal !important;
   }
 
-  /* 6. Gắn Header dính liền với khối nội dung bên dưới (chống tiêu đề mồ côi) */
-  h1, h2, h3, h4, .section-title, .hero-name, .section-prefix, .section-subtitle, .pillar-title, .career-card-title {
-    break-after: avoid !important;
-    page-break-after: avoid !important;
-  }
-
-  /* Khóa cụm Header với phần tử con đầu tiên của mỗi danh sách */
+  /* Section Headers */
   .section-header-block {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    break-after: avoid !important;
-    page-break-after: avoid !important;
-    margin-bottom: 12pt !important;
-  }
-
-  .section-header-block + *,
-  #experience-showcase-container > .showcase-tier-block:first-child,
-  .metrics-grid > .metric-card:first-child,
-  .stack-matrix-grid > .stack-pillar-card:first-child,
-  .education-grid > .edu-card:first-child,
-  .contact-container > *:first-child {
-    break-before: avoid !important;
-    page-break-before: avoid !important;
-  }
-
-  .showcase-tier-header {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    break-after: avoid !important;
-    page-break-after: avoid !important;
     margin-bottom: 10pt !important;
-    padding-bottom: 8pt !important;
   }
 
-  /* Phân tách các phần lớn một cách trang trọng */
-  .hero-section {
-    padding: 0 0 16pt 0 !important;
-    border-bottom: 1px solid #1F1F2E !important;
-    break-after: page !important;
-    page-break-after: always !important; /* Hero kết thúc trang 1 trang trọng */
+  .section-prefix {
+    font-size: 8.5pt !important;
+    margin-bottom: 3pt !important;
   }
 
-  .section-wrapper {
-    padding: 18mm 0 14pt 0 !important;
-    border-bottom: 1px solid #1F1F2E !important;
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Mục 2 (Kinh nghiệm & Showcase), Mục 3 (Tech Stack), Mục 5 (Liên hệ) bắt đầu trang mới, thụt lề trên an toàn 18mm */
-  #experience {
-    break-before: page !important;
-    page-break-before: always !important;
-    padding-top: 18mm !important;
-  }
-
-  #stack {
-    break-before: page !important;
-    page-break-before: always !important;
-    padding-top: 18mm !important;
-  }
-
-  #contact {
-    break-before: page !important;
-    page-break-before: always !important;
-    padding-top: 18mm !important;
-  }
-
-  /* Co nhẹ font Header riêng khi in để không bị đè khối */
   h1, .hero-title, .hero-name {
-    font-size: 26pt !important;
-    line-height: 1.2 !important;
-    break-after: avoid !important;
-    page-break-after: avoid !important;
+    font-size: 28pt !important;
+    line-height: 1.1 !important;
+    margin-bottom: 6pt !important;
   }
 
   h2, .section-title {
-    font-size: 18pt !important;
-    line-height: 1.25 !important;
-    break-after: avoid !important;
-    page-break-after: avoid !important;
+    font-size: 16pt !important;
+    line-height: 1.2 !important;
+    margin-bottom: 4pt !important;
   }
 
-  /* 7. Giữ nguyên các khối Lego không bị cắt ngang trang, thu gọn lề còn 12px */
-  .cv-lego-block, section, article, .card,
-  .metric-card,
-  .career-card,
-  .showcase-tier-3,
-  .vault-cluster,
-  .showcase-cta-bar,
-  .stack-pillar-card,
-  .edu-card,
-  .contact-terminal-box,
-  .channel-link-card,
-  .hero-main-frame,
-  .hero-telemetry-strip,
-  .cv-radar-container,
-  .cv-radar-container-p5,
-  .cv-mindmap-container {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid-page !important;
-    margin-bottom: 12px !important;
-    position: relative !important;
-  }
-
-  .showcase-tier-1,
-  .showcase-tier-2 {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* 8. Tự động kéo dãn khối Radar để lấp đầy khoảng trống dư thừa */
-  #stack {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 230mm !important;
-  }
-
-  .cv-radar-container {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    margin-top: auto !important; /* Đẩy khối Radar xuống bám đáy trang ở mục Tech Stack */
-    padding: 16px !important;
-    border: 1px solid #18181E !important;
-    background-color: #0D0D11 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    display: block !important;
-  }
-
-  .cv-radar-container-p5 {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    margin-top: 14px !important; /* Bám sát ngay dưới phần Motion Graphics & Video Production */
-    padding: 16px !important;
-    border: 1px solid #18181E !important;
-    background-color: #0D0D11 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    display: block !important;
-  }
-
-  /* Khóa chặt Footer với Section Contact - Tuyệt đối không để rơi 1 dòng sang trang sau */
-  footer,
-  .site-footer,
-  .cv-footer {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    break-before: avoid !important;
-    page-break-before: avoid !important;
-    margin-top: 14px !important;
-    padding-top: 10px !important;
-    border-top: 1px solid #1F1F2E !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px !important;
-  }
-
-  .footer-rights,
-  .footer-spec {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    font-size: 8pt !important;
+  .section-subtitle {
+    font-size: 8.5pt !important;
     line-height: 1.35 !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 
-  .radar-legend,
-  .radar-legend-p5 {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 16px !important;
-    margin-bottom: 8px !important;
+  /* PAGE 1: UNIFIED HERO COVER (Telemetry Strip + Avatar + Bio) */
+  .hero-telemetry-strip {
+    margin-bottom: 14pt !important;
+    padding: 8pt 12pt !important;
     font-size: 8pt !important;
   }
 
-  .radar-title-p5 {
-    color: #F4F8FF !important;
-    font-size: 11pt !important;
-    margin: 4px 0 8px 0 !important;
+  .hero-main-frame {
+    padding: 22pt 20pt !important;
+    flex: 0 0 auto !important;
+  }
+
+  .hero-grid-layout {
+    display: grid !important;
+    grid-template-columns: 155px 1fr !important;
+    gap: 20pt !important;
+    align-items: start !important;
+  }
+
+  .hero-avatar-col {
+    padding-top: 2pt !important;
+    gap: 8pt !important;
+  }
+
+  .hero-avatar-frame {
+    width: 132px !important;
+    height: 132px !important;
+  }
+
+  .avatar-stamp-wrapper {
+    display: block !important;
+    margin-top: 6pt !important;
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  .hero-badge-row {
+    gap: 6pt !important;
+    margin-bottom: 10pt !important;
+  }
+
+  .hero-role {
+    font-size: 12.5pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .hero-specializations {
+    font-size: 8.5pt !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .hero-summary {
+    font-size: 9pt !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16pt !important;
+  }
+
+  .hero-cta-group {
+    gap: 8pt !important;
+  }
+
+  /* PAGE 2: METRICS + WORKFLOW MIND MAP */
+  .metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8pt !important;
+  }
+
+  .metric-card {
+    padding: 9pt 11pt !important;
+  }
+
+  .metric-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
+    gap: 4pt !important;
+    margin-bottom: 5pt !important;
+  }
+
+  .metric-val,
+  .metric-value,
+  .metric-number,
+  .stat-number,
+  .stat-value,
+  .telemetry-number,
+  .metric-card .metric-val {
+    font-size: 24pt !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    color: #00E5FF !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .metric-unit {
+    font-size: 7.5pt !important;
+    font-weight: 700 !important;
+    color: #A1A1AA !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    text-align: right !important;
+    line-height: 1.2 !important;
+    max-width: 48% !important;
+    word-break: break-word !important;
+  }
+
+  .metric-label {
+    font-size: 9pt !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 3pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .metric-desc {
+    font-size: 7.8pt !important;
+    line-height: 1.35 !important;
+    color: #A1A1AA !important;
+  }
+
+  .cv-mindmap-container {
+    margin-top: 12pt !important;
+    padding: 12pt 14pt !important;
+    border: 1px solid #18181E !important;
+    background-color: #09090B !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .mindmap-svg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 175px !important;
   }
 
   .hud-tag-cyan {
     color: #00E5FF !important;
     font-family: monospace !important;
     font-size: 8pt !important;
+    letter-spacing: 1px !important;
   }
 
-  .radar-svg-3layer,
-  .radar-svg-full {
+  .mindmap-title {
+    color: #F4F8FF !important;
+    font-size: 10pt !important;
+    font-family: monospace !important;
+    margin: 3pt 0 8pt 0 !important;
+  }
+
+  /* PAGES 3, 4, 5: 3-TIER WORK EXPERIENCE & PRODUCTION SHOWCASE */
+  .showcase-tier-block {
+    padding: 8pt 10pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .showcase-tier-header {
+    margin-bottom: 7pt !important;
+    padding-bottom: 5pt !important;
+    gap: 6pt !important;
+  }
+
+  .showcase-tier-tag {
+    font-size: 7.5pt !important;
+    padding: 2pt 6pt !important;
+  }
+
+  .showcase-tier-title {
+    font-size: 10.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .showcase-tier-subtitle {
+    font-size: 7.8pt !important;
+    line-height: 1.3 !important;
+  }
+
+  .career-tier1-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6.5pt !important;
+  }
+
+  .career-tier2-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 7pt !important;
+  }
+
+  .career-card {
+    padding: 7pt 9pt !important;
+    gap: 4.5pt !important;
+    margin-bottom: 0 !important;
+  }
+
+  .career-card-head {
+    gap: 6pt !important;
+  }
+
+  .career-timeframe-badge,
+  .career-project-badge {
+    font-size: 7pt !important;
+    padding: 2pt 5.5pt !important;
+  }
+
+  .career-card-title {
+    font-size: 9pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .career-meta-grid {
+    display: grid !important;
+    grid-template-columns: 1.4fr 1fr !important;
+  }
+
+  .career-meta-grid-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  .career-meta-cell {
+    padding: 3.5pt 6pt !important;
+  }
+
+  .career-meta-label {
+    font-size: 6.5pt !important;
+  }
+
+  .career-meta-val {
+    font-size: 7.3pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .career-stack-row {
+    gap: 6pt !important;
+  }
+
+  .career-stack-label {
+    font-size: 7pt !important;
+    padding-top: 2pt !important;
+  }
+
+  .showcase-tags {
+    gap: 3.5pt !important;
+  }
+
+  .showcase-tag {
+    font-size: 6.5pt !important;
+    padding: 1.5pt 4pt !important;
+  }
+
+  .career-bullets {
+    gap: 3pt !important;
+    padding-top: 4.5pt !important;
+  }
+
+  .career-bullets li {
+    font-size: 7pt !important;
+    line-height: 1.32 !important;
+    padding-left: 11pt !important;
+  }
+
+  /* PAGE 5: TIER 3 INNOVATION VAULT + REAL-WORLD TELEMETRY RADAR */
+  .showcase-vault-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6pt !important;
+  }
+
+  .vault-cluster {
+    padding: 6.5pt !important;
+    gap: 4.5pt !important;
+    margin-bottom: 0 !important;
+  }
+
+  .vault-cluster-header {
+    padding-bottom: 4pt !important;
+  }
+
+  .vault-cluster-index {
+    font-size: 6.5pt !important;
+    margin-bottom: 1.5pt !important;
+  }
+
+  .vault-cluster-title {
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .vault-nodes-list {
+    gap: 4pt !important;
+  }
+
+  .vault-node {
+    padding: 4.5pt 6pt !important;
+  }
+
+  .vault-node-head {
+    margin-bottom: 2pt !important;
+  }
+
+  .vault-node-title {
+    font-size: 7.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .vault-node-desc {
+    font-size: 6.6pt !important;
+    line-height: 1.28 !important;
+  }
+
+  .cv-radar-container-p5 {
+    margin-top: 8pt !important;
+    padding: 8pt 12pt !important;
+    border: 1px solid #18181E !important;
+    background-color: #0D0D11 !important;
     width: 100% !important;
-    max-height: 240px !important;
-    height: auto !important;
     display: block !important;
+  }
+
+  .radar-header-p5,
+  .radar-header {
+    margin-bottom: 4pt !important;
+    gap: 2pt !important;
+  }
+
+  .radar-title-p5,
+  .radar-title {
+    color: #F4F8FF !important;
+    font-size: 9.5pt !important;
+    margin: 2pt 0 4pt 0 !important;
+  }
+
+  .radar-legend,
+  .radar-legend-p5 {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14pt !important;
+    margin-bottom: 4pt !important;
+    font-size: 7.5pt !important;
+  }
+
+  /* Strict Radar Chart Height Clamps (Eliminates Orphan Spillover) */
+  .radar-chart-container {
+    height: 180px !important;
+    max-height: 180px !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  .radar-chart-container svg,
+  .radar-chart-container canvas {
+    max-height: 100% !important;
+    height: 100% !important;
+    width: auto !important;
+    object-fit: contain !important;
     margin: 0 auto !important;
-  }
-
-  .avatar-stamp-wrapper {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
     display: block !important;
-    margin-top: 10pt !important;
-    width: 120px !important;
-    height: 120px !important;
   }
 
-  /* Đảm bảo nền và đường viền Dark Obsidian (#0B0B0F / #1F1F2E) */
+  /* PAGE 6: TECH STACK + COMPETENCY RADAR */
+  .stack-matrix-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8pt !important;
+  }
+
+  .stack-pillar-card {
+    padding: 9pt 11pt !important;
+  }
+
+  .pillar-title {
+    font-size: 10pt !important;
+    padding-bottom: 5pt !important;
+    margin-bottom: 7pt !important;
+  }
+
+  .pillar-tools-list {
+    gap: 4pt !important;
+  }
+
+  .tool-badge-item {
+    padding: 3.5pt 7pt !important;
+    font-size: 7.8pt !important;
+  }
+
+  .cv-radar-container {
+    margin-top: 10pt !important;
+    padding: 9pt 12pt !important;
+    border: 1px solid #18181E !important;
+    background-color: #0D0D11 !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  #stack .radar-chart-container {
+    height: 195px !important;
+    max-height: 195px !important;
+  }
+
+  /* PAGE 7: CREDENTIALS + CONTACT + FOOTER */
+  .education-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8pt !important;
+  }
+
+  .edu-card {
+    padding: 9pt 11pt !important;
+  }
+
+  .edu-type-tag {
+    margin-bottom: 5pt !important;
+    font-size: 7.5pt !important;
+  }
+
+  .edu-title {
+    font-size: 10pt !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .edu-institution {
+    font-size: 8pt !important;
+  }
+
+  .pdf-page-subblock {
+    margin-top: 14pt !important;
+    padding-top: 14pt !important;
+    border-top: 1px solid #1F1F2E !important;
+  }
+
+  .contact-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10pt !important;
+    margin-bottom: 10pt !important;
+  }
+
+  .contact-terminal-box {
+    padding: 12pt !important;
+  }
+
+  .contact-meta-row {
+    margin-bottom: 10pt !important;
+  }
+
+  .contact-meta-val {
+    font-size: 11pt !important;
+  }
+
+  .channels-list {
+    gap: 6pt !important;
+  }
+
+  .channel-link-card {
+    padding: 8pt 12pt !important;
+  }
+
+  .channel-name {
+    font-size: 10pt !important;
+  }
+
+  footer,
+  .site-footer,
+  .cv-footer {
+    margin-top: auto !important;
+    padding: 8pt 0 0 0 !important;
+    border-top: 1px solid #1F1F2E !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3pt !important;
+  }
+
+  .footer-rights,
+  .footer-spec {
+    font-size: 7.5pt !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* High-Contrast Print Surfaces & Color Enforcement */
   .hero-main-frame,
   .metric-card,
   .showcase-tier-block,
@@ -2141,7 +2508,6 @@ body {
     color: #F4F8FF !important;
   }
 
-  /* Giữ nguyên màu tương phản cao */
   .hero-name, .section-title, h1, h2, h3, h4, .text-white {
     color: #FFFFFF !important;
   }
@@ -2159,10 +2525,10 @@ body {
   }
 
   .edu-type-tag {
-    color: #5322FF !important;
+    color: #FFFFFF !important;
+    background-color: #5322FF !important;
   }
 
-  /* SỬA LỖI CHỮ TRÙNG MÀU NỀN TÍM TRONG BẢN IN PDF */
   .badge-purple, .tag-purple, .hero-experience-badge, .badge-experience,
   .showcase-tier-tag-indigo, .career-timeframe-indigo {
     background-color: #5322FF !important;
@@ -2215,10 +2581,7 @@ body {
   .career-bullets li,
   .career-stack-label,
   .vault-node-desc,
-  .showcase-tag {
-    color: #A1A1AA !important;
-  }
-
+  .showcase-tag,
   .metric-desc,
   .section-subtitle,
   .hero-summary,
@@ -2227,196 +2590,7 @@ body {
     color: #A1A1AA !important;
   }
 
-  /* Bố cục lưới in ấn A4 */
-  .metrics-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8pt !important;
-  }
-
-  /* CHỐNG BẺ DÒNG SỐ LỚN & BỐ CỤC THẺ METRIC IN A4 */
-  .metric-card {
-    padding: 10pt 12pt !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-
-  .metric-header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: baseline !important;
-    flex-wrap: nowrap !important;
-    gap: 4pt !important;
-    margin-bottom: 6pt !important;
-  }
-
-  .metric-val,
-  .metric-value,
-  .metric-number,
-  .stat-number,
-  .stat-value,
-  .telemetry-number,
-  .metric-card .metric-val {
-    font-size: 26pt !important; /* Co nhẹ 26pt - 28pt vừa vặn khổ A4 */
-    line-height: 1 !important;
-    white-space: nowrap !important;
-    word-break: keep-all !important;
-    overflow-wrap: normal !important;
-    display: inline-block !important;
-    flex-shrink: 0 !important;
-    color: #00E5FF !important;
-    letter-spacing: -0.02em !important;
-  }
-
-  .metric-unit {
-    font-size: 8pt !important;
-    font-weight: 700 !important;
-    color: #A1A1AA !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    text-align: right !important;
-    line-height: 1.2 !important;
-    max-width: 48% !important;
-    word-break: break-word !important;
-  }
-
-  .metric-label {
-    font-size: 9.5pt !important;
-    font-weight: 700 !important;
-    color: #FFFFFF !important;
-    margin-bottom: 4pt !important;
-    line-height: 1.3 !important;
-  }
-
-  .metric-desc {
-    font-size: 8pt !important;
-    line-height: 1.4 !important;
-    color: #A1A1AA !important;
-  }
-
-  /* Ép toàn bộ khối Mindmap không bị cắt ngang trang và lấp kín đáy trang */
-  .cv-mindmap-container {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    margin-top: 14px !important;
-    padding: 14px 16px !important;
-    border: 1px solid #18181E !important;
-    background-color: #09090B !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    display: block !important;
-  }
-
-  .mindmap-svg {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 180px !important;
-  }
-
-  .hud-tag-cyan {
-    color: #00E5FF !important;
-    font-family: monospace !important;
-    font-size: 8.5pt !important;
-    letter-spacing: 1px !important;
-  }
-
-  .mindmap-title {
-    color: #F4F8FF !important;
-    font-size: 10.5pt !important;
-    font-family: monospace !important;
-    margin: 4px 0 10px 0 !important;
-  }
-
-  .stack-matrix-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8pt !important;
-  }
-
-  .showcase-tier-block {
-    padding: 10pt !important;
-    margin-bottom: 10pt !important;
-  }
-
-  .career-tier1-list {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 8pt !important;
-  }
-
-  .career-tier2-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8pt !important;
-  }
-
-  .showcase-vault-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 7pt !important;
-  }
-
-  .career-card,
-  .vault-cluster {
-    padding: 8pt !important;
-    gap: 6pt !important;
-    margin-bottom: 0 !important;
-  }
-
-  .career-card-title {
-    font-size: 9.5pt !important;
-    line-height: 1.25 !important;
-  }
-
-  .career-meta-cell {
-    padding: 4pt 6pt !important;
-  }
-
-  .career-meta-label {
-    font-size: 6.5pt !important;
-  }
-
-  .career-meta-val {
-    font-size: 7.5pt !important;
-  }
-
-  .career-bullets {
-    gap: 4pt !important;
-    padding-top: 6pt !important;
-  }
-
-  .career-bullets li,
-  .vault-node-desc {
-    font-size: 7.5pt !important;
-    line-height: 1.35 !important;
-  }
-
-  .showcase-tag {
-    font-size: 6.5pt !important;
-    padding: 1.5pt 4pt !important;
-  }
-
-  .vault-node {
-    padding: 6pt 7pt !important;
-  }
-
-  .vault-node-title {
-    font-size: 8pt !important;
-  }
-
-  .education-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8pt !important;
-  }
-
-  .contact-container {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10pt !important;
-  }
-
-  /* Link nhấp được trong PDF */
+  /* Clickable PDF Links */
   a, a:link, a:visited {
     color: inherit !important;
     text-decoration: none !important;
@@ -2446,8 +2620,8 @@ body {
     background-color: #00E5FF !important;
     color: #050507 !important;
     border: 1px solid #00E5FF !important;
-    padding: 4pt 6pt !important;
-    font-size: 7.5pt !important;
+    padding: 3.5pt 6pt !important;
+    font-size: 7pt !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -2458,8 +2632,8 @@ body {
     background-color: #121218 !important;
     color: #FFFFFF !important;
     border: 1px solid #2D2D44 !important;
-    padding: 4pt 6pt !important;
-    font-size: 7.5pt !important;
+    padding: 3.5pt 6pt !important;
+    font-size: 7pt !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -2480,7 +2654,8 @@ body {
     display: flex !important;
     width: 100% !important;
     justify-content: space-between !important;
-    padding: 8pt 12pt !important;
+    padding: 6.5pt 10pt !important;
+    margin-bottom: 0 !important;
     background-color: #0B0B0F !important;
     border: 1px solid #00E5FF !important;
     color: #00E5FF !important;
@@ -2490,12 +2665,12 @@ body {
 
   a.showcase-cta-bar .showcase-cta-prefix {
     color: #A1A1AA !important;
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
   }
 
   a.showcase-cta-bar .showcase-cta-label {
     color: #00E5FF !important;
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
   }
 
   /* ========================================================

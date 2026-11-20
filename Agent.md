@@ -88,3 +88,24 @@ Before delivering the output:
 - Verify that the total number of columns in `Framer_Export_Work` matches `work single` exactly.
 - Verify that `Framer_Export_Service` matches `service single` exactly.
 - Ensure zero empty critical fields (Slug, Title, Tag, About, Descriptions, Stories).
+
+---
+
+## SECTION: PDF & PAGED PRINT ARCHITECTURE
+
+### ZERO-TOLERANCE RULES FOR PDF GENERATION
+
+1. **Discrete Page Container Architecture**:
+   - Free-flowing multi-page HTML is strictly prohibited.
+   - All PDF layouts must be partitioned into explicit `<section class="pdf-page">` blocks.
+   - Every `.pdf-page` must enforce:
+     `width: 210mm; height: 297mm; max-height: 297mm; overflow: hidden; page-break-after: always; padding: 16mm 14mm; box-sizing: border-box;`
+   - `@page` must strictly declare `margin: 0;` to delegate box modeling entirely to `.pdf-page`.
+
+2. **No Orphan Component Spillovers**:
+   - A single chart, diagram, or table row pushed onto an extra trailing page is classified as an automatic build failure.
+   - Visual charts inside a page must have rigid height clamps (`max-height: 180px - 220px`) and never rely on fluid expansion.
+
+3. **Compilation Page-Budget Gate**:
+   - Target page count must be determined BEFORE rendering.
+   - Total rendered pages must match target count exactly. Any extra trailing page (e.g., target 8 pages producing 9 pages) aborts the deployment pipeline.
